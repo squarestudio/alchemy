@@ -163,8 +163,19 @@ button, .button {
   line-height: 100%;
   letter-spacing: 0;
 
+  background: var(--button-default);
   color: var(--text-100) !important;
   text-transform: uppercase;
+
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+a.sqs-block-button-element:hover,
+.sqs-block-button .sqs-block-button-element--small:hover,
+.sqs-block-button .sqs-block-button-element--medium:hover,
+.sqs-block-button .sqs-block-button-element--large:hover,
+button:hover, .button:hover {
+  background: var(--gradient-button);
 }
 
 .text-bg {
