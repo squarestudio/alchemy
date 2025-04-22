@@ -195,6 +195,7 @@ header.Header {
   top: 0;
   left: 0;
   right: auto;
+  z-index: 20;
 
   height: 100%;
 
@@ -242,6 +243,18 @@ header.Header {
         a.Header-nav-item {
           margin: 0;
           padding: 1rem .5rem;
+
+          color: var(--text-100);
+
+          -webkit-transition: all .15s linear;
+          transition: all .15s linear;
+
+          &:hover {
+            text-decoration: underline;
+          }
+          &.Header-nav-item--active {
+            color: var(--text-0);
+          }
         }
       }
     }
