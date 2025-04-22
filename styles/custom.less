@@ -388,6 +388,11 @@ header.Header {
       float: none;
     }
     & > .col:nth-child(1) {
+      .html-block {
+        h1 {
+          line-height: 100%;
+        }
+      }
       .code-block {
         margin-top: var(--gap-60);
 
@@ -396,6 +401,9 @@ header.Header {
           margin-bottom: 0;
         }
         h6.medium {
+          position: relative;
+          top: -4px;
+
           margin-top: var(--gap-32);
         }
       }
