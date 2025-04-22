@@ -360,8 +360,17 @@ header.Header {
 /* HERO */
 
 #alchemy-hero {
-  //height: ~"calc(100vh - 98px)";
+  height: ~"calc(100vh - 98px)";
   padding: 0;
+
+  .sqs-layout > .row {
+    display: flex;
+    align-items: center;
+
+    & > .col {
+      float: none;
+    }
+  }
 }
 
 /* FOOTER */
