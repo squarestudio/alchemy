@@ -229,11 +229,20 @@ header.Header {
       }
     }
 
-    .Header-nav-inner {
-      writing-mode: vertical-rl;
-      transform: rotate(180deg); /* flip to make text bottom-to-top */
-      display: flex;
-      gap: 2rem;
+    .Header-nav {
+      padding: 0;
+
+      .Header-nav-inner {
+        writing-mode: vertical-rl;
+        transform: rotate(180deg); /* flip to make text bottom-to-top */
+        display: flex;
+        gap: 1.75rem;
+
+        a.Header-nav-item {
+          margin: 0;
+          padding: 0;
+        }
+      }
     }
   }
 }
