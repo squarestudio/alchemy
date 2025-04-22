@@ -1,0 +1,177 @@
+:root {
+  --background-color: #FFFFFF;
+
+  --gradient-nav: linear-gradient(180deg, #F8EC1B 0.51%, #FF9700 12.5%, #F25E8F 24.5%, #BD00C6 35%, #FF8B92 46%, #FFDC00 59.5%, #99ED61 73%, #06E181 84.5%, #00C3B2 98.5%);
+  --gradient-hover: linear-gradient(90deg, #FDF461 0%, #45FD9E 100%);
+  --gradient-button: linear-gradient(272deg, #F16889 1.58%, #FCD237 91.67%);
+  --gradient-footer: linear-gradient(180deg, #303030 0%, #969696 100%);
+
+  --text-100: #303030;
+  --text-60: #828282;
+  --text-10: #D1D1D1;
+  --text-0: #FFFFFF;
+  --text-bg: #585858;
+
+  --stroke-20: #C7C7C7;
+  --stroke-60: #828282;
+  --stroke-active: #00C3B2;
+  --stroke-error: #F34871;
+
+  --button-default: #FFFFFF;
+  --button-disable: #828282;
+
+  --gap-8: 8px;
+  --gap-16: 16px;
+  --gap-24: 24px;
+  --gap-32: 32px;
+  --gap-40: 40px;
+  --gap-60: 60px;
+  --gap-80: 80px;
+  --gap-120: 120px;
+
+  --font-regular: 'Founders Grotesk Regular', sans-serif;
+  --font-medium: 'Founders Grotesk Medium', sans-serif;
+  --font-semibold: 'Founders Grotesk SemiBold', sans-serif;
+  --font-bold: 'Founders Grotesk Bold', sans-serif;
+}
+
+/* GENERAL STYLES */
+
+body {
+  background: var(--background-color) !important;
+
+  font-family: var(--font-regular);
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0;
+
+  color: var(--text-100);
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: var(--font-medium);
+  font-weight: 500;
+  font-style: normal;
+
+  letter-spacing: 0;
+  color: var(--text-100);
+
+  text-transform: uppercase;
+}
+
+h1 {
+  font-size: 100px;
+  line-height: 130%;
+}
+
+h2 {
+  font-size: 80px;
+  line-height: 130%;
+}
+
+h3 {
+  font-size: 60px;
+  line-height: 110%;
+}
+
+h4 {
+  font-size: 40px;
+  line-height: 110%;
+}
+
+h5 {
+  font-size: 30px;
+  line-height: 110%;
+}
+
+h6 {
+  font-family: var(--font-regular);
+  font-weight: 600;
+  font-style: normal;
+
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+
+  text-transform: uppercase;
+
+  color: var(--text-100);
+}
+h6.medium {
+  font-family: var(--font-medium);
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+p, p.regular {
+  font-family: var(--font-regular);
+  font-weight: 400;
+  font-style: normal;
+
+  font-size: 18px;
+  line-height: 140%;
+  letter-spacing: 0;
+
+  color: var(--text-100);
+}
+p.supersmall {
+  font-size: 14px;
+  line-height: 150%;
+}
+p.small {
+  font-size: 16px;
+  line-height: 150%;
+}
+p.medium {
+  font-family: var(--font-medium);
+  font-weight: 500;
+  font-style: normal;
+
+  font-size: 18px;
+  line-height: 150%;
+}
+p.large {
+  font-size: 24px;
+  line-height: 150%;
+}
+
+button, .button {
+  font-family: var(--font-medium);
+  font-weight: 500;
+  font-style: normal;
+
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0;
+
+  color: var(--text-100);
+
+  text-transform: uppercase;
+}
+
+.text-bg {
+  font-family: var(--font-bold);
+  font-weight: 700;
+  font-style: normal;
+
+  font-size: 7px;
+  line-height: 100%;
+
+  color: var(--text-100);
+
+  text-transform: uppercase;
+}
+
+
+/* REMOVE INITIAL */
+
+div.Header-account, a.Cart {
+  display: none;
+}
+.Index-page {
+  background: none;
+}

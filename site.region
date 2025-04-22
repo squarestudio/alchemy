@@ -127,6 +127,7 @@
                     {siteTitle}
                   {.end}
                 {.end}
+                <img src="" alt="">
               </a>
               {.section website}{.section siteTagLine}<div class="Header-tagline" data-nc-element="tagline">{@}</div>{.end}{.end}
 
@@ -176,6 +177,7 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
+    <squarespace:script src="custom.js" combo="false" />
 
     {squarespace-footers}
 
