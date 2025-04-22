@@ -215,23 +215,27 @@ header.Header {
       flex: unset !important;
     }
 
-    & > div[data-nc-container="top-left"],
-    & > div[data-nc-container="top-right"] {
+    div[data-nc-container="top-left"],
+    div[data-nc-container="top-right"] {
       height: 100px;
     }
 
-    a.Header-branding {
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
+    div[data-nc-container="top-left"] {
+      display: block;
 
-      width: 72px;
-      padding: 14px 0;
+      a.Header-branding {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
 
-      img {
-        display: block;
-        width: 58px;
-        height: auto;
+        width: 72px;
+        padding: 14px 0;
+
+        img {
+          display: block;
+          width: 58px;
+          height: auto;
+        }
       }
     }
 
@@ -268,33 +272,35 @@ header.Header {
       }
     }
 
-    .Header-social {
-      .socialaccountlinks-v2-block {
-        padding: 0;
+    div[data-nc-container="top-right"] {
+      .Header-social {
+        .socialaccountlinks-v2-block {
+          padding: 0;
 
-        .sqs-svg-icon--list {
-          display: flex;
-          flex-direction: column;
-          justify-content: flex-end;
-          align-items: center;
+          .sqs-svg-icon--list {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
 
-          position: relative;
-          bottom: -.5rem;
+            position: relative;
+            bottom: -.5rem;
 
-          a {
-            margin: 0;
-            width: 3rem;
-            height: 3rem;
-            padding: .5rem;
-            box-sizing: border-box;
+            a {
+              margin: 0;
+              width: 3rem;
+              height: 3rem;
+              padding: .5rem;
+              box-sizing: border-box;
 
-            svg {
-              top: 50%;
-              left: 50%;
+              svg {
+                top: 50%;
+                left: 50%;
 
-              transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
 
-              width: 2rem;
+                width: 2rem;
+              }
             }
           }
         }
