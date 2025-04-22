@@ -442,9 +442,11 @@ header.Header {
 
         img {
           position: absolute;
-          top: auto !important;
+          top: 50% !important;
           left: 0;
-          bottom: -5vw !important;
+
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
           width: ~"calc(100% + 30px)" !important;
           height: auto !important;
@@ -464,9 +466,11 @@ header.Header {
 
           img {
             position: absolute;
-            top: auto !important;
+            top: 50% !important;
             left: 0;
-            bottom: -5vw !important;
+
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
 
             width: ~"calc(100% + 30px)" !important;
             height: auto !important;
