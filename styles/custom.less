@@ -393,8 +393,20 @@ header.Header {
           img {
             position: absolute;
             top: 0;
-            left: -20px;
+            left: 0;
 
+            opacity: 0;
+
+            -webkit-transition: all 1s linear;
+            transition: all 1s linear;
+          }
+        }
+      }
+
+      &.animate-image {
+        .image-block:last-child {
+          img {
+            left: -20px;
             opacity: .3;
           }
         }
