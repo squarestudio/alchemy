@@ -96,7 +96,7 @@
           </div>
           <div data-nc-container="top-right">
             <div class="Header-social">
-                <squarespace:block-field id="headerSocial" columns="12" label="Header Social" />
+                <squarespace:block-field id="headerSocial" class="Header-blocks Header-blocks--bottom sqs-alternate-block-style-container" columns="12" label="headerSocial" />
             </div>
 
             {@|apply cart.block}
