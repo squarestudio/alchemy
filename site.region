@@ -96,6 +96,8 @@
           </div>
           <div data-nc-container="top-right">
 
+            <div class="Header-social"></div>
+
             {@|apply cart.block}
 
           </div>
@@ -132,8 +134,6 @@
 
             </div>
             <div data-nc-container="bottom-right">
-
-              <div class="Header-social"></div>
 
               <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
                 <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
