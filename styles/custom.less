@@ -215,14 +215,18 @@ header.Header {
       flex: unset !important;
     }
 
+    & > div[data-nc-container="top-left"],
+    & > div[data-nc-container="top-right"] {
+      height: 100px;
+    }
+
     a.Header-branding {
       display: flex;
       justify-content: center;
       align-items: flex-start;
 
       width: 72px;
-      height: 100px;
-      padding: 14px 0 0;
+      padding: 14px 0;
 
       img {
         display: block;
