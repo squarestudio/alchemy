@@ -518,13 +518,20 @@ header.Header {
   height: 98px;
   width: 100vw;
   margin-left: ~"calc(665px - 50vw)";
-}
-.marquee-content {
-  flex-shrink: 0;
-  display: flex;
-  justify-content: space-around;
-  min-width: 100%;
-  gap: 1rem;
+
+  background: var(--text-100);
+
+  .marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 1rem;
+
+    h5 {
+      color: var(--text-0);
+    }
+  }
 }
 
 @keyframes scroll {
