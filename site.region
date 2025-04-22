@@ -95,11 +95,9 @@
             {.end}
           </div>
           <div data-nc-container="top-right">
-
             <div class="Header-social"></div>
 
             {@|apply cart.block}
-
           </div>
         </div>
       </header>
