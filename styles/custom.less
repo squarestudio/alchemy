@@ -657,12 +657,20 @@ section#formula {
        width: 100%;
      }
 
-     h6 {
-       text-align: center;
-       line-height: 100%;
-     }
-     .code-block + .html-block {
-       margin-top: var(--gap-16);
+     .sqs-col-12 {
+       & > .code-block + .html-block {
+         margin-top: var(--gap-16);
+       }
+
+       h6 {
+         text-align: center;
+         line-height: 100%;
+       }
+
+       .row:before,
+       .row:after {
+         display: none;
+       }
      }
    }
 }
