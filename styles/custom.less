@@ -997,13 +997,20 @@ section#your-sweat-sanctuary {
             z-index: 2;
           }
         }
+        & > .row + .image-block {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          height: ~"calc(100vh - 96px)";
+        }
         & > .image-block + .image-block {
           position: absolute;
-          top: 167px;
-          z-index: 2;
-
+          top: 0;
           right: 0;
+          z-index: 2;
           opacity: 0;
+          height: ~"calc(100vh - 96px)";
 
           -webkit-transition: all 1s ease-in-out .1s;
           transition: all 1s ease-in-out .1s;
