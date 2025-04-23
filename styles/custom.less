@@ -658,6 +658,13 @@ header.Header {
 
           & > .col:nth-child(1) {
             width: 33.333%;
+
+            .horizontalrule-block {
+              display: none;
+            }
+            .horizontalrule-block + .html-block {
+              margin-top: var(--gap-40);
+            }
           }
           & > .col:nth-child(2) {
             width: 25%;
