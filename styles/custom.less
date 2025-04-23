@@ -651,6 +651,14 @@ section#hero {
     animation: scroll 30s linear infinite;
   }
 }
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100% - 1rem);
+  }
+}
 
 /* FORMULA */
 
@@ -739,7 +747,6 @@ section#benefits {
       width: 100%;
     }
 
-
     .sqs-col-12 > .row {
       display: flex;
       column-gap: 24px;
@@ -775,6 +782,21 @@ section#benefits {
           .image-block-wrapper {
             & > div {
               img {
+                left: 0;
+                opacity: 0;
+
+                -webkit-transition: all 1s ease-in-out .1s;
+                transition: all 1s ease-in-out .1s;
+              }
+            }
+          }
+        }
+      }
+      .col.image-blur {
+        .image-block + .image-block {
+          .image-block-wrapper {
+            & > div {
+              img {
                 left: -20px;
                 opacity: .3;
               }
@@ -791,16 +813,6 @@ section#benefits {
         }
       }
     }
-  }
-}
-
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100% - 1rem);
   }
 }
 
