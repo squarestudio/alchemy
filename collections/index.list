@@ -82,7 +82,9 @@
                     </div>
                     <div class="list-items">
                         <ul>
-                            <li></li>
+                        {.repeated section items}
+                            <li>{title}</li>
+                        {.end}
                         </ul>
                     </div>
                 </div>
