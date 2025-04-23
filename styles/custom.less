@@ -958,6 +958,9 @@ section#your-sweat-sanctuary {
         position: relative;
         height: 100vh;
 
+        & > .row {
+          flex-direction: column;
+        }
         & > .row:first-child {
           position: sticky;
           top: 0;
@@ -966,8 +969,6 @@ section#your-sweat-sanctuary {
           //display: none;
           margin-left: 96px;
           width: ~"calc((100vw - 1296px) / 2 + 416px - 96px)" !important;
-
-          flex-direction: column;
 
           .col {
             width: 100% !important;
