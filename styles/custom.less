@@ -833,6 +833,15 @@ body.benefits-blur section#benefits {
       }
       .col:first-child {
         width: 58.333%;
+        .image-block + .image-block {
+          .image-block-wrapper {
+            & > div {
+              img {
+                left: -50px;
+              }
+            }
+          }
+        }
       }
       .col:last-child {
         width: 41.667%;
