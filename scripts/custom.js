@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let sanctuaryOffsetTop;
     if (sanctuarySection) {
         let element = sanctuarySection.querySelector('.sqs-col-12 > .image-block:nth-child(2)');
-        sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY + (window.innerHeight/3);
+        sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY + (window.innerHeight/3) - 167;
     }
 
     window.onload = function() {
