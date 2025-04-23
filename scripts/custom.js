@@ -4,5 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
         heroImage.classList.add("animate-image");
     }
 
-    document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
+    window.onload = function() {
+        document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
+    }
 });
