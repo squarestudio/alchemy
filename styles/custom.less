@@ -884,8 +884,13 @@ section#melt-the-limits {
           border-bottom: 1px solid var(--text-30);
 
           .item-number {
-            display: block;
             padding-right: var(--gap-24);
+
+            p {
+              display: flex;
+              justify-content: flex-start;
+              align-items: center;
+            }
           }
 
           .item-description {
@@ -900,7 +905,7 @@ section#melt-the-limits {
 
           &:nth-child(-n+9) {
             .item-number {
-              p:before {
+              p span:before {
                 content: '0';
               }
             }
