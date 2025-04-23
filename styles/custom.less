@@ -682,6 +682,7 @@ section#formula {
          background: var(--background-color);
 
          & > .col {
+           float: none !important;
            width: 25%;
            padding-left: 24px;
            padding-right: 24px;
@@ -740,6 +741,10 @@ section#benefits {
     .sqs-col-12 > .row {
       display: flex;
       column-gap: 24px;
+
+      .col {
+        float: none !important;
+      }
 
       .col:first-child {
         width: 25%;
