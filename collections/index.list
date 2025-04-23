@@ -75,7 +75,9 @@
 
     {.or}
         {.equal? typeName "list"}
-            melt your limits
+            <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
+                {mainContent}
+            </section>
         {.or}
             <section id="{urlId}" class="Index-page{.section mainImage} Index-page--has-image{.or}{.background-source-video?} Index-page--has-image{.end}{.end}" {.section mainImage} data-parallax-original-element{.or}{.background-source-video?} data-parallax-original-element{.end}{.end} data-collection-id="{id}" data-parallax-id="{id}" data-edit-main-image="Background">
                 {.equal? @index 1}
