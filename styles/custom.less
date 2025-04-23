@@ -723,6 +723,10 @@ header.Header {
                 display: flex;
                 justify-content: space-between;
                 align-items: flex-start;
+
+                div[tabindex="-1"] {
+                  display: none;
+                }
               }
               .form-item > label {
                 display: none;
