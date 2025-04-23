@@ -671,6 +671,22 @@ section#formula {
        .row:after {
          display: none;
        }
+       .row {
+         display: flex;
+
+         & > .col {
+           width: 25%;
+           padding-left: 24px;
+           padding-right: 24px;
+           box-sizing: border-box;
+         }
+         & > .col:first-child {
+           padding-left: 0;
+         }
+         & > .col:last-child {
+           padding-right: 0;
+         }
+       }
      }
    }
 }
