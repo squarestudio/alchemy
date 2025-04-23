@@ -466,7 +466,7 @@ header.Header {
           padding-bottom: 0 !important;
         }
 
-        &:last-child {
+        &:nth-child(2) {
           position: absolute;
           top: 0;
           left: 0;
@@ -492,7 +492,7 @@ header.Header {
       }
 
       &.animate-image {
-        .image-block:last-child {
+        .image-block:nth-child(2) {
           img {
             left: -50px;
             opacity: .3;
@@ -544,11 +544,11 @@ header.Header {
       color: var(--text-0);
     }
   }
+  .scroll {
+    animation: scroll 30s linear infinite;
+  }
 }
 
-.scroll {
-  animation: scroll 30s linear infinite;
-}
 
 @keyframes scroll {
   from {
