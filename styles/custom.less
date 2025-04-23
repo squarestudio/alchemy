@@ -759,8 +759,12 @@ header.Header {
                 div[tabindex="-1"] {
                   display: none;
                 }
-                .form-item > label {
-                  display: none;
+                .form-item {
+                  margin-bottom: 0;
+
+                  & > label {
+                    display: none;
+                  }
                 }
 
                 .field-list {
