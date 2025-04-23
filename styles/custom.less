@@ -494,6 +494,12 @@ header.Header {
           }
         }
       }
+
+      .button-block {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
     }
   }
   .sqs-layout > .row:nth-child(2) > .col {
@@ -535,6 +541,10 @@ header.Header {
   }
 }
 
+.scroll {
+  animation: scroll 30s linear infinite;
+}
+
 @keyframes scroll {
   from {
     transform: translateX(0);
@@ -542,9 +552,6 @@ header.Header {
   to {
     transform: translateX(-100% - 1rem);
   }
-}
-.scroll {
-  animation: scroll 30s linear infinite;
 }
 
 /* FOOTER */
