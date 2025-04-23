@@ -249,45 +249,6 @@ button:hover, .button:hover {
   padding: 0 !important;
 }
 
-.socialaccountlinks-v2-block {
-  padding: 0;
-
-  .sqs-svg-icon--list {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-
-    position: relative;
-    bottom: -.5rem;
-
-    a {
-      margin: 0;
-      width: 3rem;
-      height: 3rem;
-      padding: .5rem;
-      box-sizing: border-box;
-
-      svg {
-        display: none;
-      }
-
-      &>div {
-        transform: none;
-      }
-
-      &[aria-label="Instagram"] {
-        background: url('../assets/instagram.png') no-repeat center;
-        background-size: 32px auto;
-      }
-      &[aria-label="Spotify"] {
-        background: url('../assets/spotify.png') no-repeat center;
-        background-size: 32px auto;
-      }
-    }
-  }
-}
-
 /* GRID */
 
 #bg-grid {
@@ -429,6 +390,49 @@ header.Header {
           }
           &.Header-nav-item--active:hover {
             text-decoration: none;
+          }
+        }
+      }
+    }
+
+    div[data-nc-container="top-right"] {
+      .Header-social {
+        .socialaccountlinks-v2-block {
+          padding: 0;
+
+          .sqs-svg-icon--list {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: center;
+
+            position: relative;
+            bottom: -.5rem;
+
+            a {
+              margin: 0;
+              width: 3rem;
+              height: 3rem;
+              padding: .5rem;
+              box-sizing: border-box;
+
+              svg {
+                display: none;
+              }
+
+              &>div {
+                transform: none;
+              }
+
+              &[aria-label="Instagram"] {
+                background: url('../assets/instagram.png') no-repeat center;
+                background-size: 32px auto;
+              }
+              &[aria-label="Spotify"] {
+                background: url('../assets/spotify.png') no-repeat center;
+                background-size: 32px auto;
+              }
+            }
           }
         }
       }
@@ -806,6 +810,45 @@ header.Header {
             }
             .form-block + .code-block {
               margin-top: var(--gap-80);
+            }
+
+            .socialaccountlinks-v2-block {
+              padding: 0;
+
+              .sqs-svg-icon--list {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: center;
+
+                position: relative;
+                bottom: -.5rem;
+
+                a {
+                  margin: 0;
+                  width: 3rem;
+                  height: 3rem;
+                  padding: .5rem;
+                  box-sizing: border-box;
+
+                  svg {
+                    display: none;
+                  }
+
+                  &>div {
+                    transform: none;
+                  }
+
+                  &[aria-label="Instagram"] {
+                    background: url('../assets/instagram.png') no-repeat center;
+                    background-size: 32px auto;
+                  }
+                  &[aria-label="Spotify"] {
+                    background: url('../assets/spotify.png') no-repeat center;
+                    background-size: 32px auto;
+                  }
+                }
+              }
             }
           }
         }
