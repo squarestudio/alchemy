@@ -544,13 +544,22 @@ header.Header {
             min-width: 100%;
           }
           .scroll {
-            animation: scroll 5s linear infinite;
+            animation: scroll-image 5s linear infinite;
           }
         }
         .marquee-image.marquee-forward {
           .scroll {
-            animation: scroll 3s linear infinite;
+            animation: scroll-image 3s linear infinite;
             animation-direction: reverse;
+          }
+        }
+
+        @keyframes scroll-image {
+          from {
+            transform: translateX(0);
+          }
+          to {
+            transform: translateX(-100% - 10rem);
           }
         }
       }
