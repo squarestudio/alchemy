@@ -752,7 +752,7 @@ header.Header {
               form {
                 display: flex;
                 justify-content: space-between;
-                align-items: flex-start;
+                align-items: flex-end;
 
                 div[tabindex="-1"] {
                   display: none;
@@ -763,6 +763,13 @@ header.Header {
 
                 .field-list {
                   width: ~"calc(60% - 12px)";
+
+                  input[type="email"] {
+                    padding: 0;
+                    background: none;
+                    border: none;
+                    border-bottom: 1px solid var(--text-30);
+                  }
                 }
                 button[type="submit"] {
                   padding: 17px 32px;
