@@ -12,6 +12,7 @@
 
     {@|apply mobile.block}
     {@|apply grid.block}
+    {@|apply grid-layout.block}
 
     <div class="Parallax-host-outer">
       <div class="Parallax-host" data-parallax-host>
