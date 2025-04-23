@@ -84,7 +84,7 @@
                         <ul>
                         {.repeated section items}
                             <li class="item">
-                                <span class="item-number">[{@index}]</div>
+                                <span class="item-number">[<span>{@index}</span>]</div>
                                 <h4 class="item-title">{title}</h4>
                                 <div class="item-description">{body}<div>
                             </li>
