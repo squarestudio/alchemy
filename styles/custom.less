@@ -762,7 +762,15 @@ section#benefits {
 
               img {
                 width: ~"calc(100% + 20px)" !important;
-                height: auto !important;
+              }
+            }
+          }
+        }
+        .image-block + .image-block {
+          .image-block-wrapper {
+            & > div {
+              img {
+                left: -20px;
               }
             }
           }
