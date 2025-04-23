@@ -962,7 +962,7 @@ section#your-sweat-sanctuary {
           position: sticky;
           top: 0;
           margin-top: -167px;
-          z-index: 2;
+          z-index: 3;
           //display: none;
           margin-left: 96px;
           width: ~"calc((100vw - 1296px) / 2 + 416px - 96px)" !important;
@@ -1017,11 +1017,12 @@ section#your-sweat-sanctuary {
           transition: all 1s ease-in-out .1s;
         }
 
-        &.code-block {
+        & > .code-block {
           position: absolute;
           left: 0;
           right: 0;
           bottom: 0;
+          z-index: 4;
         }
       }
     }
