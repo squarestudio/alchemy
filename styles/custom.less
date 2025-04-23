@@ -876,15 +876,32 @@ section#melt-the-limits {
         margin: 0;
         padding: 0;
 
-        li.item:nth-child(-n+9) {
-          span.item-number span:before {
-            content: '0';
+        li.item {
+          display: flex;
+          justify-content: flex-start;
+          align-items: flex-start;
+          padding-bottom: var(--gap-40);
+
+          .item-number {
+            display: block;
+            padding-right: var(--gap-24);
           }
 
           .item-description {
+            border-left: 1px solid var(--text-30);
+            padding-left: var(--gap-24);
+
             .sqs-layout {
               padding-left: 0;
               padding-right: 0;
+            }
+          }
+
+          &:nth-child(-n+9) {
+            .item-number {
+              p:before {
+                content: '0';
+              }
             }
           }
         }
