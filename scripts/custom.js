@@ -5,13 +5,14 @@ document.addEventListener("DOMContentLoaded", function () {
         heroImage.classList.add("image-blur");
     }
 
-    window.onload = function() {
-        const benefitsSection = document.getElementById("benefits");
-        if(benefitsSection) {
-            let benefitsOffsetTop = benefitsSection.querySelector('.sqs-col-12').offsetTop;
-            console.log(benefitsOffsetTop);
-        }
+    const benefitsSection = document.getElementById("benefits");
+    if (benefitsSection) {
+        const element = benefitsSection.querySelector('.sqs-col-12');
+        const benefitsOffsetTop = element.getBoundingClientRect().top + window.scrollY;
+        console.log(benefitsOffsetTop);
+    }
 
+    window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
 });
