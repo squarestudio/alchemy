@@ -965,8 +965,11 @@ section#your-sweat-sanctuary {
           top: 167px;
           z-index: 2;
 
-          right: 50px;
-          opacity: .3;
+          right: 0;
+          opacity: 0;
+
+          -webkit-transition: all 1s ease-in-out .1s;
+          transition: all 1s ease-in-out .1s;
         }
       }
     }
@@ -977,6 +980,18 @@ section#your-sweat-sanctuary {
     .marquee {
       width: 100vw;
       margin-left: 0;
+    }
+  }
+}
+body.sanctuary-blur section#your-sweat-sanctuary {
+  .Index-page-content {
+    .sqs-layout {
+      .sqs-col-12 {
+        & > .image-block + .image-block {
+          right: -50px;
+          opacity: .3;
+        }
+      }
     }
   }
 }

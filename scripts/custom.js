@@ -8,8 +8,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const benefitsSection = document.getElementById("benefits");
     let benefitsOffsetTop;
     if (benefitsSection) {
-        const element = benefitsSection.querySelector('.sqs-col-12');
+        let element = benefitsSection.querySelector('.sqs-col-12');
         benefitsOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/1.6);
+    }
+
+    const sanctuarySection = document.getElementById("your-sweat-sanctuary");
+    let sanctuaryOffsetTop;
+    if (sanctuarySection) {
+        let element = sanctuarySection.querySelector('.sqs-col-12 > .image-block:nth-child(2)');
+        sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY;
     }
 
     window.onload = function() {
@@ -19,6 +26,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const scrollPosition = window.scrollY || window.pageYOffset;
         if(scrollPosition >= benefitsOffsetTop) {
             document.body.classList.add('benefits-blur');
+        }
+        if(scrollPosition >= sanctuaryOffsetTop) {
+            document.body.classList.add('sanctuary-blur');
         }
     });
 });
