@@ -704,6 +704,10 @@ section#formula {
          & > .col:first-child {
            padding-left: 0;
          }
+         & > .col:not(:last-child) {
+           border-right: 1px solid var(--stroke-20);
+           box-sizing: border-box;
+         }
          & > .col:last-child {
            padding-right: 0;
          }
