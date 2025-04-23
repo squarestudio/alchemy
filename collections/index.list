@@ -77,19 +77,27 @@
         {.equal? typeName "list"}
             <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
                 <div class="Index-page-content">
-                    <div class="list-title">
-                      <h3>{description}<h3>
-                    </div>
-                    <div class="list-items">
-                        <ul>
-                        {.repeated section items}
-                            <li class="item">
-                                <span class="item-number">[<span>{@index}</span>]</span>
-                                <h4 class="item-title">{title}</h4>
-                                <div class="item-description">{body}<div>
-                            </li>
-                        {.end}
-                        </ul>
+                    <div class="sqs-layout">
+                        <div class="row sqs-row">
+                            <div class="col sqs-col-12">
+                                <div class="row">
+                                    <div class="col sqs-col-6 list-title">
+                                      <h3>{description}<h3>
+                                    </div>
+                                    <div class="col sqs-col-6 list-items">
+                                        <ul>
+                                        {.repeated section items}
+                                            <li class="item">
+                                                <span class="item-number">[<span>{@index}</span>]</span>
+                                                <h4 class="item-title">{title}</h4>
+                                                <div class="item-description">{body}<div>
+                                            </li>
+                                        {.end}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
