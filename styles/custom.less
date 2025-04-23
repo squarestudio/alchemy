@@ -967,6 +967,21 @@ section#your-sweat-sanctuary {
           .col {
             width: 100% !important;
 
+            .image-block {
+              .image-block-wrapper {
+                aspect-ratio: 1 / .895;
+
+                & > div {
+                  padding-bottom: 0 !important;
+                  height: 100%;
+
+                  img {
+                    width: ~"calc(100% + 20px)" !important;
+                  }
+                }
+              }
+            }
+
             figure {
               max-width: unset !important;
             }
