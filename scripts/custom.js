@@ -3,4 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if (heroImage) {
         heroImage.classList.add("animate-image");
     }
+
+    document.querySelector('footer.Footer .option input[type="checkbox"]').checked = true;
 });
