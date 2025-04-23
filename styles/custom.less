@@ -545,7 +545,12 @@ header.Header {
             gap: 1rem;
           }
           .scroll {
-            animation: scroll-backwards 30s linear infinite;
+            animation: scroll-backwards 10s linear infinite;
+          }
+        }
+        .marquee-image.marquee-forward {
+          .scroll {
+            animation: scroll-forward 10s linear infinite;
           }
         }
       }
@@ -600,6 +605,14 @@ header.Header {
   }
   to {
     transform: translateX(-100% - 1rem);
+  }
+}
+@keyframes scroll-forward {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100% + 1rem);
   }
 }
 
