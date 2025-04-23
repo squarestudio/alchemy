@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const benefitsSection = document.getElementById("benefits");
     if (benefitsSection) {
         const element = benefitsSection.querySelector('.sqs-col-12');
-        const benefitsOffsetTop = element.getBoundingClientRect().top + window.scrollY - window.height;
+        const benefitsOffsetTop = element.getBoundingClientRect().top + window.scrollY - window.innerHeight;
         console.log(benefitsOffsetTop);
     }
 
