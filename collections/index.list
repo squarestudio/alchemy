@@ -77,7 +77,14 @@
         {.equal? typeName "list"}
             <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
                 <div class="Index-page-content">
-                  {description}
+                    <div class="list-title">
+                      <h3>{description}<h3>
+                    </div>
+                    <div class="list-items">
+                        <ul>
+                            <li></li>
+                        </ul>
+                    </div>
                 </div>
             </section>
         {.or}
