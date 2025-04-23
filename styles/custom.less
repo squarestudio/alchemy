@@ -751,6 +751,7 @@ section#benefits {
 
       .col:first-child {
         width: 25%;
+        position: relative;
 
         .image-block {
           .image-block-wrapper {
@@ -767,6 +768,10 @@ section#benefits {
           }
         }
         .image-block + .image-block {
+          position: absolute;
+          top: 0;
+          left: 0;
+
           .image-block-wrapper {
             & > div {
               img {
