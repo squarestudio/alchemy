@@ -15,8 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const sanctuarySection = document.getElementById("your-sweat-sanctuary");
     let sanctuaryOffsetTop;
     if (sanctuarySection) {
-        let element = sanctuarySection.querySelector('.sqs-col-12 > .image-block:nth-child(2)');
-        sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY + (window.innerHeight/3) - 167;
+        let element = sanctuarySection.querySelector('.sqs-col-12 > .row:nth-child(1)');
+        sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY;
     }
 
     window.onload = function() {
