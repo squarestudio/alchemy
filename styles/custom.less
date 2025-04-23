@@ -959,7 +959,11 @@ section#your-sweat-sanctuary {
         & > .row {
           //display: none;
           margin-left: 96px;
-          width: ~"calc((100vw - 1296px) / 2 + 416px - 96px)";
+          width: ~"calc((100vw - 1296px) / 2 + 416px - 96px)" !important;
+
+          .col {
+            width: 100% !important;
+          }
         }
 
         & > .image-block + .image-block {
