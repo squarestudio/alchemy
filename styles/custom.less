@@ -95,7 +95,7 @@ h2 {
   line-height: 130%;
 }
 
-h3 {
+h3, h3 p {
   font-size: 60px;
   line-height: 110%;
 }
@@ -856,6 +856,12 @@ section#melt-the-limits {
   .sqs-layout > .row > .col > .row {
     display: flex;
     column-gap: 24px;
+
+    .col:first-child {
+      h3 p {
+
+      }
+    }
 
     .col:last-child {
       ul {
