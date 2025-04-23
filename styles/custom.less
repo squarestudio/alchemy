@@ -681,14 +681,20 @@ section#formula {
            box-sizing: border-box;
 
            .code-block {
-             svg {
-               margin: var(--gap-40) auto;
-             }
-             h5 {
-               border-top: 1px solid var(--stroke-20);
-               padding-top: var(--gap-40);
+             .sqs-block-content {
+               display: flex;
+               flex-direction: column;
+               justify-content: flex-start;
+               align-items: center;
+               svg {
+                 margin: var(--gap-40) auto;
+               }
+               h5 {
+                 border-top: 1px solid var(--stroke-20);
+                 padding-top: var(--gap-40);
 
-               text-align: center;
+                 text-align: center;
+               }
              }
            }
          }
