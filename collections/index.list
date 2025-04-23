@@ -83,9 +83,9 @@
                     <div class="list-items">
                         <ul>
                         {.repeated section items}
-                            <li>
-                                <div>{title}<div>
-                                <div>{body}<div>
+                            <li class="item">
+                                <h4 class="item-title">{title}</h4>
+                                <div class="item-description">{body}<div>
                             </li>
                         {.end}
                         </ul>
