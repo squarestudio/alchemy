@@ -6,10 +6,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const benefitsSection = document.getElementById("benefits");
+    let benefitsOffsetTop;
     if (benefitsSection) {
         const element = benefitsSection.querySelector('.sqs-col-12');
-        const benefitsOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/1.6);
-        console.log(benefitsOffsetTop);
+        benefitsOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/1.6);
     }
 
     window.onload = function() {
@@ -17,6 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
-        console.log(scrollPosition);
+        if(scrollPosition >= benefitsOffsetTop) {
+            document.body.classList.add('benefits-blur');
+        }
     });
 });
