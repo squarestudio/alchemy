@@ -243,6 +243,11 @@ button:hover, .button:hover {
 
 .sqs-layout > .sqs-row {
   margin: 0;
+
+  &:before,
+  &:after {
+    display: none;
+  }
 }
 
 [class*=sqs-col] .sqs-block {
@@ -729,6 +734,11 @@ section#benefits {
 
     .sqs-block {
       width: 100%;
+    }
+
+    .sqs-col-12 > .row {
+      display: flex;
+      column-gap: 24px;
     }
   }
 }
