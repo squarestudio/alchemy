@@ -956,11 +956,12 @@ section#your-sweat-sanctuary {
 
       .sqs-col-12 {
         position: relative;
+        height: ~"calc(61.68vw + 96px)";
 
         & > .row {
           flex-direction: column;
         }
-        & > .row:first-child {
+        & > .row:nth-child(1) {
           position: sticky;
           top: 0;
           margin-top: -167px;
@@ -999,7 +1000,10 @@ section#your-sweat-sanctuary {
           }
         }
         & > .row:nth-child(2) {
-          position: relative;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
           aspect-ratio: 1/.6168;
           overflow: hidden;
 
