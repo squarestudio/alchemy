@@ -967,6 +967,9 @@ section#your-sweat-sanctuary {
           .col {
             width: 100% !important;
 
+            -webkit-transition: all 1s ease-in-out .1s;
+            transition: all 1s ease-in-out .1s;
+
             .image-block {
               figure {
                 max-width: unset !important;
@@ -981,8 +984,15 @@ section#your-sweat-sanctuary {
               }
             }
           }
-        }
+          .col:last-child {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
 
+            z-index: 2;
+          }
+        }
         & > .image-block + .image-block {
           position: absolute;
           top: 167px;
@@ -1010,6 +1020,12 @@ body.sanctuary-blur section#your-sweat-sanctuary {
   .Index-page-content {
     .sqs-layout {
       .sqs-col-12 {
+        & > .row {
+          .col:last-child {
+            left: -20px;
+            opacity: .3;
+          }
+        }
         & > .image-block + .image-block {
           right: 50px;
           opacity: .3;
