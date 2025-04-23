@@ -950,6 +950,21 @@ section#your-sweat-sanctuary {
       max-width: none;
       padding-left: 0;
       padding-right: 0;
+
+      .sqs-col-12 {
+        position: relative;
+
+        & > .row {
+          display: none;
+        }
+
+        & > .image-block + .image-block {
+          position: absolute;
+          top: 0;
+          right: 0;
+          z-index: 2;
+        }
+      }
     }
     .sqs-block {
       width: 100%;
