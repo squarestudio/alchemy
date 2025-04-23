@@ -83,7 +83,10 @@
                     <div class="list-items">
                         <ul>
                         {.repeated section items}
-                            <li>{title}</li>
+                            <li>
+                                <div>{title}<div>
+                                <div>{bodyHtml}<div>
+                            </li>
                         {.end}
                         </ul>
                     </div>
