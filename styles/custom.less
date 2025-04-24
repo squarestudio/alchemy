@@ -1243,7 +1243,16 @@ section#classes {
   .Index-page-content {
     .sqs-layout {
       & > .row:nth-child(1) {
+        .col {
+          height: 98px;
+          box-sizing: border-box;
 
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          cursor: pointer;
+        }
       }
       & > .row:nth-child(2) {
         margin-top: var(--gap-80);
