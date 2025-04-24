@@ -1296,6 +1296,12 @@ section#classes {
               .sqs-layout {
                 padding: 0;
                 max-width: unset;
+
+                .sqs-col-12 {
+                  & > .html-block + .code-block {
+                    margin-top: var(--gap-60);
+                  }
+                }
               }
             }
           }
