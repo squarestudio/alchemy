@@ -109,25 +109,24 @@
                     <div class="Index-page-content">
                         <div class="sqs-layout">
                             <div class="row sqs-row">
-                                <div class="col sqs-col-12">
-                                    <div class="row">
-                                        <div class="col sqs-col-6 list-title">
-                                          <h3>{description}<h3>
-                                        </div>
-                                        <div class="col sqs-col-6 list-items">
-                                            <ul>
-                                            {.repeated section items}
-                                                <li class="item">
-                                                    <span class="item-number"><p class="small">[<span>{@index}</span>]</p></span>
-                                                    <div>
-                                                        <h4 class="item-title">{title}</h4>
-                                                        <div class="item-description">{body}</div>
-                                                    </div>
-                                                </li>
-                                            {.end}
-                                            </ul>
-                                        </div>
+                                {.repeated section items}
+                                    <div class="col sqs-col-4">
+                                        <h3 class="tab-title">{title}</h3>
                                     </div>
+                                {.end}
+                            </div>
+                            <div class="row sqs-row">
+                                <div class="col sqs-col-12">
+                                    {.repeated section items}
+                                        <div class="row item">
+                                            <div class="col sqs-col-6 item-image">
+
+                                            </div>
+                                            <div class="col sqs-col-6 item-description">
+                                                {body}
+                                            </div>
+                                        </div>
+                                    {.end}
                                 </div>
                             </div>
                         </div>
