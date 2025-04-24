@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const classesSection = document.getElementById("classes");
     let classesOffsetTop;
     if(classesSection) {
-        classesOffsetTop = classesSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
+        classesOffsetTop = classesSection.getBoundingClientRect().top + window.scrollY;
         console.log(classesOffsetTop);
 
         const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
