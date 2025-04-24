@@ -26,7 +26,11 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const classesSection = document.getElementById("classes");
+    let classesOffsetTop;
     if(classesSection) {
+        classesOffsetTop = classesSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
+        console.log(classesOffsetTop);
+
         const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
         const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
 
@@ -50,6 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
+        console.log(scrollPosition);
         if(scrollPosition >= benefitsOffsetTop) {
             document.body.classList.add('benefits-blur');
         }
