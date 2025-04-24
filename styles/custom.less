@@ -1221,12 +1221,18 @@ section#our-signature-classes {
       & > .sqs-block {
         width: 100%;
       }
-      & > .code-block + .html-block {
-        margin-top: var(--gap-60);
+      & > .code-block {
+        h6 {
+          text-align: center;
+          line-height: 100%;
+        }
       }
-      h6 {
-        text-align: center;
-        line-height: 100%;
+      & > .code-block + .html-block {
+        margin-top: var(--gap-16);
+      }
+
+      & > .row {
+        margin-top: var(--gap-32);
       }
     }
   }
