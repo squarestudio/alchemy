@@ -110,7 +110,7 @@
                         <div class="sqs-layout">
                             <div class="row sqs-row">
                                 {.repeated section items}
-                                    <div class="col sqs-col-4">
+                                    <div class="col sqs-col-4{if index == 0} active{end}">
                                         <h3 class="tab-title">{title}</h3>
                                     </div>
                                 {.end}
