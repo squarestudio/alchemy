@@ -22,8 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const a37Section = document.getElementById("a37-classes");
     let a37OffsetTop;
     if (a37Section) {
-        a37OffsetTop = a37Section.getBoundingClientRect().top + window.scrollY;
-        console.log(a37OffsetTop);
+        a37OffsetTop = a37Section.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2);
     }
 
     window.onload = function() {
@@ -37,6 +36,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(scrollPosition >= sanctuaryOffsetTop) {
             document.body.classList.add('sanctuary-blur');
+        }
+        if(scrollPosition >= a37OffsetTop) {
+            document.body.classList.add('a37-blur');
         }
     });
 });
