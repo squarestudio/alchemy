@@ -25,6 +25,25 @@ document.addEventListener("DOMContentLoaded", function () {
         a37OffsetTop = a37Section.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
     }
 
+    const classesSection = document.getElementById("classes");
+    if(classesSection) {
+        const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
+        const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
+
+        cols.forEach((col, index) => {
+            col.addEventListener('click', () => {
+                cols.forEach(c => c.classList.remove('active'));
+                items.forEach(item => item.classList.remove('active'));
+
+                // Add 'active' class to the clicked col and the corresponding item
+                col.classList.add('active');
+                if (items[index]) {
+                    items[index].classList.add('active');
+                }
+            });
+        });
+    }
+
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
