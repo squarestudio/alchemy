@@ -19,11 +19,19 @@ document.addEventListener("DOMContentLoaded", function () {
         sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY;
     }
 
+    const a37Section = document.getElementById("a37-classes");
+    let a37OffsetTop;
+    if (a37Section) {
+        a37OffsetTop = a37Section.getBoundingClientRect().top + window.scrollY;
+        console.log(a37OffsetTop);
+    }
+
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
+        console.log(scrollPosition);
         if(scrollPosition >= benefitsOffsetTop) {
             document.body.classList.add('benefits-blur');
         }
