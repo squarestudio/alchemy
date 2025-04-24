@@ -120,7 +120,8 @@
                                     {.repeated section items}
                                         <div class="row item">
                                             <div class="col sqs-col-6 item-image">
-
+                                                <img src="{assetUrl}" alt="{title}">
+                                                <img src="{assetUrl}" alt="{title}">
                                             </div>
                                             <div class="col sqs-col-6 item-description">
                                                 {body}
