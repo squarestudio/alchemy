@@ -1271,8 +1271,8 @@ section#classes {
           line-height: 90%;
         }
 
-        & > .sqs-col-12 > .row {
-          display: flex;
+        & > .sqs-col-12 > .row.item {
+          display: none;
           column-gap: 24px;
 
           & > .col {
@@ -1369,6 +1369,10 @@ section#classes {
                 }
               }
             }
+          }
+
+          &.active {
+            display: flex;
           }
         }
       }
