@@ -1394,6 +1394,20 @@ body.classes-blur section#classes {
   .Index-page-content {
     & > .sqs-layout {
       & > .row:nth-child(2) {
+        & > .sqs-col-12 > .row.item:not(.active) {
+          & > .col {
+            &:nth-child(1) {
+              .image {
+                img + img {
+                  left: 0;
+                  opacity: 0;
+                  -webkit-transition: all 1s ease-in-out .5s;
+                  transition: all 1s ease-in-out .5s;
+                }
+              }
+            }
+          }
+        }
         & > .sqs-col-12 > .row.item.active {
           & > .col {
             &:nth-child(1) {
@@ -1401,8 +1415,6 @@ body.classes-blur section#classes {
                 img + img {
                   left: -20px;
                   opacity: .3;
-                  -webkit-transition: all 1s ease-in-out .5s;
-                  transition: all 1s ease-in-out .5s;
                 }
               }
             }
