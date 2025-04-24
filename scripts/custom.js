@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const a37Section = document.getElementById("a37-classes");
     let a37OffsetTop;
     if (a37Section) {
-        a37OffsetTop = a37Section.getBoundingClientRect().top + window.scrollY + (window.innerHeight/1.5);
+        a37OffsetTop = a37Section.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
     }
 
     window.onload = function() {
