@@ -29,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let classesOffsetTop;
     if(classesSection) {
         classesOffsetTop = classesSection.getBoundingClientRect().top + window.scrollY;
-        console.log(classesOffsetTop);
 
         const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
         const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
@@ -63,6 +62,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(scrollPosition >= a37OffsetTop) {
             document.body.classList.add('a37-blur');
+        }
+        if(scrollPosition >= classesOffsetTop) {
+            document.body.classList.add('classes-blur');
         }
     });
 });
