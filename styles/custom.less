@@ -1241,12 +1241,19 @@ section#our-signature-classes {
 
 section#classes {
   .Index-page-content {
-    .sqs-layout > .row:nth-child(2) {
-      .sqs-col-12 > .row {
-        display: flex;
-        
-        .col {
-          float: none;
+    .sqs-layout {
+      & > .row:nth-child(1) {
+
+      }
+      & > .row:nth-child(2) {
+        margin-top: var(--gap-80);
+
+        .sqs-col-12 > .row {
+          display: flex;
+
+          .col {
+            float: none;
+          }
         }
       }
     }
