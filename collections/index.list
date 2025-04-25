@@ -155,7 +155,7 @@
                                             <div class="col sqs-col-6 manifesto-items">
                                                 {.repeated section items}
                                                     <div class="manifesto-item">
-                                                        <span class="number">[<span>{@index}</span>]</div>
+                                                        <span class="number">[<span>{@index}</span>]</span>
                                                         <h4 class="title">{title}</h4>
                                                         <div class="description">{body}</div>
                                                     </div>
