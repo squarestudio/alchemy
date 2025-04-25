@@ -1462,11 +1462,13 @@ section#a37-manifesto {
     }
     .manifesto-bg + .sqs-layout {
       position: absolute;
-      top: 0;
+      top: var(--gap-120);
       left: 50%;
       z-index: 3;
 
       transform: translateX(-50%);
+
+      padding-top: var(--gap-80);
 
       .sqs-block {
         width: 100%;
