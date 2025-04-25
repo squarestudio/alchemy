@@ -1451,6 +1451,11 @@ section#a37-manifesto {
         left: 0;
         width: 100%;
         height: 100%;
+
+        opacity: 0;
+
+        -webkit-transition: all 1s ease-in-out .1s;
+        transition: all 1s ease-in-out .1s;
       }
     }
 
@@ -1468,6 +1473,16 @@ section#a37-manifesto {
             animation: scroll 15s linear infinite;
           }
         }
+      }
+    }
+  }
+}
+body.manifesto-blur section#a37-manifesto {
+  .Index-page-content {
+    .manifesto-bg {
+      img + img {
+        left: -50px;
+        opacity: .3;
       }
     }
   }
