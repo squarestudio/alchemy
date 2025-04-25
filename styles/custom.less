@@ -1432,8 +1432,8 @@ section#a37-manifesto {
   .Index-page-content {
     position: relative;
 
-    padding-top: var(--gap-120);
-    padding-bottom: var(--gap-120);
+    margin-top: var(--gap-120);
+    margin-bottom: var(--gap-120);
     padding-left: 0;
 
     .manifesto-bg {
@@ -1462,9 +1462,11 @@ section#a37-manifesto {
     }
     .manifesto-bg + .sqs-layout {
       width: 100%;
+      height: 100%;
+      box-sizing: border-box;
 
       position: absolute;
-      top: var(--gap-120);
+      top: 0;
       left: 50%;
       z-index: 3;
 
