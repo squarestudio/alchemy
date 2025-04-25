@@ -139,9 +139,12 @@
                 {.equal? typeName "manifesto"}
                     <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
                         <div class="Index-page-content">
+                            <div class="manifesto-bg">
+                                <img src="{mainImage.assetUrl}" alt="{title}">
+                                <img src="{mainImage.assetUrl}" alt="{title}">
+                            </div>
                             <div class="sqs-layout">
                                 <div class="row sqs-row">
-                                    <img src="{mainImage.assetUrl}" alt="{title}">
                                     <h6>{description}</h6>
                                     <h2>{title}</h2>
                                 </div>
