@@ -15,7 +15,10 @@
                     {.repeated section items}
                         <div class="blog-item swiper-slide">
                             <div class="item-image">
-                                <img src="{mainImage.assetUrl}" alt="{title}">
+                                <a href="{featuredUrl}">
+                                    <img src="{mainImage.assetUrl}" alt="{title}">
+                                    <img src="{mainImage.assetUrl}" alt="{title}">
+                                </a>
                             </div>
                             <div class="item-content">
                                 <div class="item-date">{addedOn|date %A, %B %d}</div>
