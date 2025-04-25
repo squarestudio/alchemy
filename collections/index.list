@@ -7,8 +7,8 @@
         <div class="Index-page-content">
             <div class="sqs-layout">
               <div class="blog-header">
-                  <h6>{title}</h6>
-                  <h2>{description}</h2>
+                  <h6>{description}</h6>
+                  <h2>{title}</h2>
               </div>
               <div class="blog-articles swiper">
                   <div class="swiper-wrapper">
