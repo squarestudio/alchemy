@@ -14,7 +14,9 @@
                   <div class="swiper-wrapper">
                     {.repeated section items}
                         <div class="blog-item swiper-slide">
-                            <div class="item-image"></div>
+                            <div class="item-image">
+                                <img src="{mainImage.assetUrl}" alt="{title}">
+                            </div>
                             <div class="item-content">
                                 <div class="item-date">{addedOn|date %A, %B %d}</div>
                                 <h5 class="item-title">{title}</h5>
