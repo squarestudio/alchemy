@@ -141,6 +141,7 @@
                         <div class="Index-page-content">
                             <div class="sqs-layout">
                                 <div class="row sqs-row">
+                                    <img src="{mainImage.assetUrl}" alt="{title}">
                                     <h6>{description}</h6>
                                     <h2>{title}</h2>
                                 </div>
