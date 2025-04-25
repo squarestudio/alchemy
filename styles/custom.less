@@ -1430,6 +1430,8 @@ body.classes-blur section#classes {
 
 section#a37-manifesto {
   .Index-page-content {
+    position: relative;
+
     padding-top: var(--gap-120);
     padding-bottom: var(--gap-120);
     padding-left: 0;
@@ -1458,8 +1460,10 @@ section#a37-manifesto {
         transition: all 1s ease-in-out .1s;
       }
     }
+    .manifesto-bg + .sqs-layout {
+      position: absolute;
+      top: 0;
 
-    .sqs-layout {
       max-width: none;
       padding: 0;
 

@@ -59,7 +59,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
-        console.log(scrollPosition);
         if(scrollPosition >= benefitsOffsetTop) {
             document.body.classList.add('benefits-blur');
         }
