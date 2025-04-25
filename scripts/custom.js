@@ -19,10 +19,10 @@ document.addEventListener("DOMContentLoaded", function () {
         sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY;
     }
 
-    const a37Section = document.getElementById("a37-classes");
-    let a37OffsetTop;
-    if (a37Section) {
-        a37OffsetTop = a37Section.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
+    const a37ClassesSection = document.getElementById("a37-classes");
+    let a37ClassesOffsetTop;
+    if (a37ClassesSection) {
+        a37ClassesOffsetTop = a37ClassesSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
     }
 
     const classesSection = document.getElementById("classes");
@@ -48,6 +48,12 @@ document.addEventListener("DOMContentLoaded", function () {
         cols[0].click();
     }
 
+    const a37ManifestoSection = document.getElementById("a37-manifesto");
+    let a37ManifestoOffsetTop;
+    if (a37ManifestoSection) {
+        a37ManifestoOffsetTop = a37ManifestoSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
+    }
+
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
@@ -60,11 +66,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if(scrollPosition >= sanctuaryOffsetTop) {
             document.body.classList.add('sanctuary-blur');
         }
-        if(scrollPosition >= a37OffsetTop) {
+        if(scrollPosition >= a37ClassesOffsetTop) {
             document.body.classList.add('a37-blur');
         }
         if(scrollPosition >= classesOffsetTop) {
             document.body.classList.add('classes-blur');
+        }
+        if(scrollPosition >= a37ManifestoOffsetTop) {
+            document.body.classList.add('manifesto-blur');
         }
     });
 });
