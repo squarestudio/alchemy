@@ -4,7 +4,7 @@
     {.equal? typeName "blog"}
 
       <section id="{urlId}" class="Index-blog" data-collection-id="{id}">
-        <div class="Index-gallery-wrapper">
+        <div class="Index-page-content">
             <div class="sqs-layout">
               <div class="blog-header">
                   <h6>{title}</h6>
