@@ -150,19 +150,15 @@
                                 </div>
                                 <div class="row sqs-row">
                                     <div class="col sqs-col-12">
-                                        {.repeated section items}
-                                            <div class="row item">
-                                                <div class="col sqs-col-6 item-image">
-                                                    <div class="image">
-                                                        <img src="{assetUrl}" alt="{title}">
-                                                        <img src="{assetUrl}" alt="{title}">
-                                                    </div>
-                                                </div>
-                                                <div class="col sqs-col-6 item-description">
+                                        <div class="row">
+                                            <div class="col sqs-col-6 item-space"></div>
+                                            <div class="col sqs-col-6 item-description">
+                                                {.repeated section items}
+                                                    {title}
                                                     {body}
-                                                </div>
+                                                {.end}
                                             </div>
-                                        {.end}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
