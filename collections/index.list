@@ -1,7 +1,7 @@
 {.section collection}
   {.repeated section collections}
 
-    {.equal? typeName "gallery"}
+    {.equal? typeName "blog"}
 
       <section id="{urlId}" class="Index-gallery" data-controller="IndexGallery" data-collection-id="{id}">
         <div class="Index-gallery-wrapper">
