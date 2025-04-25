@@ -1489,8 +1489,17 @@ section#a37-manifesto {
 
         height: ~"calc(76vw - 581px)";
 
+        & > .col:last-child {
+          height: 100%;
+          overflow-y: scroll;
+        }
+
         .manifesto-items {
           height: 100%;
+
+          .manifesto-item {
+            height: 80%;
+          }
         }
       }
 
