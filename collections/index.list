@@ -155,7 +155,7 @@
                                             <div class="col sqs-col-6 item-description">
                                                 {.repeated section items}
                                                     {title}
-                                                    {body}
+                                                    {bodyHtml}
                                                 {.end}
                                             </div>
                                         </div>
