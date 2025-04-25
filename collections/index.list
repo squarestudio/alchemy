@@ -144,7 +144,7 @@
                                 <img src="{mainImage.assetUrl}" alt="{title}">
                             </div>
                             <div class="sqs-layout">
-                                <div class="row sqs-row">
+                                <div class="manifesto-header">
                                     <h6>{description}</h6>
                                     <h2>{title}</h2>
                                 </div>
