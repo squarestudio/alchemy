@@ -15,14 +15,14 @@
                     {.repeated section items}
                         <div class="blog-item swiper-slide">
                             <div class="item-image">
-                                <a href="/{section.fullUrl}/blog/{urlId}">
+                                <a href="/blog/{urlId}">
                                     <img src="{mainImage.assetUrl}" alt="{title}">
                                     <img src="{mainImage.assetUrl}" alt="{title}">
                                 </a>
                             </div>
                             <div class="item-content">
                                 <div class="item-date">{addedOn|date %A, %B %d}</div>
-                                <h5 class="item-title">{title}</h5>
+                                <h5 class="item-title"><a href="/blog/{urlId}">{title}</a></h5>
                                 <div class="item-excerpt">{excerpt}</div>
                             </div>
                         </div>
