@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         a37ManifestoOffsetTop = a37ManifestoSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
     }
 
-    const welcomeSection = document.getElementById("benefits");
+    const welcomeSection = document.getElementById("welcome");
     let welcomeOffsetTop;
     if (welcomeSection) {
         let element = welcomeSection.querySelector('.sqs-col-12');
