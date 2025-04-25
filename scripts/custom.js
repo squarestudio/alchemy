@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let welcomeOffsetTop;
     if (welcomeSection) {
         let element = welcomeSection.querySelector('.sqs-col-12');
-        welcomeOffsetTop = element.getBoundingClientRect().top + window.scrollY
+        welcomeOffsetTop = element.getBoundingClientRect().top + window.scrollY + (window.innerHeight/4);
     }
 
     window.onload = function() {
