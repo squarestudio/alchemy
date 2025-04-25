@@ -1591,6 +1591,20 @@ section#blog {
     .blog-articles {
       margin-top: var(--gap-80);
       padding: var(--gap-32) 0;
+
+      .blog-item {
+        width: 416px;
+
+        .item-image {
+          aspect-ratio: 1 / 1.13;
+
+          img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
     }
   }
 }
