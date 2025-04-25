@@ -1685,7 +1685,17 @@ section#join-the-movement {
     padding-bottom: var(--gap-120);
     margin-bottom: var(--gap-80);
 
-
+    .sqs-layout {
+      .sqs-col-12 {
+        & > .row {
+          .col:first-child {
+            .sqs-block h3 {
+              margin-top: -12px;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
