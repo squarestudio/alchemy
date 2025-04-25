@@ -1573,7 +1573,110 @@ section#heat-beat-hiit {
   }
 }
 
-  /* FOOTER */
+/* BENEFITS */
+
+section#welcome {
+  .Index-page-content {
+    margin-top: var(--gap-120);
+    margin-bottom: var(--gap-120);
+
+    .sqs-block {
+      width: 100%;
+    }
+    .sqs-col-12 > .row {
+      display: flex;
+      column-gap: 24px;
+      margin-top: 0;
+
+      .col {
+        float: none !important;
+
+        transition: width .5s linear;
+      }
+
+      .col:first-child {
+        width: 25%;
+        position: relative;
+
+        .image-block {
+          .image-block-wrapper {
+            aspect-ratio: 1 / .895;
+
+            & > div {
+              padding-bottom: 0 !important;
+              height: 100%;
+
+              img {
+                width: ~"calc(100% + 20px)" !important;
+              }
+            }
+          }
+        }
+        .image-block + .image-block {
+          position: absolute;
+          top: 0;
+          left: 0;
+
+          .image-block-wrapper {
+            & > div {
+              img {
+                left: 0;
+                opacity: 0;
+
+                -webkit-transition: all 1s ease-in-out .1s;
+                transition: all 1s ease-in-out .1s;
+              }
+            }
+          }
+        }
+      }
+      .col.image-blur {
+        .image-block + .image-block {
+          .image-block-wrapper {
+            & > div {
+              img {
+                left: -20px;
+                opacity: .3;
+              }
+            }
+          }
+        }
+      }
+      .col:last-child {
+        width: 75%;
+
+        h2 {
+          position: relative;
+          margin-top: -24px;
+        }
+      }
+    }
+  }
+}
+body.welcome-blur section#welcome {
+  .Index-page-content {
+    .sqs-col-12 > .row {
+      .col:first-child {
+        width: 58.333%;
+        .image-block + .image-block {
+          .image-block-wrapper {
+            & > div {
+              img {
+                left: -50px;
+                opacity: .3;
+              }
+            }
+          }
+        }
+      }
+      .col:last-child {
+        width: 41.667%;
+      }
+    }
+  }
+}
+
+/* FOOTER */
 
 .Footer {
   -webkit-font-smoothing: antialiased !important;

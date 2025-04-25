@@ -54,6 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
         a37ManifestoOffsetTop = a37ManifestoSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
     }
 
+    const welcomeSection = document.getElementById("benefits");
+    let welcomeOffsetTop;
+    if (welcomeSection) {
+        let element = welcomeSection.querySelector('.sqs-col-12');
+        welcomeOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/1.6);
+    }
+
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
@@ -73,6 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(scrollPosition >= a37ManifestoOffsetTop) {
             document.body.classList.add('manifesto-blur');
+        }
+        if(scrollPosition >= welcomeOffsetTop) {
+            document.body.classList.add('welcome-blur');
         }
     });
 });
