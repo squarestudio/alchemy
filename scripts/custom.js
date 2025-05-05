@@ -50,6 +50,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const blogSection = document.getElementById("blog");
     if(blogSection) {
+
+        let blogLength = blogSection.querySelectorAll('.blog-item').length;
+        console.log(blogLength);
+
         const blogSwiper = new Swiper('.swiper', {
             slidesPerView: "auto",
             centeredSlides: true,
