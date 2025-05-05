@@ -1683,6 +1683,16 @@ section#blog {
         .item-image {
           aspect-ratio: 1 / .62;
         }
+        .item-content {
+          .item-excerpt {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2; /* Adjust this number based on your font size and expected words per line */
+            -webkit-box-orient: vertical;
+            max-height: 50px;
+          }
+        }
       }
     }
   }
