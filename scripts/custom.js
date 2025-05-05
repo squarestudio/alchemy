@@ -51,8 +51,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const blogSection = document.getElementById("blog");
     if(blogSection) {
         const blogSwiper = new Swiper('.swiper', {
-            speed: 400,
-            spaceBetween: 100,
+            slidesPerView: 4,
+            spaceBetween: 30,
+            centeredSlides: true
         });
     }
 
