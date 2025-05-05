@@ -17,8 +17,8 @@
                     <div class="blog-item swiper-slide">
                         <div class="item-image">
                             <a href="/blog/{urlId}">
-                                <img src="{mainImage.assetUrl}" alt="{title}">
-                                <img src="{mainImage.assetUrl}" alt="{title}">
+                                <img src="" alt="{title}">
+                                <img src="" alt="{title}">
                             </a>
                         </div>
                         <div class="item-content">
