@@ -180,6 +180,7 @@
     </div>
 
     <squarespace:script src="site-bundle.js" combo="false" />
+    <squarespace:script src="swiper-bundle.min.js" combo="false" />
     <squarespace:script src="custom.js" combo="false" />
 
     {squarespace-footers}
