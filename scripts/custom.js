@@ -52,21 +52,23 @@ document.addEventListener("DOMContentLoaded", function () {
     if(blogSection) {
 
         let blogLength = blogSection.querySelectorAll('.blog-item').length;
-        console.log(blogLength);
+        if(blogLength > 2) {
+            const blogSwiper = new Swiper('.swiper', {
+                slidesPerView: "auto",
+                centeredSlides: true,
+                spaceBetween: 24,
+                initialSlide: 1
+            });
 
-        const blogSwiper = new Swiper('.swiper', {
-            slidesPerView: "auto",
-            centeredSlides: true,
-            spaceBetween: 24,
-            initialSlide: 1
-        });
-
-        blogSwiper.on('slideChange', () => {
-            const realSlideCount = blogSwiper.slides.length;
-            if (blogSwiper.activeIndex === 0 || blogSwiper.activeIndex === realSlideCount - 1) {
-                blogSwiper.slideTo(blogSwiper.previousIndex);
-            }
-        });
+            blogSwiper.on('slideChange', () => {
+                const realSlideCount = blogSwiper.slides.length;
+                if (blogSwiper.activeIndex === 0 || blogSwiper.activeIndex === realSlideCount - 1) {
+                    blogSwiper.slideTo(blogSwiper.previousIndex);
+                }
+            });
+        }else{
+            blogSection.classList.add('blogItems'+blogLength);
+        }
     }
 
     const a37ManifestoSection = document.getElementById("a37-manifesto");
