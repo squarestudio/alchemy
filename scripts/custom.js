@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const blogSection = document.getElementById("blog");
     if(blogSection) {
 
-        let blogLength = blogSection.querySelectorAll('.blog-item').length;
+        let blogLength = blogSection.querySelectorAll('.blog-item:not(.more-is-coming)').length;
         if(blogLength > 2) {
             const blogSwiper = new Swiper('.swiper', {
                 slidesPerView: "auto",
