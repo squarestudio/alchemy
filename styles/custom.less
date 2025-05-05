@@ -1668,13 +1668,16 @@ section#blog {
   }
   &.blogItems1 {
     .blog-item.more-is-coming {
-      display: block !important;
+      display: flex !important;
+      justify-content: center;
+      align-items: center;
     }
     .swiper-wrapper {
       column-gap: 24px;
 
       .blog-item {
         width: 50% !important;
+        background: var(--text-20);
 
         .item-image {
           aspect-ratio: 1 / .62;
