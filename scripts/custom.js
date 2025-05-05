@@ -58,9 +58,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         blogSwiper.on('slideChange', () => {
-            const realSlideCount = swiper.slides.length;
-            if (swiper.activeIndex === 0 || swiper.activeIndex === realSlideCount - 1) {
-                swiper.slideTo(swiper.previousIndex);
+            const realSlideCount = blogSwiper.slides.length;
+            if (blogSwiper.activeIndex === 0 || blogSwiper.activeIndex === realSlideCount - 1) {
+                blogSwiper.slideTo(blogSwiper.previousIndex);
             }
         });
     }
