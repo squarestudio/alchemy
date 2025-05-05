@@ -48,6 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
         cols[0].click();
     }
 
+    const blogSection = document.getElementById("blog");
+    if(blogSection) {
+        const blogSwiper = new Swiper('.swiper', {
+            speed: 400,
+            spaceBetween: 100,
+        });
+    }
+
     const a37ManifestoSection = document.getElementById("a37-manifesto");
     let a37ManifestoOffsetTop;
     if (a37ManifestoSection) {
