@@ -56,6 +56,13 @@ document.addEventListener("DOMContentLoaded", function () {
             spaceBetween: 24,
             initialSlide: 1
         });
+
+        blogSwiper.on('slideChange', () => {
+            const realSlideCount = swiper.slides.length;
+            if (swiper.activeIndex === 0 || swiper.activeIndex === realSlideCount - 1) {
+                swiper.slideTo(swiper.previousIndex);
+            }
+        });
     }
 
     const a37ManifestoSection = document.getElementById("a37-manifesto");
