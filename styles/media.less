@@ -115,12 +115,18 @@
   }
 
   /* HERO */
+  section#hero .sqs-layout {
+    padding: 0;
+  }
   section#hero .sqs-layout>.row:nth-child(1) {
     margin-top: var(--gap-80);
     flex-direction: column;
   }
   section#hero .sqs-layout>.row:nth-child(1)>.col {
     width: 100%;
+  }
+  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(1) {
+    padding: 0 16px;
   }
   section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(2) .button-block {
     display: none;
