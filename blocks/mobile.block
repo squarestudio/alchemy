@@ -63,13 +63,14 @@
         <nav class="Mobile-overlay-nav Mobile-overlay-nav--primary" data-content-field="navigation">
           <squarespace:navigation navigationId="mainNavigation" template="mobile-nav" />
         </nav>
-        <nav class="Mobile-overlay-nav Mobile-overlay-nav--secondary" data-content-field="navigation">
-          <squarespace:navigation navigationId="secondaryNavigation" template="mobile-nav" />
-        </nav>
-      </div>
-      <div class="Mobile-overlay-folders" data-content-field="navigation">
-        <squarespace:navigation navigationId="mainNavigation" template="mobile-nav-folder" />
-        <squarespace:navigation navigationId="secondaryNavigation" template="mobile-nav-folder" />
+        <div class="Mobile-overlay-contacts">
+          <div class="Mobile-overlay-book">
+            <squarespace:block-field id="MobileOverlayBook" class="Mobile-blocks" columns="12" label="Mobile Overlay Book" />
+          </div>
+          <div class="Mobile-overlay-socials">
+            <squarespace:block-field id="MobileOverlaySocials" class="Mobile-blocks" columns="12" label="Mobile Overlay Socials" />
+          </div>
+        </div>
       </div>
     </div>
     <button class="Mobile-overlay-close" data-controller="MobileOverlayToggle" aria-label="{localizedStrings.closeNavigation}">
