@@ -180,6 +180,9 @@ document.addEventListener("DOMContentLoaded", function () {
         const docHeight = document.body.scrollHeight - window.innerHeight;
         const scrollPercent = Math.min(scrollTop / docHeight, 1);
 
+        console.log(scrollTop);
+        console.log(docHeight);
+
         const headerColor = getInterpolatedColor(reversedGradientStops, scrollPercent);
         const overlayColor = getInterpolatedColor(reversedGradientStops, scrollPercent);
 
