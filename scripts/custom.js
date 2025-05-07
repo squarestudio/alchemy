@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }else{
             blogSection.classList.add('blogItems'+blogLength);
             blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-            console.log(blogHeight);
+            blogSection.querySelector('.swiper-wrapper').style.height = blogHeight;
 
             if(window.innerWidth <= 1024) {
                 blogSwiper = new Swiper('.swiper', {
