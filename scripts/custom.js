@@ -52,8 +52,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if(blogSection) {
 
         let blogLength = blogSection.querySelectorAll('.blog-item:not(.more-is-coming)').length;
+        let blogSwiper;
         if(blogLength > 2) {
-            const blogSwiper = new Swiper('.swiper', {
+            blogSwiper = new Swiper('.swiper', {
                 slidesPerView: "auto",
                 centeredSlides: true,
                 spaceBetween: 24,
@@ -70,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             if(window.innerWidth > 1024) {
                 blogSection.classList.add('blogItems'+blogLength);
             }else{
-                const blogSwiper = new Swiper('.swiper', {
+                blogSwiper = new Swiper('.swiper', {
                     slidesPerView: 1
                 });
             }
