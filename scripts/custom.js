@@ -68,9 +68,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }else{
-            if(window.innerWidth > 1024) {
-                blogSection.classList.add('blogItems'+blogLength);
-            }else{
+            blogSection.classList.add('blogItems'+blogLength);
+            if(window.innerWidth <= 1024) {
                 blogSwiper = new Swiper('.swiper', {
                     slidesPerView: 1,
                     // If we need pagination
