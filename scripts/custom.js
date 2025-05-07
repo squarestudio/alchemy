@@ -132,17 +132,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
+    const mobileOverlay = document.querySelector(".Mobile-overlay-menu");
 
     const gradientStops = [
-        "#00C3B2",
-        "#06E181",
-        "#99ED61",
-        "#FFDC00",
-        "#FF8B92",
-        "#BD00C6",
-        "#F25E8F",
+        "#F8EC1B",
         "#FF9700",
-        "#F8EC1B"
+        "#F25E8F",
+        "#BD00C6",
+        "#FF8B92",
+        "#FFDC00",
+        "#99ED61",
+        "#06E181",
+        "#00C3B2"
     ];
 
     function interpolateColor(color1, color2, factor) {
@@ -159,23 +160,28 @@ document.addEventListener("DOMContentLoaded", function () {
         return `rgb(${r}, ${g}, ${b})`;
     }
 
+    function getInterpolatedColor(stops, percent) {
+        const rangeCount = stops.length - 1;
+        const exactIndex = percent * rangeCount;
+        const lowerIndex = Math.floor(exactIndex);
+        const upperIndex = Math.min(lowerIndex + 1, rangeCount);
+        const factor = exactIndex - lowerIndex;
+
+        const startColor = stops[lowerIndex];
+        const endColor = stops[upperIndex];
+        return interpolateColor(startColor, endColor, factor);
+    }
+
     function updateGradient() {
         const scrollTop = window.scrollY;
         const docHeight = document.body.scrollHeight - window.innerHeight;
         const scrollPercent = Math.min(scrollTop / docHeight, 1);
 
-        // обчислюємо індекс діапазону
-        const rangeCount = gradientStops.length - 1;
-        const exactIndex = scrollPercent * rangeCount;
-        const lowerIndex = Math.floor(exactIndex);
-        const upperIndex = Math.min(lowerIndex + 1, rangeCount);
-        const factor = exactIndex - lowerIndex;
+        const headerColor = getInterpolatedColor(gradientStops, scrollPercent);
+        const overlayColor = getInterpolatedColor(gradientStops, scrollPercent);
 
-        const startColor = gradientStops[lowerIndex];
-        const endColor = gradientStops[upperIndex];
-        const currentColor = interpolateColor(startColor, endColor, factor);
-
-        header.style.background = `linear-gradient(0deg, ${currentColor}, ${currentColor})`;
+        header.style.background = `linear-gradient(0deg, ${headerColor}, ${headerColor})`;
+        mobileOverlay.style.background = `linear-gradient(0deg, ${overlayColor}, ${overlayColor})`;
     }
 
     window.addEventListener("scroll", updateGradient);
