@@ -32,6 +32,9 @@
                     <h5>More is coming</h5>
                 </div>
               </div>
+
+               <!-- If we need pagination -->
+               <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
