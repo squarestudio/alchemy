@@ -146,9 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
         "#F8EC1B"
     ];
 
-    let lastValidScrollPercent = 0;
-    let isMenuOpen = false;
-
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
         const c2 = parseInt(color2.slice(1), 16);
@@ -175,40 +172,51 @@ document.addEventListener("DOMContentLoaded", function () {
         return interpolateColor(startColor, endColor, factor);
     }
 
-    function applyGradient(percent) {
-        const headerColor = getInterpolatedColor(gradientStops, percent);
-        const overlayColor = getInterpolatedColor(gradientStops, percent);
+    function getElementScrollPercent(element) {
+        const rect = element.getBoundingClientRect();
+        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
-        header.style.background = `linear-gradient(0deg, ${headerColor}, ${headerColor})`;
-        mobileOverlay.style.background = `linear-gradient(0deg, ${overlayColor}, ${overlayColor})`;
+        const start = rect.top + window.scrollY;
+        const end = rect.bottom + window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+
+        const startPercent = Math.min(Math.max(start / docHeight, 0), 1);
+        const endPercent = Math.min(Math.max(end / docHeight, 0), 1);
+
+        return [startPercent, endPercent];
     }
 
-    function updateGradient() {
+    function applyGradientToElement(element) {
+        const [startPercent, endPercent] = getElementScrollPercent(element);
+
+        const startColor = getInterpolatedColor(gradientStops, startPercent);
+        const endColor = getInterpolatedColor(gradientStops, endPercent);
+
+        element.style.background = `linear-gradient(180deg, ${startColor}, ${endColor})`;
+    }
+
+    function updateGradients() {
+        const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (isMenuOpen) return;
 
-        const scrollTop = window.scrollY;
-        const docHeight = document.body.scrollHeight - window.innerHeight;
-        const scrollPercent = Math.min(scrollTop / docHeight, 1);
-
-        lastValidScrollPercent = scrollPercent;
-        applyGradient(scrollPercent);
+        applyGradientToElement(header);
+        applyGradientToElement(mobileOverlay);
     }
 
-// Слідкуємо за класом на body
-    const observer = new MutationObserver(() => {
-        isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
+// Обновлення при скролі
+    window.addEventListener("scroll", updateGradients);
+    updateGradients();
 
+// Спостереження за відкриттям меню
+    const observer = new MutationObserver(() => {
+        const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (!isMenuOpen) {
-            // Після закриття меню — відновлюємо останній збережений колір
-            applyGradient(lastValidScrollPercent);
+            updateGradients(); // після закриття меню відновлюємо
         }
     });
 
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
-// Події
-    window.addEventListener("scroll", updateGradient);
-    updateGradient();
 
 
 });
