@@ -1848,7 +1848,7 @@ section#join-the-movement {
             }
           }
         }
-        & > .sqs-block {
+        & > .row + .sqs-block {
           width: 100%;
           margin-top: var(--gap-120);
 
@@ -1912,6 +1912,9 @@ section#join-the-movement {
               }
             }
           }
+        }
+        & > .sqs-block + .sqs-block {
+          display: none;
         }
       }
     }
