@@ -28,7 +28,7 @@
                         </div>
                     </div>
                 {.end}
-                <div class="blog-item more-is-coming">
+                <div class="blog-item swiper-slide more-is-coming">
                     <h5>More is coming</h5>
                 </div>
               </div>
