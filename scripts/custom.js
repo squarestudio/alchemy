@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-            console.log('Swiper wrapper height:', blogHeight);
+            console.log(blogHeight);
 
             blogSwiper.on('slideChange', () => {
                 const realSlideCount = blogSwiper.slides.length;
@@ -81,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
 
                 blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-                console.log('Swiper wrapper height:', blogHeight);
+                console.log(blogHeight);
             }
         }
     }
