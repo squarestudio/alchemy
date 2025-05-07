@@ -133,6 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
     const mobileOverlay = document.querySelector(".Mobile-overlay-menu");
+
     const gradientStops = [
         "#00C3B2",
         "#06E181",
@@ -146,6 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
     let lastValidScrollPercent = 0;
+    let isMenuOpen = false;
 
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
@@ -182,7 +184,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function updateGradient() {
-        const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (isMenuOpen) return;
 
         const scrollTop = window.scrollY;
@@ -193,18 +194,21 @@ document.addEventListener("DOMContentLoaded", function () {
         applyGradient(scrollPercent);
     }
 
-// Щоб градієнт не скидався при закритті меню
+// Слідкуємо за класом на body
     const observer = new MutationObserver(() => {
-        const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
+        isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
+
         if (!isMenuOpen) {
-            // Після закриття меню відновлюємо градієнт
+            // Після закриття меню — відновлюємо останній збережений колір
             applyGradient(lastValidScrollPercent);
         }
     });
 
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
+// Події
     window.addEventListener("scroll", updateGradient);
     updateGradient();
+
 
 });
