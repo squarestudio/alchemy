@@ -72,8 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }else{
             blogSection.classList.add('blogItems'+blogLength);
-            blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-            blogSection.querySelector('.swiper-wrapper').style.height = blogHeight+'px';
 
             if(window.innerWidth <= 1024) {
                 blogSwiper = new Swiper('.swiper', {
@@ -82,6 +80,12 @@ document.addEventListener("DOMContentLoaded", function () {
                         el: '.swiper-pagination',
                     },
                 });
+
+                blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
+                blogSection.querySelector('.swiper-wrapper').style.height = blogHeight+'px';
+            }else{
+                blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
+                blogSection.querySelector('.swiper-wrapper').style.height = blogHeight+'px';
             }
         }
     }
