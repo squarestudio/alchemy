@@ -72,7 +72,6 @@ document.addEventListener("DOMContentLoaded", function () {
             if(window.innerWidth <= 1024) {
                 blogSwiper = new Swiper('.swiper', {
                     slidesPerView: 2,
-                    // If we need pagination
                     pagination: {
                         el: '.swiper-pagination',
                     },
