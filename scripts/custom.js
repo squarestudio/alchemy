@@ -67,6 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }else{
+            console.log(window.innerWidth);
             blogSection.classList.add('blogItems'+blogLength);
         }
     }
