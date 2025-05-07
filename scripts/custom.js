@@ -129,4 +129,56 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.add('welcome-blur');
         }
     });
+
+
+    const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
+
+    const gradientStops = [
+        "#F8EC1B",
+        "#FF9700",
+        "#F25E8F",
+        "#BD00C6",
+        "#FF8B92",
+        "#FFDC00",
+        "#99ED61",
+        "#06E181",
+        "#00C3B2"
+    ];
+
+    function interpolateColor(color1, color2, factor) {
+        const c1 = parseInt(color1.slice(1), 16);
+        const c2 = parseInt(color2.slice(1), 16);
+
+        const r1 = (c1 >> 16) & 0xff, g1 = (c1 >> 8) & 0xff, b1 = c1 & 0xff;
+        const r2 = (c2 >> 16) & 0xff, g2 = (c2 >> 8) & 0xff, b2 = c2 & 0xff;
+
+        const r = Math.round(r1 + (r2 - r1) * factor);
+        const g = Math.round(g1 + (g2 - g1) * factor);
+        const b = Math.round(b1 + (b2 - b1) * factor);
+
+        return `rgb(${r}, ${g}, ${b})`;
+    }
+
+    function updateGradient() {
+        const scrollTop = window.scrollY;
+        const docHeight = document.body.scrollHeight - window.innerHeight;
+        const scrollPercent = Math.min(scrollTop / docHeight, 1);
+
+        // обчислюємо індекс діапазону
+        const rangeCount = gradientStops.length - 1;
+        const exactIndex = scrollPercent * rangeCount;
+        const lowerIndex = Math.floor(exactIndex);
+        const upperIndex = Math.min(lowerIndex + 1, rangeCount);
+        const factor = exactIndex - lowerIndex;
+
+        const startColor = gradientStops[lowerIndex];
+        const endColor = gradientStops[upperIndex];
+        const currentColor = interpolateColor(startColor, endColor, factor);
+
+        header.style.background = `linear-gradient(0deg, ${currentColor}, ${currentColor})`;
+    }
+
+    window.addEventListener("scroll", updateGradient);
+    window.addEventListener("resize", updateGradient);
+    updateGradient();
 });
