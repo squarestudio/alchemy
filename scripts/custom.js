@@ -146,6 +146,9 @@ document.addEventListener("DOMContentLoaded", function () {
         "#00C3B2"
     ];
 
+    // Обернений масив кольорів для overlay
+    const reversedGradientStops = [...gradientStops].reverse();
+
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
         const c2 = parseInt(color2.slice(1), 16);
@@ -177,8 +180,8 @@ document.addEventListener("DOMContentLoaded", function () {
         const docHeight = document.body.scrollHeight - window.innerHeight;
         const scrollPercent = Math.min(scrollTop / docHeight, 1);
 
-        const headerColor = getInterpolatedColor(gradientStops, scrollPercent);
-        const overlayColor = getInterpolatedColor(gradientStops, scrollPercent);
+        const headerColor = getInterpolatedColor(reversedGradientStops, scrollPercent);
+        const overlayColor = getInterpolatedColor(reversedGradientStops, scrollPercent);
 
         header.style.background = `linear-gradient(0deg, ${headerColor}, ${headerColor})`;
         mobileOverlay.style.background = `linear-gradient(0deg, ${overlayColor}, ${overlayColor})`;
