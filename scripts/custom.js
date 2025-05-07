@@ -67,8 +67,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             });
         }else{
-            console.log(window.innerWidth);
-            blogSection.classList.add('blogItems'+blogLength);
+            if(window.innerWidth > 1024) {
+                blogSection.classList.add('blogItems'+blogLength);
+            }else{
+                const blogSwiper = new Swiper('.swiper', {
+                    slidesPerView: 1
+                });
+            }
         }
     }
 
