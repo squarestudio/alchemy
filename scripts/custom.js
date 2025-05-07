@@ -134,15 +134,15 @@ document.addEventListener("DOMContentLoaded", function () {
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
 
     const gradientStops = [
-        "#F8EC1B",
-        "#FF9700",
-        "#F25E8F",
-        "#BD00C6",
-        "#FF8B92",
-        "#FFDC00",
-        "#99ED61",
+        "#00C3B2",
         "#06E181",
-        "#00C3B2"
+        "#99ED61",
+        "#FFDC00",
+        "#FF8B92",
+        "#BD00C6",
+        "#F25E8F",
+        "#FF9700",
+        "#F8EC1B"
     ];
 
     function interpolateColor(color1, color2, factor) {
