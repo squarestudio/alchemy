@@ -50,9 +50,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const blogSection = document.getElementById("blog");
     if(blogSection) {
-
         let blogLength = blogSection.querySelectorAll('.blog-item:not(.more-is-coming)').length;
         let blogSwiper;
+        let blogHeight;
         if(blogLength > 2) {
             blogSwiper = new Swiper('.swiper', {
                 slidesPerView: "auto",
@@ -61,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 initialSlide: 1
             });
 
-            const blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
+            blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
             console.log('Swiper wrapper height:', blogHeight);
 
             blogSwiper.on('slideChange', () => {
@@ -79,6 +79,9 @@ document.addEventListener("DOMContentLoaded", function () {
                         el: '.swiper-pagination',
                     },
                 });
+
+                blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
+                console.log('Swiper wrapper height:', blogHeight);
             }
         }
     }
