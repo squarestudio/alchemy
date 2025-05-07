@@ -71,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
             blogSection.classList.add('blogItems'+blogLength);
             if(window.innerWidth <= 1024) {
                 blogSwiper = new Swiper('.swiper', {
-                    slidesPerView: 1,
+                    slidesPerView: 2,
                     // If we need pagination
                     pagination: {
                         el: '.swiper-pagination',
