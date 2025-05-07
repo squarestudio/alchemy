@@ -72,6 +72,9 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }else{
             blogSection.classList.add('blogItems'+blogLength);
+            blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
+            console.log(blogHeight);
+
             if(window.innerWidth <= 1024) {
                 blogSwiper = new Swiper('.swiper', {
                     slidesPerView: 2,
@@ -79,9 +82,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         el: '.swiper-pagination',
                     },
                 });
-
-                blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-                console.log(blogHeight);
             }
         }
     }
