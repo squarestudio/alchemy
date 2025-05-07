@@ -188,6 +188,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     window.addEventListener("scroll", updateGradient);
-    window.addEventListener("resize", updateGradient);
+    // window.addEventListener("resize", updateGradient);
     updateGradient();
 });
