@@ -81,8 +81,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     },
                 });
 
-                blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-                blogSection.querySelector('.swiper-wrapper').style.height = blogHeight+'px';
+                setTimeout(function(){
+                    blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
+                    blogSection.querySelector('.swiper-wrapper').style.height = blogHeight+'px';
+                },500)
             }else{
                 blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
                 blogSection.querySelector('.swiper-wrapper').style.height = blogHeight+'px';
