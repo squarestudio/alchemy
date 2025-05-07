@@ -61,8 +61,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 initialSlide: 1
             });
 
-            // const blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-            // console.log('Swiper wrapper height:', blogHeight);
+            const blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
+            console.log('Swiper wrapper height:', blogHeight);
 
             blogSwiper.on('slideChange', () => {
                 const realSlideCount = blogSwiper.slides.length;
