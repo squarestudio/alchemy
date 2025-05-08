@@ -147,7 +147,7 @@
                                                             <img src="{assetUrl}" alt="{title}">
                                                         </div>
                                                         <h5>{title}</h5>
-                                                        <div>{excerpt}</div>
+                                                        <div><p>{excerpt}</p></div>
                                                     </li>
                                                 {.end}
                                             </ul>
