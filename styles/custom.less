@@ -719,6 +719,23 @@ section#formula-items {
         padding-left: 24px;
         padding-right: 24px;
         box-sizing: border-box;
+
+        border-top: 1px solid var(--stroke-20);
+
+        .image {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          padding: var(--gap-40) 0;
+          border-bottom: 1px solid var(--stroke-20);
+
+          img {
+            display: block;
+            width: auto;
+            height: 190px;
+          }
+        }
       }
     }
 
@@ -744,6 +761,7 @@ section#formula-items {
               flex-direction: column;
               justify-content: flex-start;
               align-items: center;
+
               svg {
                 margin: var(--gap-40) auto;
               }
