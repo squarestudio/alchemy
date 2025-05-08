@@ -174,8 +174,12 @@
                                                 <ul>
                                                     {.repeated section items}
                                                         <li class="item">
-                                                            <h5>{title}</h5>
-                                                            <div>{body}</div>
+                                                            <div class="question">
+                                                                <h5>{title}</h5>
+                                                            </div>
+                                                            <div class="answer">
+                                                                {body}
+                                                            </div>
                                                         </li>
                                                     {.end}
                                                 </ul>
