@@ -109,6 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let element = welcomePricingSection.querySelector('.sqs-col-12');
         welcomePricingOffsetTop = element.getBoundingClientRect().top + window.scrollY
     }
+    const welcomeFaqSection = document.getElementById("welcome-faq");
+    let welcomeFaqOffsetTop;
+    if (welcomeFaqSection) {
+        let element = welcomeFaqSection.querySelector('.sqs-col-12');
+        welcomeFaqOffsetTop = element.getBoundingClientRect().top + window.scrollY
+    }
 
     const pricingImagesSection = document.getElementById("pricing-images");
     let pricingImagesOffsetTop;
@@ -136,10 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(scrollPosition >= a37ManifestoOffsetTop) {
             document.body.classList.add('manifesto-blur');
         }
-        if(scrollPosition >= welcomeOffsetTop) {
-            document.body.classList.add('welcome-blur');
-        }
-        if(scrollPosition >= welcomePricingOffsetTop) {
+        if(scrollPosition >= welcomeOffsetTop || scrollPosition >= welcomePricingOffsetTop || scrollPosition >= welcomeFaqOffsetTop) {
             document.body.classList.add('welcome-blur');
         }
 
