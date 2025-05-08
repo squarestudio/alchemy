@@ -2369,6 +2369,17 @@ section#options {
             display: flex;
             column-gap: var(--gap-24);
 
+            .markdown-block {
+              h5:first-child {
+                height: 48px;
+                line-height: 48px;
+              }
+            }
+
+            h3 {
+              line-height: 80%;
+            }
+
             &:not(:last-child) {
               border-top: 1px solid var(--stroke-20);
             }
