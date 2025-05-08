@@ -707,7 +707,7 @@ section#formula-items {
     margin-bottom: var(--gap-120);
 
     ul.swiper-wrapper {
-      padding: 0 var(--gap-12);
+      padding: 0;
       margin: 0;
       list-style: none;
 
@@ -735,6 +735,17 @@ section#formula-items {
             width: auto;
             height: 190px;
           }
+        }
+
+        &:first-child {
+          padding-left: 12px;
+        }
+        &:not(:last-child) {
+          border-right: 1px solid var(--stroke-20);
+          box-sizing: border-box;
+        }
+        &:last-child {
+          padding-right: 12px;
         }
       }
     }
