@@ -166,7 +166,7 @@
                                                 <h2>{title}</h2>
                                             </div>
                                         </div>
-                                        <div class="row sqs-row faq-header">
+                                        <div class="row sqs-row faq-columns">
                                             <div class="col sqs-col-6">
                                                 <div>{description}</div>
                                             </div>
