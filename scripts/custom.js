@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let blogSwiper;
         let blogHeight;
         if(blogLength > 2) {
-            blogSwiper = new Swiper('.swiper', {
+            blogSwiper = new Swiper('#blog .swiper', {
                 slidesPerView: "auto",
                 centeredSlides: true,
                 spaceBetween: 24,
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
             blogSection.classList.add('blogItems'+blogLength);
 
             if(window.innerWidth <= 1024) {
-                blogSwiper = new Swiper('.swiper', {
+                blogSwiper = new Swiper('#blog .swiper', {
                     slidesPerView: 1,
                     pagination: {
                         el: '.swiper-pagination',
@@ -174,7 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function getElementScrollPercent(element) {
         const rect = element.getBoundingClientRect();
-        const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+        // const windowHeight = window.innerHeight || document.documentElement.clientHeight;
 
         const start = rect.top + window.scrollY;
         const end = rect.bottom + window.scrollY;
