@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     const heroSection = document.getElementById("hero");
-    const heroImage = heroSection.querySelector(".col:nth-child(2)");
-    if (heroSection && heroImage) {
-        heroImage.classList.add("image-blur");
+    if (heroSection && heroSection.querySelector(".col:nth-child(2)")) {
+        heroSection.querySelector(".col:nth-child(2)").classList.add("image-blur");
     }
 
     const benefitsSection = document.getElementById("benefits");
