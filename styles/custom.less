@@ -2360,6 +2360,16 @@ section#options {
         display: flex;
         column-gap: 24px;
         align-items: center;
+
+        & > .col:nth-child(3) {
+          .markdown-block {
+            .sqs-block-content {
+              display: flex;
+              flex-direction: column;
+              row-gap: 40px;
+            }
+          }
+        }
       }
     }
   }
