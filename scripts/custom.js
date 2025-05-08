@@ -110,6 +110,12 @@ document.addEventListener("DOMContentLoaded", function () {
         welcomePricingOffsetTop = element.getBoundingClientRect().top + window.scrollY
     }
 
+    const pricingImagesSection = document.getElementById("pricing-images");
+    let pricingImagesOffsetTop;
+    if (pricingImagesSection) {
+        pricingImagesOffsetTop = pricingImagesSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
+    }
+
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
@@ -136,8 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
         if(scrollPosition >= welcomePricingOffsetTop) {
             document.body.classList.add('welcome-blur');
         }
+
+        if(scrollPosition >= pricingImagesOffsetTop) {
+            document.body.classList.add('pricing-images-blur');
+        }
+
     });
 
+    /* HEADER GRADIENT */
 
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
     const mobileOverlay = document.querySelector(".Mobile-overlay-menu");
@@ -214,11 +226,11 @@ document.addEventListener("DOMContentLoaded", function () {
         applyGradientToElement(mobileOverlay);
     }
 
-// Обновлення при скролі
+    // Оновлення при скролі
     window.addEventListener("scroll", updateGradients);
     updateGradients();
 
-// Спостереження за відкриттям меню
+    // Спостереження за відкриттям меню
     const observer = new MutationObserver(() => {
         const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (!isMenuOpen) {
@@ -227,7 +239,4 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
-
-
-
 });
