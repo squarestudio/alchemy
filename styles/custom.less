@@ -2261,6 +2261,14 @@ section#invest-in-your-movement {
           flex-direction: column;
           row-gap: 60px;
 
+          & > .markdown-block {
+            .sqs-block-content {
+              h6:not(.medium) {
+                font-family: var(--font-regular);
+                font-weight: 400;
+              }
+            }
+          }
           & > .markdown-block:nth-child(1) {
             .sqs-block-content {
               display: flex;
