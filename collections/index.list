@@ -134,7 +134,7 @@
                         </div>
                     </section>
                 {.or}
-                    {.equal? typeName "list"}
+                    {.equal? typeName "formula"}
                         <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
                             <div class="Index-page-content">
                                 <div class="sqs-layout">
