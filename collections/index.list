@@ -167,10 +167,10 @@
                                             </div>
                                         </div>
                                         <div class="row sqs-row faq-columns">
-                                            <div class="col sqs-col-6">
+                                            <div class="col sqs-col-5">
                                                 <div>{description}</div>
                                             </div>
-                                            <div class="col sqs-col-6">
+                                            <div class="col sqs-col-7">
                                                 <ul>
                                                     {.repeated section items}
                                                         <li class="item">
