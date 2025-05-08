@@ -231,9 +231,6 @@
 
 
 
-
-
-
   /* HERO */
 
   section#hero .sqs-layout {
@@ -286,13 +283,6 @@
   }
   section#formula .Index-page-content .sqs-col-12 .row {
     margin-top: var(--gap-80);
-    flex-direction: column;
-  }
-  section#formula .Index-page-content .sqs-col-12 .row>.col {
-    width: 100%;
-  }
-  section#formula .Index-page-content .sqs-col-12 .row>.col:not(:last-child) {
-    border-right: none;
   }
 
   /* BENEFITS */
@@ -594,6 +584,16 @@
 
 @media only screen and (max-width:820px) {
 
+  /* FORMULA */
+  section#formula .Index-page-content .sqs-col-12 .row {
+    flex-direction: column;
+  }
+  section#formula .Index-page-content .sqs-col-12 .row>.col {
+    width: 100%;
+  }
+  section#formula .Index-page-content .sqs-col-12 .row>.col:not(:last-child) {
+    border-right: none;
+  }
 }
 
 @media only screen and (max-width:500px) {
