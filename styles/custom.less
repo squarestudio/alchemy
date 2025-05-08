@@ -2361,6 +2361,13 @@ section#options {
         column-gap: 24px;
         align-items: center;
 
+        & > .col:nth-child(1) {
+          & > .row {
+            &:not(:last-child) {
+              border-top: 1px solid var(--stroke-20);
+            }
+          }
+        }
         & > .col:nth-child(3) {
           .markdown-block {
             .sqs-block-content {
