@@ -161,6 +161,10 @@
                             <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
                                 <div class="Index-page-content">
                                     <div class="sqs-layout">
+                                        <div class="faq-header">
+                                            <h2>{title}</h2>
+                                        </div>
+                                        <div>{description}</div>
                                         <div class="row sqs-row">
                                             <div class="col sqs-col-12">
                                                 <ul>
