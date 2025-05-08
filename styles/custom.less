@@ -2258,15 +2258,17 @@ section#invest-in-your-movement {
 
         .col {
           & > .markdown-block:nth-child(1) {
-            display: flex;
-            flex-direction: column;
-            row-gap: var(--gap-24);
+            .sqs-block-content {
+              display: flex;
+              flex-direction: column;
+              row-gap: var(--gap-24);
 
-            h6 {
-              line-height: 100%;
-            }
-            h6 + h5 {
-              line-height: 110%;
+              h6 {
+                line-height: 100%;
+              }
+              h6 + h5 {
+                line-height: 110%;
+              }
             }
           }
           & > .horizontalrule-block {
