@@ -699,59 +699,6 @@ section#formula {
          text-align: center;
          line-height: 100%;
        }
-
-       .row:before,
-       .row:after {
-         display: none;
-       }
-       .row {
-         margin-top: var(--gap-100);
-
-         display: flex;
-         background: var(--background-color);
-
-         & > .col {
-           float: none !important;
-           width: 25%;
-           padding-left: 24px;
-           padding-right: 24px;
-           box-sizing: border-box;
-
-           .code-block {
-             border-top: 1px solid var(--stroke-20);
-
-             .sqs-block-content {
-               display: flex;
-               flex-direction: column;
-               justify-content: flex-start;
-               align-items: center;
-               svg {
-                 margin: var(--gap-40) auto;
-               }
-               h5 {
-                 width: 100%;
-                 border-top: 1px solid var(--stroke-20);
-                 padding-top: var(--gap-40);
-
-                 text-align: center;
-               }
-             }
-           }
-           .code-block + .html-block {
-             margin-top: var(--gap-24);
-           }
-         }
-         & > .col:first-child {
-           padding-left: 12px;
-         }
-         & > .col:not(:last-child) {
-           border-right: 1px solid var(--stroke-20);
-           box-sizing: border-box;
-         }
-         & > .col:last-child {
-           padding-right: 12px;
-         }
-       }
      }
    }
 }
@@ -763,23 +710,19 @@ section#formula-items {
       padding: 0;
       margin: 0;
       list-style: none;
+
+      display: flex;
+      background: var(--background-color);
+
+      li.swiper-slide {
+        width: 25%;
+        padding-left: 24px;
+        padding-right: 24px;
+        box-sizing: border-box;
+      }
     }
 
     .sqs-col-12 {
-
-      & > .code-block + .html-block {
-        margin-top: var(--gap-16);
-      }
-
-      h6 {
-        text-align: center;
-        line-height: 100%;
-      }
-
-      .row:before,
-      .row:after {
-        display: none;
-      }
       .row {
         margin-top: var(--gap-100);
 
