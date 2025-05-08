@@ -167,7 +167,7 @@
                                             </div>
                                         </div>
                                         <div class="row sqs-row faq-columns">
-                                            <div class="col sqs-col-5">
+                                            <div class="col sqs-col-4">
                                                 <div>{description}</div>
                                             </div>
                                             <div class="col sqs-col-7">
