@@ -141,86 +141,87 @@
 
     .Mobile-overlay-menu {
       width: 100%;
-    }
-    .Mobile-overlay-menu-main {
-      top: 72px;
-      margin-top: var(--gap-120);
-      padding: var(--gap-60) var(--gap-16) 0;
 
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: center;
+      .Mobile-overlay-menu-main {
+        top: 72px;
+        margin-top: var(--gap-120);
+        padding: var(--gap-60) var(--gap-16) 0;
 
-      nav.Mobile-overlay-nav.Mobile-overlay-nav--primary {
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         align-items: center;
-        row-gap: 32px;
 
-        margin-bottom: var(--gap-120);
+        nav.Mobile-overlay-nav.Mobile-overlay-nav--primary {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          row-gap: 32px;
 
-        a {
-          text-align: center;
-          padding-bottom: 0;
+          margin-bottom: var(--gap-120);
 
-          font-family: var(--font-medium);
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 110%;
-          letter-spacing: 0;
-          text-transform: uppercase;
-          color: var(--text-100);
+          a {
+            text-align: center;
+            padding-bottom: 0;
 
-          -webkit-font-smoothing: antialiased;
-        }
-      }
-      .Mobile-overlay-contacts {
-        width: 100%;
-        padding-top: 40px;
+            font-family: var(--font-medium);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 110%;
+            letter-spacing: 0;
+            text-transform: uppercase;
+            color: var(--text-100);
 
-        .Mobile-overlay-book .sqs-layout {
-          padding: 0;
-
-          a.sqs-block-button-element {
-            width: 100%;
-            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
           }
         }
-        .Mobile-overlay-socials {
-          margin-top: var(--gap-80);
+        .Mobile-overlay-contacts {
+          width: 100%;
+          padding-top: 40px;
 
-          .sqs-layout {
+          .Mobile-overlay-book .sqs-layout {
             padding: 0;
 
-            & > .row:first-child {
-              margin-bottom: var(--gap-24);
-
-              p {
-                font-family: var(--font-medium);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 150%;
-                text-transform: uppercase;
-                color: var(--text-100);
-
-                -webkit-font-smoothing: antialiased;
-              }
+            a.sqs-block-button-element {
+              width: 100%;
+              box-sizing: border-box;
             }
-            & > .row:nth-child(2) {
-              .socialaccountlinks-v2-block {
-                nav {
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
-                  column-gap: 78px;
+          }
+          .Mobile-overlay-socials {
+            margin-top: var(--gap-80);
 
-                  & > a {
-                    margin: 0;
-                    width: 32px;
-                    height: 32px;
+            .sqs-layout {
+              padding: 0;
+
+              & > .row:first-child {
+                margin-bottom: var(--gap-24);
+
+                p {
+                  font-family: var(--font-medium);
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 150%;
+                  text-transform: uppercase;
+                  color: var(--text-100);
+
+                  -webkit-font-smoothing: antialiased;
+                }
+              }
+              & > .row:nth-child(2) {
+                .socialaccountlinks-v2-block {
+                  nav {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    column-gap: 78px;
+
+                    & > a {
+                      margin: 0;
+                      width: 32px;
+                      height: 32px;
+                    }
                   }
                 }
               }
