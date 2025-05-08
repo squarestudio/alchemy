@@ -15,7 +15,7 @@
     {@|apply grid.block}
     {@|apply grid-layout.block}
 
-    { page.is_homepage }
+    { page.slug }
 
     <div class="Parallax-host-outer">
       <div class="Parallax-host" data-parallax-host>
