@@ -207,6 +207,8 @@
 
       -webkit-font-smoothing: antialiased;
     }
+
+
   }
 
 
@@ -493,69 +495,75 @@
   .Footer .Footer-inner {
     margin-left: 0;
     padding: var(--gap-24) var(--gap-16);
-  }
-  .Footer .Footer-inner .Footer-blocks--top {
-    padding: 20px 0;
-  }
-  .Footer .Footer-inner .Footer-middle {
-    margin-top: var(--gap-60);
-    padding-bottom: var(--gap-80);
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row {
-    flex-wrap: wrap;
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(1),
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(2) {
-    width: ~"calc(50% - 12px)";
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) {
-    width: 100%;
-    margin-top: var(--gap-60);
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    align-items: center;
-    column-gap: var(--gap-24);
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) > .sqs-block:nth-child(1),
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) > .sqs-block:nth-child(2) {
-    display: block;
-    width: 100%;
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) .form-block {
-    margin-bottom: var(--gap-60);
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) .form-block+.code-block {
-    margin-top: 0;
-  }
+    .Footer-blocks--top {
+      padding: 20px 0;
+    }
+    .Footer-middle {
+      margin-top: var(--gap-60);
+      padding-bottom: var(--gap-80);
 
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) .form-block form .field-list + .form-button-wrapper {
-    width: ~"calc(40% - 12px)";
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) .form-block form button[type="submit"] {
-    width: 100%;
-    box-sizing: border-box;
-  }
+      .sqs-layout .sqs-col-12>.row {
+        flex-wrap: wrap;
 
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) .form-block+.code-block h4 {
-    margin-bottom: 0;
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) .form-block+.code-block h4 br {
-    display: block !important;
-  }
-  .Footer .Footer-inner .Footer-middle .sqs-layout .sqs-col-12>.row>.col:nth-child(3) .socialaccountlinks-v2-block .sqs-svg-icon--list {
-    column-gap: 56px;
-    bottom: 0;
-  }
+        &>.col:nth-child(1),
+        &>.col:nth-child(2) {
+          width: ~"calc(50% - 12px)";
+        }
+        &>.col:nth-child(3) {
+          width: 100%;
+          margin-top: var(--gap-60);
 
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: flex-start;
+          align-items: center;
+          column-gap: var(--gap-24);
 
-  .Footer .Footer-inner .Footer-blocks--bottom {
-    padding-left: 0;
-    padding-right: 0;
-  }
-  .Footer .Footer-inner .Footer-blocks--bottom .html-block p br {
-    display: block;
+          & > .sqs-block:nth-child(1),
+          & > .sqs-block:nth-child(2) {
+            display: block;
+            width: 100%;
+          }
+
+          .form-block {
+            margin-bottom: var(--gap-60);
+
+            form .field-list + .form-button-wrapper {
+              width: ~"calc(40% - 12px)";
+            }
+            form button[type="submit"] {
+              width: 100%;
+              box-sizing: border-box;
+            }
+          }
+          .form-block+.code-block {
+            margin-top: 0;
+
+            h4 {
+              margin-bottom: 0;
+
+              br {
+                display: block !important;
+              }
+            }
+          }
+
+          .socialaccountlinks-v2-block .sqs-svg-icon--list {
+            column-gap: 56px;
+            bottom: 0;
+          }
+        }
+      }
+    }
+    .Footer-blocks--bottom {
+      padding-left: 0;
+      padding-right: 0;
+
+      .html-block p br {
+        display: block;
+      }
+    }
   }
 }
 
