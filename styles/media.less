@@ -587,14 +587,16 @@
   /* FORMULA */
   section#formula .Index-page-content .sqs-col-12 .row {
     flex-direction: column;
-  }
-  section#formula .Index-page-content .sqs-col-12 .row>.col {
-    width: 100%;
-    padding-right: 0 !important;
-    padding-left: 0 !important;
-  }
-  section#formula .Index-page-content .sqs-col-12 .row>.col:not(:last-child) {
-    border-right: none;
+
+    &>.col {
+      width: 100%;
+      padding-right: 0 !important;
+      padding-left: 0 !important;
+
+      &:not(:last-child) {
+        border-right: none;
+      }
+    }
   }
 }
 
