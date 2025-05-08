@@ -161,12 +161,16 @@
                             <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
                                 <div class="Index-page-content">
                                     <div class="sqs-layout">
-                                        <div class="faq-header">
-                                            <h2>{title}</h2>
-                                        </div>
-                                        <div>{description}</div>
-                                        <div class="row sqs-row">
+                                        <div class="row sqs-row faq-header">
                                             <div class="col sqs-col-12">
+                                                <h2>{title}</h2>
+                                            </div>
+                                        </div>
+                                        <div class="row sqs-row faq-header">
+                                            <div class="col sqs-col-6">
+                                                <div>{description}</div>
+                                            </div>
+                                            <div class="col sqs-col-6">
                                                 <ul>
                                                     {.repeated section items}
                                                         <li class="item">
