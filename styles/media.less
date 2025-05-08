@@ -593,8 +593,23 @@
       padding-right: 0 !important;
       padding-left: 0 !important;
 
-      .code-block .sqs-block-content svg {
-        margin: var(--gap-32) 0;
+      .code-block {
+        .sqs-block-content {
+          svg {
+            margin: var(--gap-32) 0;
+          }
+          h5 {
+            margin-top: var(--gap-32);
+            line-height: 100%;
+
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+      .code-block+.html-block {
+
       }
 
       &:not(:last-child) {
