@@ -104,6 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let element = welcomeSection.querySelector('.sqs-col-12');
         welcomeOffsetTop = element.getBoundingClientRect().top + window.scrollY
     }
+    const welcomePricingSection = document.getElementById("welcome-pricing");
+    let welcomePricingOffsetTop;
+    if (welcomePricingSection) {
+        let element = welcomePricingSection.querySelector('.sqs-col-12');
+        welcomePricingOffsetTop = element.getBoundingClientRect().top + window.scrollY
+    }
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
@@ -126,6 +132,9 @@ document.addEventListener("DOMContentLoaded", function () {
             document.body.classList.add('manifesto-blur');
         }
         if(scrollPosition >= welcomeOffsetTop) {
+            document.body.classList.add('welcome-blur');
+        }
+        if(scrollPosition >= welcomePricingOffsetTop) {
             document.body.classList.add('welcome-blur');
         }
     });
