@@ -260,7 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
         teamSwiper.on('slideChange', () => {
             const realSlideCount = teamSwiper.slides.length;
             if (teamSwiper.activeIndex === 0 || teamSwiper.activeIndex === realSlideCount - 1) {
-                blogSwiper.slideTo(blogSwiper.previousIndex);
+                teamSwiper.slideTo(teamSwiper.previousIndex);
             }
         });
     }
