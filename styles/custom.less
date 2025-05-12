@@ -2601,9 +2601,17 @@ section#faq-items {
           }
         }
         div.answer {
-          display: none;
+          max-height: 0;
+          overflow: hidden;
 
+          transition: max-height 0.3s ease-out;
           padding-top: var(--gap-40);
+        }
+
+        &.open {
+          div.answer {
+            max-height: 1000px;
+          }
         }
       }
     }
