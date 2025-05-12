@@ -270,7 +270,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let wwaOffsetTop;
     if (wwaSection) {
         let element = wwaSection.querySelector('.sqs-col-12 > .row:nth-child(1)');
-        wwaOffsetTop = element.getBoundingClientRect().top + window.scrollY;
+        wwaOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/2.5);
     }
 
 
