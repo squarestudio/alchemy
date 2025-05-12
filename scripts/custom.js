@@ -249,7 +249,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ TEAM ------------ */
-    const teamSection = document.getElementById("team");
+    const teamSection = document.getElementById("our-team");
     if(teamSection) {
         let teamSwiper = new Swiper('#our-team .swiper', {
             slidesPerView: "auto",
