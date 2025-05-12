@@ -1776,7 +1776,8 @@ section#blog {
 
 section#welcome,
 section#welcome-pricing,
-section#welcome-faq {
+section#welcome-faq,
+section#welcome-concept {
   .Index-page-content {
     margin-top: var(--gap-120);
     margin-bottom: var(--gap-120);
@@ -1855,27 +1856,30 @@ section#welcome-faq {
   }
 }
 
-body.welcome-blur section#welcome,
-body.welcome-blur section#welcome-pricing,
-body.welcome-blur section#welcome-faq {
-  .Index-page-content {
-    .sqs-col-12 > .row {
-      .col:first-child {
-        width: 58.333%;
+body.welcome-blur {
+  section#welcome,
+  section#welcome-pricing,
+  section#welcome-faq,
+  section#welcome-concept {
+    .Index-page-content {
+      .sqs-col-12 > .row {
+        .col:first-child {
+          width: 58.333%;
 
-        .image-block + .image-block {
-          .image-block-wrapper {
-            & > div {
-              img {
-                left: -50px;
-                opacity: .3;
+          .image-block + .image-block {
+            .image-block-wrapper {
+              & > div {
+                img {
+                  left: -50px;
+                  opacity: .3;
+                }
               }
             }
           }
         }
-      }
-      .col:last-child {
-        width: 41.667%;
+        .col:last-child {
+          width: 41.667%;
+        }
       }
     }
   }
@@ -1885,7 +1889,8 @@ body.welcome-blur section#welcome-faq {
 
 section#join-the-movement,
 section#join-the-movement-pricing,
-section#join-the-movement-faq {
+section#join-the-movement-faq,
+section#join-the-movement-concept {
   .Index-page-content {
     padding-top: var(--gap-60);
     padding-bottom: var(--gap-120);
