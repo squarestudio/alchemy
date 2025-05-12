@@ -173,7 +173,7 @@
                                       <div class="team-mates swiper">
                                           <div class="swiper-wrapper">
                                             {.repeated section items}
-                                                <div class="blog-item swiper-slide">
+                                                <div class="team-item swiper-slide">
                                                     <div class="item-image">
                                                         <div class="image">
                                                             <img src="{assetUrl}" alt="{title}">
