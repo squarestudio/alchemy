@@ -265,12 +265,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     /* ------------ WHO WE ARE  ------------ */
     const wwaSection = document.getElementById("who-we-are-images");
     let wwaOffsetTop;
     if (wwaSection) {
         let element = wwaSection.querySelector('.sqs-col-12 > .row:nth-child(1)');
         wwaOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/2.5);
+    }
+
+
+    /* ------------ A37 CLASSES ------------ */
+    const combineSection = document.getElementById("a37-at-alchemy-37-we-combine");
+    let combineOffsetTop;
+    if (combineSection) {
+        combineOffsetTop = combineSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
     }
 
 
@@ -305,6 +314,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(scrollPosition >= wwaOffsetTop) {
             document.body.classList.add('wwa-blur');
+        }
+        if(scrollPosition >= combineOffsetTop) {
+            document.body.classList.add('combine-blur');
         }
 
     });
