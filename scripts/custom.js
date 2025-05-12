@@ -226,7 +226,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const welcomeConceptSection = document.getElementById("welcome-concept");
     let welcomeConceptOffsetTop;
     if (welcomeConceptSection) {
-        let element = welcomeConceptOffsetTop.querySelector('.sqs-col-12');
+        let element = welcomeConceptSection.querySelector('.sqs-col-12');
         welcomeConceptOffsetTop = element.getBoundingClientRect().top + window.scrollY
     }
 
