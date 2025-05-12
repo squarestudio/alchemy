@@ -2667,12 +2667,22 @@ section#who-we-are {
     & > .sqs-block {
       width: 100%;
     }
-    & > .row {
-      margin-top: var(--gap-120);
-    }
     & > .markdown-block {
       h6 {
         text-align: center;
+      }
+    }
+    & > .row {
+      margin-top: var(--gap-120);
+
+      .col:last-child {
+        h5 + p {
+          margin-top: var(--gap-24);
+          margin-bottom: 0;
+        }
+        p + h4 {
+          margin-top: var(--gap-24);
+        }
       }
     }
   }
