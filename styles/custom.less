@@ -2601,17 +2601,13 @@ section#faq-items {
           }
         }
         div.answer {
-          max-height: 0;
-          overflow: hidden;
-
-          transition: max-height 0.3s ease-out;
+          display: none;
           padding-top: var(--gap-40);
         }
 
         &.open {
           div.answer {
-            max-height: 1000px;
-            transition: max-height 0.3s ease-out;
+            display: block;
           }
         }
       }
