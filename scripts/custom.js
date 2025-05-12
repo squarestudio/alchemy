@@ -248,6 +248,24 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    /* ------------ TEAM ------------ */
+    const teamSection = document.getElementById("team");
+    if(teamSection) {
+        let teamSwiper = new Swiper('#our-team .swiper', {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 24,
+            initialSlide: 1
+        });
+        teamSwiper.on('slideChange', () => {
+            const realSlideCount = teamSwiper.slides.length;
+            if (teamSwiper.activeIndex === 0 || teamSwiper.activeIndex === realSlideCount - 1) {
+                blogSwiper.slideTo(blogSwiper.previousIndex);
+            }
+        });
+    }
+
+
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
