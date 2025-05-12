@@ -276,7 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ A37 CLASSES ------------ */
-    const combineSection = document.getElementById("a37-at-alchemy-37-we-combine");
+    const combineSection = document.getElementById("at-alchemy-37-we-combine");
     let combineOffsetTop;
     if (combineSection) {
         combineOffsetTop = combineSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
