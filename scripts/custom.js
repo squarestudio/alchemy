@@ -266,7 +266,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /* ------------ WHO WE ARE  ------------ */
-    const wwaSection = document.getElementById("who-we-are");
+    const wwaSection = document.getElementById("who-we-are-images");
     let wwaOffsetTop;
     if (wwaSection) {
         let element = wwaSection.querySelector('.sqs-col-12 > .row:nth-child(1)');
