@@ -2571,62 +2571,80 @@ section#faq-items {
     justify-content: space-between;
     margin-top: var(--gap-120);
 
-    ul {
-      margin: 0;
-      padding: 0;
-      list-style: none;
+    & > col:nth-child(1) {
+      p:nth-last-child(2) {
+        margin-bottom: 0;
+      }
+      p:last-child {
+        margin-top: 0;
+      }
+      p a {
+        display: inline-flex;
+        margin-top: var(--gap-60);
+      }
+    }
+    & > col:nth-child(2) {
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
 
-      border-bottom: 1px solid var(--text-10);
+        border-bottom: 1px solid var(--text-10);
 
-      li {
-        border-top: 1px solid var(--text-10);
-        padding: 30px;
+        li {
+          border-top: 1px solid var(--text-10);
+          padding: 30px;
 
-        div.question {
-          height: 48px;
-
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-
-          cursor: pointer;
-
-          span {
-            display: block;
+          div.question {
             height: 48px;
 
-            svg {
-              display: block;
-              width: 48px;
-              height: 48px;
-            }
-          }
-        }
-        div.answer {
-          display: none;
-          padding-top: var(--gap-40);
-        }
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
 
-        &.open {
-          div.question {
+            cursor: pointer;
+
             span {
-              svg:first-child {
-                display: none;
-              }
-              svg:last-child {
-                display: block !important;
+              display: block;
+              height: 48px;
+
+              svg {
+                display: block;
+                width: 48px;
+                height: 48px;
               }
             }
           }
           div.answer {
-            display: block;
+            display: none;
+            padding-top: var(--gap-40);
+
+            .sqs-layout {
+              padding: 0;
+            }
+          }
+
+          &.open {
+            div.question {
+              span {
+                svg:first-child {
+                  display: none;
+                }
+                svg:last-child {
+                  display: block !important;
+                }
+              }
+            }
+            div.answer {
+              display: block;
+            }
           }
         }
       }
     }
 
-    .sqs-layout {
-      padding: 0;
-    }
+
+
+
   }
 }
