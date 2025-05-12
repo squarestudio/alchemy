@@ -265,6 +265,14 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+    /* ------------ WHO WE ARE  ------------ */
+    const wwaSection = document.getElementById("who-we-are");
+    let wwaOffsetTop;
+    if (wwaSection) {
+        let element = wwaSection.querySelector('.sqs-col-12 > .row:nth-child(1)');
+        wwaOffsetTop = element.getBoundingClientRect().top + window.scrollY;
+    }
+
 
 
     window.onload = function() {
@@ -293,6 +301,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(scrollPosition >= pricingImagesOffsetTop) {
             document.body.classList.add('pricing-images-blur');
+        }
+
+        if(scrollPosition >= wwaOffsetTop) {
+            document.body.classList.add('wwa-blur');
         }
 
     });
