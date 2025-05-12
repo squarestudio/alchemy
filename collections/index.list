@@ -182,7 +182,7 @@
                                                         <div class="info">{body}</div>
                                                     </div>
                                                     <div class="item-content">
-                                                        <h5 class="item-title"><a href="/blog/{urlId}">{title}</a></h5>
+                                                        <h5 class="item-title">{title}</h5>
                                                         <div class="item-excerpt">{excerpt}</div>
                                                     </div>
                                                 </div>
