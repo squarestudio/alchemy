@@ -2589,6 +2589,8 @@ section#faq-items {
           justify-content: space-between;
           align-items: center;
 
+          cursor: pointer;
+
           span {
             display: block;
             height: 48px;
@@ -2606,6 +2608,16 @@ section#faq-items {
         }
 
         &.open {
+          div.question {
+            span {
+              svg:first-child {
+                display: none;
+              }
+              svg:last-child {
+                display: block !important;
+              }
+            }
+          }
           div.answer {
             display: block;
           }
