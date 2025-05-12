@@ -2793,6 +2793,113 @@ body.wwa-blur section#who-we-are-images {
   }
 }
 
+section#at-alchemy-37-we-combine {
+  .Index-page-content {
+    padding-top: var(--gap-80);
+    padding-bottom: 0;
+
+    .sqs-col-12 > .row {
+      &:last-child {
+        margin-top: var(--gap-120);
+
+        .col:nth-child(1) {
+          position: relative;
+
+          .image-block {
+            width: 100%;
+
+            .image-block-wrapper {
+              aspect-ratio: 1 / .9245;
+
+              & > div {
+                padding-bottom: 0 !important;
+                height: 100%;
+
+                img {
+                  width: ~"calc(100% + 20px)" !important;
+                }
+              }
+            }
+          }
+          .image-block + .image-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            .image-block-wrapper {
+              & > div {
+                img {
+                  left: 0;
+                  opacity: 0;
+
+                  -webkit-transition: all 1s ease-in-out .1s;
+                  transition: all 1s ease-in-out .1s;
+                }
+              }
+            }
+          }
+        }
+        .col:nth-child(2) {
+          position: relative;
+
+          .image-block {
+            width: 100%;
+
+            .image-block-wrapper {
+              aspect-ratio: 1 / .5487;
+
+              & > div {
+                padding-bottom: 0 !important;
+                height: 100%;
+
+                img {
+                  width: ~"calc(100% + 20px)" !important;
+                }
+              }
+            }
+          }
+          .image-block + .image-block {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+
+            .image-block-wrapper {
+              & > div {
+                img {
+                  left: 0;
+                  opacity: 0;
+
+                  -webkit-transition: all 1s ease-in-out .1s;
+                  transition: all 1s ease-in-out .1s;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body.combine-blur section#at-alchemy-37-we-combine{
+  .Index-page-content {
+    .sqs-col-12 > .row:nth-child(2) {
+      .col {
+        .image-block + .image-block {
+          .image-block-wrapper {
+            & > div {
+              img {
+                left: -20px;
+                opacity: .3;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 section#our-team {
   .Index-page-content {
     margin-top: var(--gap-60);
