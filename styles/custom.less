@@ -3385,10 +3385,26 @@ body.collection-type-blog.view-item {
           }
 
           .markdown-block {
-            h5 + h5 {
-              margin-top: var(--gap-60);
+            .sqs-block-content {
+              h5 + h5 {
+                margin-top: var(--gap-60);
+              }
+
+              & > div {
+                padding: var(--gap-40) 0;
+
+                border-bottom: 1px solid var(--text-30);
+              }
+              & > div:first-child {
+                padding-top: 0;
+              }
+              & > div:last-child {
+                padding-bottom: 0;
+                border-bottom: none;
+              }
             }
           }
+
         }
       }
     }
