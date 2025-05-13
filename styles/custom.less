@@ -2814,6 +2814,7 @@ section#at-alchemy-37-we-combine {
           margin-top: var(--gap-80);
 
           .markdown-block {
+            position: relative;
             padding-left: 51px !important;
 
             .sqs-block-content {
@@ -2825,6 +2826,24 @@ section#at-alchemy-37-we-combine {
               }
               p {
                 margin-top: var(--gap-40);
+              }
+            }
+          }
+        }
+        &:nth-child(2):not(:last-child) {
+          .col:first-child {
+            .markdown-block {
+              &:before {
+                content: "[01]";
+
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                font-family: var(--font-regular);
+                font-size: 16px;
+                line-height: 150%;
+                color: var(--text-100);
               }
             }
           }
