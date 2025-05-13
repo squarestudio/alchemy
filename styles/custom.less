@@ -1998,7 +1998,96 @@ section#welcome-and-join {
   margin-bottom: var(--gap-80);
 
   #joinBlock {
+    .sqs-col-12 {
+      & > .row {
+        .col:first-child {
+          .sqs-block {
+            h3 {
+              margin-top: -12px;
+            }
+            h3 + p {
+              margin-top: var(--gap-40);
+            }
+          }
+        }
+        .col:last-child {
+          p {
+            margin: 14px 0 0;
+          }
+          p:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+      & > .sqs-block {
+        width: 100%;
+        margin-top: var(--gap-120);
 
+        .newsletter-form-wrapper {
+          padding: 0  !important;
+        }
+        .newsletter-form-header,
+        .newsletter-form-footnote {
+          display: none;
+        }
+        .newsletter-form-body {
+          display: flex;
+          align-items: flex-end;
+          justify-content: center;
+          column-gap: 24px;
+          padding: 0;
+
+          .newsletter-form-fields-wrapper,
+          .newsletter-form-button-wrapper {
+            margin-top: 0;
+            padding: 0;
+          }
+          .newsletter-form-fields-wrapper {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            column-gap: 24px;
+
+            .newsletter-form-field-wrapper {
+              padding: 0;
+
+              input {
+                display: block;
+                width: 420px;
+                background: none;
+                outline: none;
+                border: none;
+                border-bottom: 1px solid var(--text-60);
+                padding: 0 0 2px;
+
+                line-height: 150%;
+              }
+            }
+
+            fieldset {
+              display: block;
+              line-height: 1;
+
+              .newsletter-form-field-wrapper.last-name {
+                display: none;
+              }
+            }
+          }
+          .newsletter-form-button-wrapper {
+            button {
+              font-family: var(--font-medium);
+              font-weight: 500;
+              font-style: normal;
+
+              border-radius: 30px !important;
+            }
+          }
+        }
+      }
+      & > .sqs-block + .sqs-block {
+        display: none;
+      }
+    }
   }
 }
 
