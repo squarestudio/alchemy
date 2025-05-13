@@ -2999,8 +2999,12 @@ section#our-team {
             background: rgba(255, 255, 255, .6);
             box-sizing: border-box;
 
+            opacity: 0;
+
             .sqs-layout {
               padding: 0;
+              height: 100%;
+              overflow: hidden;
 
               .markdown-block {
                 h5 {
@@ -3051,6 +3055,9 @@ section#our-team {
                 left: -20px;
                 opacity: .3;
               }
+            }
+            div.info {
+              opacity: 1;
             }
           }
         }
