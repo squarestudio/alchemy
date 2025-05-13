@@ -2817,6 +2817,16 @@ section#at-alchemy-37-we-combine {
             position: relative;
             padding-left: 51px !important;
 
+            &:before {
+              position: absolute;
+              top: 0;
+              left: 0;
+
+              font-family: var(--font-regular);
+              font-size: 16px;
+              line-height: 140%;
+              color: var(--text-100);
+            }
             .sqs-block-content {
               padding-left: 24px;
               border-left: 1px solid var(--text-30);
@@ -2835,19 +2845,50 @@ section#at-alchemy-37-we-combine {
             .markdown-block {
               &:before {
                 content: "[01]";
-
-                position: absolute;
-                top: 0;
-                left: 0;
-
-                font-family: var(--font-regular);
-                font-size: 16px;
-                line-height: 150%;
-                color: var(--text-100);
+              }
+            }
+          }
+          .col:last-child {
+            .markdown-block {
+              &:before {
+                content: "[02]";
               }
             }
           }
         }
+        &:nth-child(3):not(:last-child) {
+          .col:first-child {
+            .markdown-block {
+              &:before {
+                content: "[03]";
+              }
+            }
+          }
+          .col:last-child {
+            .markdown-block {
+              &:before {
+                content: "[04]";
+              }
+            }
+          }
+        }
+        &:nth-child(4):not(:last-child) {
+          .col:first-child {
+            .markdown-block {
+              &:before {
+                content: "[05]";
+              }
+            }
+          }
+          .col:last-child {
+            .markdown-block {
+              &:before {
+                content: "[06]";
+              }
+            }
+          }
+        }
+
         &:last-child {
           margin-top: var(--gap-120);
 
