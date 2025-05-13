@@ -3,7 +3,44 @@
 
     {.equal? typeName "blog"}
 
-      c
+      <section id="{urlId}" class="Index-blog" data-collection-id="{id}">
+          <div class="Index-page-content">
+            <div class="sqs-layout">
+                <div class="blog-header">
+                    <h6>{description}</h6>
+                    <h2>{title}</h2>
+                </div>
+            </div>
+            <div class="blog-articles swiper">
+                <div class="swiper-wrapper">
+                  {.repeated section items}
+                      <div class="blog-item swiper-slide">
+                          <div class="item-image">
+                              <a href="/blog/{urlId}">
+                                  <img src="{assetUrl}" alt="{title}">
+                                  <img src="{assetUrl}" alt="{title}">
+                              </a>
+                          </div>
+                          <div class="item-content">
+                              <div class="item-date">{addedOn|date %A, %B %d}</div>
+                              <h5 class="item-title"><a href="/blog/{urlId}">{title}</a></h5>
+                              <div class="item-excerpt">{excerpt}</div>
+                          </div>
+                      </div>
+                  {.end}
+                  <div class="blog-item swiper-slide more-is-coming">
+                      <div>
+                          <h5>More is coming</h5>
+                      </div>
+                  </div>
+                </div>
+
+                 <!-- If we need pagination -->
+                 <div class="swiper-pagination"></div>
+            </div>
+        </div>
+      </section>
+
 
     {.or}
         {.equal? typeName "list"}
