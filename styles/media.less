@@ -129,6 +129,11 @@
     padding: 0 16px;
   }
 
+  .marquee {
+    margin-left: 0;
+    height: 54px;
+  }
+
   /* HEADER */
   .Mobile-bar {
     padding: 12px 16px !important;
@@ -252,62 +257,75 @@
 
   /* HERO */
 
-  section#hero .sqs-layout {
-    padding: 0;
-  }
-  section#hero .sqs-layout>.row:nth-child(1) {
-    margin-top: var(--gap-80);
-    flex-direction: column;
-  }
-  section#hero .sqs-layout>.row:nth-child(1)>.col {
-    width: 100%;
-  }
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(1) {
-    padding: 0 16px 60px;
-    box-sizing: border-box;
-  }
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(1) .code-block p.large,
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(1) .code-block h6.medium {
-    margin-top: var(--gap-24);
-  }
+  section#hero {
+    .sqs-layout {
+      padding: 0;
 
+      & >.row:nth-child(1) {
+        margin-top: var(--gap-80);
+        flex-direction: column;
 
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(1) .code-block,
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(1) .button-block {
-    top: 0;
-  }
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(2) .button-block {
-    display: none;
-  }
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(2) .image-block {
-    width: 100% !important;
-  }
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(2) .code-block {
-    width: 100%;
-  }
-  section#hero .sqs-layout>.row:nth-child(1)>.col:nth-child(2) .code-block .marquee-image .marquee-content {
-    gap: 4rem;
-    padding: 0 2rem;
-  }
+        & > .col {
+          width: 100%;
+        }
+        & > .col:nth-child(1) {
+          padding: 0 16px 60px;
+          box-sizing: border-box;
 
-  .marquee {
-    margin-left: 0;
-    height: 54px;
+          .code-block p.large,
+          .code-block h6.medium {
+            margin-top: var(--gap-24);
+          }
+
+          .code-block,
+          .button-block {
+            top: 0;
+          }
+        }
+        & > .col:nth-child(2) {
+          .button-block {
+            display: none;
+          }
+          .image-block {
+            width: 100% !important;
+          }
+          .code-block {
+            width: 100%;
+
+            .marquee-image .marquee-content {
+              gap: 4rem;
+              padding: 0 2rem;
+            }
+          }
+        }
+      }
+    }
   }
 
   /* FORMULA */
 
-  section#formula .Index-page-content {
-    padding-top: 0;
-  }
-  section#formula .Index-page-content .sqs-col-12 .row {
-    margin-top: var(--gap-80);
+  section#formula {
+    .Index-page-content {
+      padding-top: 0;
+
+      .sqs-col-12 .row {
+        margin-top: var(--gap-80);
+      }
+    }
   }
 
   /* BENEFITS */
 
-  section#benefits .Index-page-content .sqs-col-12>.row .col:last-child h2 {
-    margin-top: 0;
+  section#benefits {
+    .Index-page-content {
+      .sqs-col-12 > .row {
+        .col:last-child {
+          h2 {
+            margin-top: 0;
+          }
+        }
+      }
+    }
   }
 
   /* YOUR SWEET SANCTUARY */
