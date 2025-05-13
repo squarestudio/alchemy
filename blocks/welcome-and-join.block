@@ -1,8 +1,4 @@
 <section id="welcome-and-join">
-  <div class="wj-top">
-    <squarespace:block-field id="welcomeBlock" columns="12" label="Welcome" />
-  </div>
-  <div class="wj-bottom">
-    <squarespace:block-field id="joinBlock" columns="12" label="Join the Movement" />
-  </div>
+  <squarespace:block-field id="welcomeBlock" columns="12" label="Welcome" />
+  <squarespace:block-field id="joinBlock" columns="12" label="Join the Movement" />
 </section>
