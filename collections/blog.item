@@ -10,7 +10,8 @@
             </div>
         </div>
         <div class="article-content">
-             {body}
+            <div class="article-excerpt">{excerpt}</div>
+            <div class="article-body">{body}</div>
         </div>
     </article>
 {.end}
