@@ -176,6 +176,7 @@
         </div>
       </div>
 
+      {@|apply blog-marquee.block}
       {@|apply welcome-and-join.block}
       {@|apply footer.block}
 
