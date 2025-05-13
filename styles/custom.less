@@ -2921,7 +2921,7 @@ section#transformation {
 
               &:before {
                 position: absolute;
-                top: 0;
+                top: 6px;
                 left: 0;
 
                 display: block;
@@ -2933,13 +2933,15 @@ section#transformation {
                 font-size: 16px;
                 line-height: 150%;
                 color: var(--text-100);
-
-                //border-right: 1px solid var(--text-30);
               }
             }
             h4:first-child {
               top: -6px;
               padding-bottom: var(--gap-32);
+
+              &:before {
+
+              }
             }
             h4 + h4 {
               border-top: 1px solid var(--text-30);
