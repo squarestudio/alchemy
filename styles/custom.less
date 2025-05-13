@@ -2802,7 +2802,6 @@ section#at-alchemy-37-we-combine {
     padding-top: var(--gap-80);
     padding-bottom: 0;
 
-
     .sqs-col-12 {
       & > .sqs-block {
         width: 100%;
@@ -2815,7 +2814,14 @@ section#at-alchemy-37-we-combine {
       }
       & > .row {
         &:not(:last-child) {
-
+          .markdown-block {
+            h4 {
+              line-height: 80%;
+            }
+            p {
+              margin-top: var(--gap-40);
+            }
+          }
         }
         &:last-child {
           margin-top: var(--gap-120);
