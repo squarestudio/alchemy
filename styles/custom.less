@@ -1975,7 +1975,7 @@ body.textpage section#welcome-and-join {
 
 /* FOOTER */
 
-body:not(.sqs-edit-mode) #articleMarquee {
+#articleMarquee {
   display: none;
 }
 
@@ -3490,4 +3490,7 @@ body.collection-type-blog.view-item {
       margin-left: 0;
     }
   }
+}
+body.sqs-edit-mode:not(.textpage) #articleMarquee {
+  display: block;
 }
