@@ -2911,15 +2911,20 @@ section#transformation {
           .markdown-block {
             h4 {
               position: relative;
+              padding-left: 76px;
 
 
               &:before {
+                display: block;
+                width: 51px;
                 content: '[01]';
 
                 font-family: var(--font-regular);
                 font-size: 16px;
                 line-height: 150%;
                 color: var(--text-100);
+
+                border-right: 1px solid var(--text-30);
               }
             }
             h4:first-child {
