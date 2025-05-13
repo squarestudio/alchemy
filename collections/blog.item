@@ -1,7 +1,9 @@
 {.section item}
     <article id="post-{id}" class="BlogItem hentry category-exhibitions author-square-studio post-type-text has-categories" data-item-id="{id}">
         <div class="article-header">
-            <div class="article-image"></div>
+            <div class="article-image">
+                <img src="{assetUrl}" alt="{title}">
+            </div>
             <div class="article-header-content">
                 <div class="article-date">{addedOn|date %A, %B %d}</div>
                 <h1 class="article-title" data-content-field="title">{title}</h1>
