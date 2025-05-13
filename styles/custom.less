@@ -3512,7 +3512,9 @@ body.textpage {
           line-height: 100%;
         }
       }
-      & > .html-block {
+      & > .markdown-block + .html-block {
+        margin-top: var(--gap-32);
+
         h2 {
           line-height: 100%;
         }
