@@ -2909,8 +2909,12 @@ section#transformation {
       .row {
         .col:last-child {
           .markdown-block {
+            h4:first-child {
+              padding-bottom: var(--gap-40);
+            }
             h4 + h4 {
               border-top: 1px solid var(--text-30);
+              padding: var(--gap-40) 0;
             }
           }
         }
