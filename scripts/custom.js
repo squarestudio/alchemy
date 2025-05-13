@@ -93,9 +93,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ HERO ------------ */
     const heroSection = document.getElementById("hero");
-    if (heroSection && heroSection.querySelector(".col:nth-child(2)")) {
-        heroSection.querySelector(".col:nth-child(2)").classList.add("image-blur");
-    }
+    // if (heroSection && heroSection.querySelector(".col:nth-child(2)")) {
+    //     heroSection.querySelector(".col:nth-child(2)").classList.add("image-blur");
+    // }
 
 
     /* ------------ BENEFITS ------------ */
