@@ -3502,13 +3502,20 @@ body.textpage {
   .Main-content {
     padding: 0 0 0 96px;
 
-    .sqs-col-12 > .sqs-block {
-      width: 100%;
-    }
-    .sqs-col-12 > .markdown-block {
-      h6 {
-        text-align: center;
-        line-height: 100%;
+    .sqs-col-12 {
+      & > .sqs-block {
+        width: 100%;
+      }
+      & > .markdown-block {
+        h6 {
+          text-align: center;
+          line-height: 100%;
+        }
+      }
+      & > .html-block {
+        h2 {
+          line-height: 100%;
+        }
       }
     }
   }
