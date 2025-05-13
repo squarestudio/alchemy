@@ -100,34 +100,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ BENEFITS ------------ */
     const benefitsSection = document.getElementById("benefits");
-    let benefitsOffsetTop;
-    if (benefitsSection) {
-        let element = benefitsSection.querySelector('.sqs-col-12');
-        benefitsOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/1.6);
-    }
 
 
     /* ------------ SANCTUARY ------------ */
     const sanctuarySection = document.getElementById("your-sweat-sanctuary");
-    let sanctuaryOffsetTop;
-    if (sanctuarySection) {
-        let element = sanctuarySection.querySelector('.sqs-col-12 > .row:nth-child(1)');
-        sanctuaryOffsetTop = element.getBoundingClientRect().top + window.scrollY;
-    }
 
 
     /* ------------ A37 CLASSES ------------ */
     const a37ClassesSection = document.getElementById("a37-classes");
-    let a37ClassesOffsetTop;
-    if (a37ClassesSection) {
-        a37ClassesOffsetTop = a37ClassesSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
-    }
 
     const classesSection = document.getElementById("classes");
-    let classesOffsetTop;
     if(classesSection) {
-        classesOffsetTop = classesSection.getBoundingClientRect().top + window.scrollY;
-
         const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
         const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
 
@@ -162,7 +145,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
 
             blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
-            console.log(blogHeight);
 
             blogSwiper.on('slideChange', () => {
                 const realSlideCount = blogSwiper.slides.length;
@@ -195,27 +177,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ A37 MANIFESTO ------------ */
     const a37ManifestoSection = document.getElementById("a37-manifesto");
-    let a37ManifestoOffsetTop;
-    if (a37ManifestoSection) {
-        a37ManifestoOffsetTop = a37ManifestoSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
-    }
 
 
     /* ------------ WELCOME ------------ */
     const welcomeSection = document.getElementById("welcome-and-join");
-    let welcomeOffsetTop;
-    if (welcomeSection) {
-        let element = welcomeSection.querySelector('.sqs-col-12');
-        welcomeOffsetTop = element.getBoundingClientRect().top + window.scrollY
-    }
 
 
     /* ------------ PRICING ------------ */
     const pricingImagesSection = document.getElementById("pricing-images");
-    let pricingImagesOffsetTop;
-    if (pricingImagesSection) {
-        pricingImagesOffsetTop = pricingImagesSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
-    }
+
 
     /* ------------ FAQ ------------ */
     const faqItemsSection = document.getElementById("faq-items");
@@ -256,19 +226,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ WHO WE ARE  ------------ */
     const wwaSection = document.getElementById("who-we-are-images");
-    let wwaOffsetTop;
-    if (wwaSection) {
-        let element = wwaSection.querySelector('.sqs-col-12 > .row:nth-child(1)');
-        wwaOffsetTop = element.getBoundingClientRect().top + window.scrollY - (window.innerHeight/2.5);
-    }
 
 
     /* ------------ A37 CLASSES ------------ */
     const combineSection = document.getElementById("at-alchemy-37-we-combine");
-    let combineOffsetTop;
-    if (combineSection) {
-        combineOffsetTop = combineSection.getBoundingClientRect().top + window.scrollY + (window.innerHeight/2.5);
-    }
 
 
 
@@ -277,35 +238,35 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
-        if(scrollPosition >= benefitsOffsetTop) {
-            document.body.classList.add('benefits-blur');
-        }
-        if(scrollPosition >= sanctuaryOffsetTop) {
-            document.body.classList.add('sanctuary-blur');
-        }
-        if(scrollPosition >= a37ClassesOffsetTop) {
-            document.body.classList.add('a37-blur');
-        }
-        if(scrollPosition >= classesOffsetTop) {
-            document.body.classList.add('classes-blur');
-        }
-        if(scrollPosition >= a37ManifestoOffsetTop) {
-            document.body.classList.add('manifesto-blur');
-        }
-        if(scrollPosition >= welcomeOffsetTop) {
-            document.body.classList.add('welcome-blur');
-        }
-
-        if(scrollPosition >= pricingImagesOffsetTop) {
-            document.body.classList.add('pricing-images-blur');
-        }
-
-        if(scrollPosition >= wwaOffsetTop) {
-            document.body.classList.add('wwa-blur');
-        }
-        if(scrollPosition >= combineOffsetTop) {
-            document.body.classList.add('combine-blur');
-        }
+        // if(scrollPosition >= benefitsOffsetTop) {
+        //     document.body.classList.add('benefits-blur');
+        // }
+        // if(scrollPosition >= sanctuaryOffsetTop) {
+        //     document.body.classList.add('sanctuary-blur');
+        // }
+        // if(scrollPosition >= a37ClassesOffsetTop) {
+        //     document.body.classList.add('a37-blur');
+        // }
+        // if(scrollPosition >= classesOffsetTop) {
+        //     document.body.classList.add('classes-blur');
+        // }
+        // if(scrollPosition >= a37ManifestoOffsetTop) {
+        //     document.body.classList.add('manifesto-blur');
+        // }
+        // if(scrollPosition >= welcomeOffsetTop) {
+        //     document.body.classList.add('welcome-blur');
+        // }
+        //
+        // if(scrollPosition >= pricingImagesOffsetTop) {
+        //     document.body.classList.add('pricing-images-blur');
+        // }
+        //
+        // if(scrollPosition >= wwaOffsetTop) {
+        //     document.body.classList.add('wwa-blur');
+        // }
+        // if(scrollPosition >= combineOffsetTop) {
+        //     document.body.classList.add('combine-blur');
+        // }
 
     });
 
