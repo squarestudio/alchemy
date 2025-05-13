@@ -202,32 +202,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ WELCOME ------------ */
-    const welcomeSection = document.getElementById("welcome");
+    const welcomeSection = document.getElementById("welcome-and-join");
     let welcomeOffsetTop;
     if (welcomeSection) {
         let element = welcomeSection.querySelector('.sqs-col-12');
         welcomeOffsetTop = element.getBoundingClientRect().top + window.scrollY
-    }
-
-    const welcomePricingSection = document.getElementById("welcome-pricing");
-    let welcomePricingOffsetTop;
-    if (welcomePricingSection) {
-        let element = welcomePricingSection.querySelector('.sqs-col-12');
-        welcomePricingOffsetTop = element.getBoundingClientRect().top + window.scrollY
-    }
-
-    const welcomeFaqSection = document.getElementById("welcome-faq");
-    let welcomeFaqOffsetTop;
-    if (welcomeFaqSection) {
-        let element = welcomeFaqSection.querySelector('.sqs-col-12');
-        welcomeFaqOffsetTop = element.getBoundingClientRect().top + window.scrollY
-    }
-
-    const welcomeConceptSection = document.getElementById("welcome-concept");
-    let welcomeConceptOffsetTop;
-    if (welcomeConceptSection) {
-        let element = welcomeConceptSection.querySelector('.sqs-col-12');
-        welcomeConceptOffsetTop = element.getBoundingClientRect().top + window.scrollY
     }
 
 
@@ -313,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(scrollPosition >= a37ManifestoOffsetTop) {
             document.body.classList.add('manifesto-blur');
         }
-        if(scrollPosition >= welcomeOffsetTop || scrollPosition >= welcomePricingOffsetTop || scrollPosition >= welcomeFaqOffsetTop || scrollPosition >= welcomeConceptOffsetTop) {
+        if(scrollPosition >= welcomeOffsetTop) {
             document.body.classList.add('welcome-blur');
         }
 

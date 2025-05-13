@@ -1772,224 +1772,8 @@ section#blog {
   }
 }
 
-/* WELCOME */
 
-section#welcome,
-section#welcome-pricing,
-section#welcome-faq,
-section#welcome-concept {
-  .Index-page-content {
-    margin-top: var(--gap-120);
-    margin-bottom: var(--gap-120);
-
-    .sqs-block {
-      width: 100%;
-    }
-    .sqs-col-12 > .row {
-      display: flex;
-      column-gap: 24px;
-      margin-top: 0;
-
-      .col {
-        float: none !important;
-
-        transition: width .5s linear;
-      }
-
-      .col:first-child {
-        width: 25%;
-        position: relative;
-
-        .image-block {
-          .image-block-wrapper {
-            aspect-ratio: 1 / .895;
-
-            & > div {
-              padding-bottom: 0 !important;
-              height: 100%;
-
-              img {
-                width: ~"calc(100% + 20px)" !important;
-              }
-            }
-          }
-        }
-        .image-block + .image-block {
-          position: absolute;
-          top: 0;
-          left: 0;
-
-          .image-block-wrapper {
-            & > div {
-              img {
-                left: 0;
-                opacity: 0;
-
-                -webkit-transition: all 1s ease-in-out .1s;
-                transition: all 1s ease-in-out .1s;
-              }
-            }
-          }
-        }
-      }
-      .col.image-blur {
-        .image-block + .image-block {
-          .image-block-wrapper {
-            & > div {
-              img {
-                left: -20px;
-                opacity: .3;
-              }
-            }
-          }
-        }
-      }
-      .col:last-child {
-        width: 75%;
-
-        h2 {
-          position: relative;
-          margin-top: -24px;
-        }
-      }
-    }
-  }
-}
-
-body.welcome-blur {
-  section#welcome,
-  section#welcome-pricing,
-  section#welcome-faq,
-  section#welcome-concept {
-    .Index-page-content {
-      .sqs-col-12 > .row {
-        .col:first-child {
-          width: 58.333%;
-
-          .image-block + .image-block {
-            .image-block-wrapper {
-              & > div {
-                img {
-                  left: -50px;
-                  opacity: .3;
-                }
-              }
-            }
-          }
-        }
-        .col:last-child {
-          width: 41.667%;
-        }
-      }
-    }
-  }
-}
-
-/* JOIN THE MOVEMENT */
-
-section#join-the-movement,
-section#join-the-movement-pricing,
-section#join-the-movement-faq,
-section#join-the-movement-concept {
-  .Index-page-content {
-    padding-top: var(--gap-60);
-    padding-bottom: var(--gap-120);
-    margin-bottom: var(--gap-80);
-
-    .sqs-layout {
-      .sqs-col-12 {
-        & > .row {
-          .col:first-child {
-            .sqs-block {
-              h3 {
-                margin-top: -12px;
-              }
-              h3 + p {
-                margin-top: var(--gap-40);
-              }
-            }
-          }
-          .col:last-child {
-            p {
-              margin: 14px 0 0;
-            }
-            p:first-child {
-              margin-top: 0;
-            }
-          }
-        }
-        & > .sqs-block {
-          width: 100%;
-          margin-top: var(--gap-120);
-
-          .newsletter-form-wrapper {
-            padding: 0  !important;
-          }
-          .newsletter-form-header,
-          .newsletter-form-footnote {
-            display: none;
-          }
-          .newsletter-form-body {
-            display: flex;
-            align-items: flex-end;
-            justify-content: center;
-            column-gap: 24px;
-            padding: 0;
-
-            .newsletter-form-fields-wrapper,
-            .newsletter-form-button-wrapper {
-              margin-top: 0;
-              padding: 0;
-            }
-            .newsletter-form-fields-wrapper {
-              display: flex;
-              justify-content: flex-start;
-              align-items: center;
-              column-gap: 24px;
-
-              .newsletter-form-field-wrapper {
-                padding: 0;
-
-                input {
-                  display: block;
-                  width: 420px;
-                  background: none;
-                  outline: none;
-                  border: none;
-                  border-bottom: 1px solid var(--text-60);
-                  padding: 0 0 2px;
-
-                  line-height: 150%;
-                }
-              }
-
-              fieldset {
-                display: block;
-                line-height: 1;
-
-                .newsletter-form-field-wrapper.last-name {
-                  display: none;
-                }
-              }
-            }
-            .newsletter-form-button-wrapper {
-              button {
-                font-family: var(--font-medium);
-                font-weight: 500;
-                font-style: normal;
-
-                border-radius: 30px !important;
-              }
-            }
-          }
-        }
-        & > .sqs-block + .sqs-block {
-          display: none;
-        }
-      }
-    }
-  }
-}
+/* WELCOME AND JOIN */
 
 section#welcome-and-join {
   padding-left: 96px;
@@ -2169,6 +1953,29 @@ section#welcome-and-join {
     }
   }
 }
+body.welcome-blur section#welcome-and-join {
+    #welcomeBlock {
+      .sqs-col-12 > .row {
+        .col:first-child {
+          width: 58.333%;
+
+          .image-block + .image-block {
+            .image-block-wrapper {
+              & > div {
+                img {
+                  left: -50px;
+                  opacity: .3;
+                }
+              }
+            }
+          }
+        }
+        .col:last-child {
+          width: 41.667%;
+        }
+      }
+    }
+  }
 
 /* FOOTER */
 
