@@ -3303,12 +3303,18 @@ section#studio {
 
 /* ------------ ARTICLE ------------ */
 
-body:not(.sqs-edit-mode) #articleMarquee {
-  display: block;
-  max-width: none;
-  padding: 0;
+body.collection-type-blog.view-item {
+  .Main-content {
+    padding: 0;
+  }
 
-  .marquee {
-    margin-left: 0;
+  #articleMarquee {
+    display: block !important;
+    max-width: none;
+    padding: 0;
+
+    .marquee {
+      margin-left: 0;
+    }
   }
 }
