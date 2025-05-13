@@ -176,6 +176,7 @@
         </div>
       </div>
 
+      <squarespace:block-field id="articleMarquee" columns="12" label="Article Marquee" />
       {@|apply welcome-and-join.block}
       {@|apply footer.block}
 

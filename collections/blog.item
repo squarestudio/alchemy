@@ -12,5 +12,3 @@
         </div>
     </article>
 {.end}
-
-<squarespace:block-field id="articleMarquee" columns="12" label="Article Marquee" />
