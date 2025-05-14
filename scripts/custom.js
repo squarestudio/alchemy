@@ -302,6 +302,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
                     const currentTranslateX = -50 * progress;
                     const currentOpacity = 0.3 * progress;
+                    console.log(currentOpacity);
 
                     benefitsImageBlock.style.width = `${currentWidth}%`;
                     benefitsSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
