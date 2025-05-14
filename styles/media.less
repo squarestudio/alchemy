@@ -1344,16 +1344,22 @@
     }
 
     #joinBlock {
-      .sqs-col-12>.sqs-block .newsletter-form-body .newsletter-form-fields-wrapper {
-        flex-direction: column;
+      .sqs-col-12>.sqs-block .newsletter-form-body {
+        .newsletter-form-fields-wrapper {
+          flex-direction: column;
 
-        & > fieldset input,
-        & > div input {
-          font-size: 12px;
+          & > fieldset input,
+          & > div input {
+            font-size: 12px;
+          }
+
+          & > * {
+            width: 100% !important;
+          }
         }
 
-        & > * {
-          width: 100% !important;
+        .newsletter-form-button-wrapper button {
+          font-size: 14px;
         }
       }
       .newsletter-block {
