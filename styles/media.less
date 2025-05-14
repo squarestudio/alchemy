@@ -1213,6 +1213,13 @@
 
         & > .col {
           width: 50% !important;
+
+          .code-block {
+            width: 44px;
+          }
+          .html-block {
+            width: ~"calc(100% - 44px)";
+          }
         }
       }
     }
