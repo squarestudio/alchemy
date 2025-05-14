@@ -580,9 +580,13 @@
   section#a37-manifesto {
     .Index-page-content {
       .manifesto-bg + .sqs-layout {
-        .manifesto-header + .sqs-row {
-          margin-top: 0;
-          height: 35vw;
+        .manifesto-header {
+          padding-bottom: var(--gap-80);
+
+          & + .sqs-row {
+            margin-top: 0;
+            height: 35vw;
+          }
         }
       }
     }
