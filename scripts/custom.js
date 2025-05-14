@@ -276,6 +276,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if(scrollPosition >= benefitsTriggerPoint) {
                 const delta = scrollPosition - benefitsTriggerPoint;
+                console.log(delta);
 
                 if (delta <= 0) {
                     benefitsImage.style.width = `${benefitsMinWidth}%`;
