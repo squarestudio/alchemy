@@ -112,10 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ------------ BENEFITS ------------ */
-    let benefitsSection = document.getElementById("benefits");
-
-
     /* ------------ MELT THE LIMITS ------------ */
     let meltLimitsSection = document.getElementById("melt-the-limits");
     if(meltLimitsSection && window.innerWidth <= 1024) {
@@ -259,6 +255,12 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ------------ A37 CLASSES ------------ */
     let combineSection = document.getElementById("at-alchemy-37-we-combine");
 
+
+
+
+    /* ------------ BENEFITS ------------ */
+    let benefitsSection = document.getElementById("benefits");
+    let benefitsImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
     const benefitsScrollRange = 200; // діапазон у якому змінюється ширина
     const benefitsMinWidth = 25; // в %
     const benefitsMaxWidth = 58.333; // в %
@@ -276,15 +278,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 const delta = scrollPosition - benefitsTriggerPoint;
 
                 if (delta <= 0) {
-                    benefitsSection.style.width = `${benefitsMinWidth}%`;
+                    benefitsImage.style.width = `${benefitsMinWidth}%`;
                 } else if (delta >= benefitsScrollRange) {
                     // вже проскролено більше 200px після точки — ставимо максимальну ширину
-                    benefitsSection.style.width = `${benefitsMaxWidth}%`;
+                    benefitsImage.style.width = `${benefitsMaxWidth}%`;
                 } else {
                     // між — обчислюємо ширину лінійно
                     const progress = delta / benefitsScrollRange;
                     const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
-                    benefitsSection.style.width = `${currentWidth}%`;
+                    benefitsImage.style.width = `${currentWidth}%`;
                 }
             }
         }
