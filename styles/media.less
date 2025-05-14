@@ -877,11 +877,17 @@
               width: 100% !important;
             }
 
-            .button-block a {
-              width: 100% !important;
-              max-width: 340px;
-              margin: 0 auto;
-              box-sizing: border-box;
+            .button-block {
+              .sqs-block-button-container {
+                text-align: center;
+
+                a {
+                  width: 100% !important;
+                  max-width: 340px;
+                  margin: 0 auto;
+                  box-sizing: border-box;
+                }
+              }
             }
           }
           & > .row:not(:last-child) {
