@@ -267,6 +267,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
         if(benefitsSection) {
+            console.log(window.innerHeight);
             console.log(scrollPosition);
             console.log(benefitsSection.offsetTop);
         }
