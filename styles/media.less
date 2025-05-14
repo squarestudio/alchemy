@@ -1392,9 +1392,15 @@
           }
         }
       }
-      .Footer-blocks--bottom .html-block p,
-      .Footer-blocks--bottom .html-block a {
-        font-size: 12px;
+      .Footer-blocks--bottom {
+        .sqs-col-12 .row {
+          display: flex !important;
+          column-gap: 24px;
+        }
+        .html-block p,
+        .html-block a {
+          font-size: 12px;
+        }
       }
     }
   }
