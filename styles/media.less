@@ -605,6 +605,44 @@
   section#blog {
     .Index-page-content {
       margin-top: var(--gap-120);
+
+      .swiper-wrapper {
+        .blog-item {
+          padding: var(--gap-16) 0;
+
+          border-top: 1px solid var(--text-20);
+          border-bottom: 1px solid var(--text-20);
+
+          .item-content .item-date {
+            font-size: 20px;
+          }
+        }
+      }
+      .swiper-pagination {
+        position: static;
+        margin-top: var(--gap-40);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: var(--gap-16);
+
+        .swiper-pagination-bullet {
+          margin: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          opacity: 1;
+          background: var(--text-30) !important;
+
+          -webkit-transition: all .2s linear;
+          transition: all .2s linear;
+        }
+        .swiper-pagination-bullet-active {
+          width: 32px;
+          background: var(--text-bg) !important;
+        }
+      }
     }
 
     &.blogItems1, &.blogItems2 {
@@ -618,43 +656,7 @@
       }
     }
 
-    .swiper-wrapper {
-      .blog-item {
-        padding: var(--gap-16) 0;
 
-        border-top: 1px solid var(--text-20);
-        border-bottom: 1px solid var(--text-20);
-
-        .item-content .item-date {
-          font-size: 20px;
-        }
-      }
-    }
-    .swiper-pagination {
-      position: static;
-      margin-top: var(--gap-40);
-
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      column-gap: var(--gap-16);
-
-      .swiper-pagination-bullet {
-        margin: 0;
-        width: 10px;
-        height: 10px;
-        border-radius: 10px;
-        opacity: 1;
-        background: var(--text-30) !important;
-
-        -webkit-transition: all .2s linear;
-        transition: all .2s linear;
-      }
-      .swiper-pagination-bullet-active {
-        width: 32px;
-        background: var(--text-bg) !important;
-      }
-    }
   }
 
   /* WELCOME AND JOIN */
