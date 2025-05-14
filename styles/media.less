@@ -1308,9 +1308,17 @@
     margin-top: 0;
 
     #welcomeBlock {
-      .html-block h3 {
-        display: block;
-        width: 100%;
+      .html-block {
+        h2 + h3 {
+          margin-top: var(--gap-20);
+        }
+        h3+h3 {
+          margin-top: var(--gap-20);
+        }
+        h3 {
+          display: block;
+          width: 100%;
+        }
       }
       .sqs-col-12>.row {
         margin-top: var(--gap-24);
