@@ -99,9 +99,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ FORMULA ------------ */
-    let formulaSection = document.getElementById("formula");
+    let formulaSection = document.getElementById("formula-items");
     if(formulaSection) {
-        let formulaSwiper = new Swiper('#formula .swiper', {
+        let formulaSwiper = new Swiper('#formula-items .swiper', {
             slidesPerView: "2"
         });
     }
