@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ FORMULA ------------ */
     let formulaSection = document.getElementById("formula-items");
-    if(formulaSection) {
+    if(formulaSection && window.innerWidth <= 1024) {
         let formulaSwiper = new Swiper('#formula-items .swiper', {
             slidesPerView: '1',
             pagination: {
@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ MELT THE LIMITS ------------ */
     let meltLimitsSection = document.getElementById("melt-the-limits");
-    if(meltLimitsSection) {
+    if(meltLimitsSection && window.innerWidth <= 1024) {
         let meltTheLimitsSwiper = new Swiper('#melt-the-limits .swiper', {
             slidesPerView: "1",
             spaceBetween: 24,
