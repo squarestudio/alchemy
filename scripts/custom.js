@@ -119,6 +119,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let meltTheLimitsSwiper = new Swiper('#melt-the-limits .swiper', {
             slidesPerView: "2",
             spaceBetween: 24,
+            autoHeight: true,
             pagination: {
                 el: '.swiper-pagination',
             },
