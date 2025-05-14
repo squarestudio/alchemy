@@ -259,7 +259,9 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ------------ A37 CLASSES ------------ */
     let combineSection = document.getElementById("at-alchemy-37-we-combine");
 
-
+    const benefitsScrollRange = 200; // діапазон у якому змінюється ширина
+    const benefitsMinWidth = 25; // в %
+    const benefitsMaxWidth = 58.333; // в %
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
@@ -271,7 +273,19 @@ document.addEventListener("DOMContentLoaded", function () {
             let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
 
             if(scrollPosition >= benefitsTriggerPoint) {
-                console.log('animate benefits');
+                const delta = scrollPosition - benefitsTriggerPoint;
+
+                if (delta <= 0) {
+                    benefitsSection.style.width = `${benefitsMinWidth}%`;
+                } else if (delta >= benefitsScrollRange) {
+                    // вже проскролено більше 200px після точки — ставимо максимальну ширину
+                    benefitsSection.style.width = `${benefitsMaxWidth}%`;
+                } else {
+                    // між — обчислюємо ширину лінійно
+                    const progress = delta / benefitsScrollRange;
+                    const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
+                    benefitsSection.style.width = `${currentWidth}%`;
+                }
             }
         }
 
