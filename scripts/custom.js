@@ -114,6 +114,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
+
     /* ------------ BENEFITS ------------ */
     let benefitsSection = document.getElementById("benefits");
 
@@ -268,6 +269,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
+        if(benefitsSection) {
+            console.log(scrollPosition);
+            console.log(benefitsSection.offsetTop);
+        }
+
+
         // if(scrollPosition >= benefitsOffsetTop) {
         //     document.body.classList.add('benefits-blur');
         // }
