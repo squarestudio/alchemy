@@ -260,11 +260,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ BENEFITS ------------ */
     let benefitsSection = document.getElementById("benefits");
-    let benefitsHeight = document.getElementById("benefits").offsetHeight - 120;
-    let benefitsImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
-    const benefitsScrollRange = 200; // діапазон у якому змінюється ширина
-    const benefitsMinWidth = 25; // в %
-    const benefitsMaxWidth = 58.333; // в %
+    let benefitsHeight;
+    let benefitsImageBlock;
+    let benefitsSecondImage;
+    let benefitsScrollRange;
+    let benefitsMinWidth;
+    let benefitsMaxWidth;
+
+    if(benefitsSection) {
+        benefitsHeight = benefitsSection.offsetHeight - 120;
+        benefitsImageBlock = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
+        benefitsSecondImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
+        benefitsScrollRange = 200; // діапазон у якому відбувається анімація
+        benefitsMinWidth = 25; // в %
+        benefitsMaxWidth = 58.333; // в %
+
+    }
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
@@ -272,25 +283,32 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
         if(benefitsSection) {
-
             let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
 
-            if(scrollPosition >= benefitsTriggerPoint) {
+            if (scrollPosition >= benefitsTriggerPoint) {
                 const delta = scrollPosition - benefitsTriggerPoint;
-                console.log(delta);
 
                 if (delta <= 0) {
-                    benefitsImage.style.width = `${benefitsMinWidth}%`;
+                    benefitsImageBlock.style.width = `${benefitsMinWidth}%`;
+                    benefitsSecondImage.style.transform = `translateX(0px)`;
+                    benefitsSecondImage.style.opacity = `0`;
                 } else if (delta >= benefitsScrollRange) {
-                    // вже проскролено більше 200px після точки — ставимо максимальну ширину
-                    benefitsImage.style.width = `${benefitsMaxWidth}%`;
+                    benefitsImageBlock.style.width = `${benefitsMaxWidth}%`;
+                    benefitsSecondImage.style.transform = `translateX(-50px)`;
+                    benefitsSecondImage.style.opacity = `0.3`;
                 } else {
-                    // між — обчислюємо ширину лінійно
                     const progress = delta / benefitsScrollRange;
+
                     const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
-                    benefitsImage.style.width = `${currentWidth}%`;
+                    const currentTranslateX = -50 * progress;
+                    const currentOpacity = 0.3 * progress;
+
+                    benefitsImageBlock.style.width = `${currentWidth}%`;
+                    benefitsSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
+                    benefitsSecondImage.style.opacity = `${currentOpacity}`;
                 }
             }
+
         }
 
 
