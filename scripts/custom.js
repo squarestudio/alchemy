@@ -117,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let meltLimitsSection = document.getElementById("melt-the-limits");
     if(meltLimitsSection) {
         let meltTheLimitsSwiper = new Swiper('#melt-the-limits .swiper', {
-            slidesPerView: "2",
+            slidesPerView: "1",
             spaceBetween: 24,
             autoHeight: true,
             pagination: {
