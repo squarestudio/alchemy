@@ -102,7 +102,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let formulaSection = document.getElementById("formula-items");
     if(formulaSection) {
         let formulaSwiper = new Swiper('#formula-items .swiper', {
-            slidesPerView: "2"
+            slidesPerView: "2",
+            pagination: {
+                el: '.swiper-pagination',
+            },
         });
     }
 
