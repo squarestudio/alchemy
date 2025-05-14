@@ -277,6 +277,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
     }
 
+    /* INVEST IN YOUR MOVEMENT */
+    let investSection = document.getElementById('invest-in-your-movement');
+    if(investSection && window.innerWidth <= 1024) {
+        investSection.querySelector('.Index-page-content .sqs-col-12').classList.add('swiper');
+        investSection.querySelector('.Index-page-content .sqs-col-12>.row').classList.add('swiper-wrapper');
+        investSection.querySelector('.Index-page-content .sqs-col-12>.row >.col').classList.add('swiper-slide');
+    }
+
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
