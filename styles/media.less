@@ -1343,7 +1343,6 @@
         display: none;
       }
     }
-
     #joinBlock {
       .sqs-col-12>.sqs-block .newsletter-form-body {
         .newsletter-form-fields-wrapper {
@@ -1366,6 +1365,19 @@
       }
       .newsletter-block {
         margin-top: var(--gap-60) !important;
+      }
+    }
+  }
+
+  .Footer {
+    .Footer-inner {
+      .Footer-middle {
+        .sqs-layout {
+          .sqs-col-12>.row>.col:nth-child(1),
+          .sqs-col-12>.row>.col:nth-child(2) {
+            width: ~"calc(50% - 12px)";
+          }
+        }
       }
     }
   }
