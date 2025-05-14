@@ -261,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ------------ BENEFITS ------------ */
     let benefitsSection = document.getElementById("benefits");
     let benefitsImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
-    const benefitsScrollRange = 200; // діапазон у якому змінюється ширина
+    const benefitsScrollRange = 100; // діапазон у якому змінюється ширина
     const benefitsMinWidth = 25; // в %
     const benefitsMaxWidth = 58.333; // в %
 
