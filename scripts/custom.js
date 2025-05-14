@@ -291,10 +291,14 @@ document.addEventListener("DOMContentLoaded", function () {
         investSection.querySelector('.Index-page-content .sqs-col-12').appendChild(pagination);
 
         let investSwiper = new Swiper('#invest-in-your-movement .swiper', {
-            slidesPerView: "1",
-            spaceBetween: 24,
+            slidesPerView: '1',
             pagination: {
                 el: '.swiper-pagination',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                }
             },
         });
     }
