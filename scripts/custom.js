@@ -92,24 +92,33 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ HERO ------------ */
-    const heroSection = document.getElementById("hero");
+    let heroSection = document.getElementById("hero");
     // if (heroSection && heroSection.querySelector(".col:nth-child(2)")) {
     //     heroSection.querySelector(".col:nth-child(2)").classList.add("image-blur");
     // }
 
 
+    /* ------------ FORMULA ------------ */
+    let formulaSection = document.getElementById("formula");
+    if(formulaSection) {
+        let formulaSwiper = new Swiper('#formula .swiper', {
+            slidesPerView: "2"
+        });
+    }
+
+
     /* ------------ BENEFITS ------------ */
-    const benefitsSection = document.getElementById("benefits");
+    let benefitsSection = document.getElementById("benefits");
 
 
     /* ------------ SANCTUARY ------------ */
-    const sanctuarySection = document.getElementById("your-sweat-sanctuary");
+    let sanctuarySection = document.getElementById("your-sweat-sanctuary");
 
 
     /* ------------ A37 CLASSES ------------ */
-    const a37ClassesSection = document.getElementById("a37-classes");
+    let a37ClassesSection = document.getElementById("a37-classes");
 
-    const classesSection = document.getElementById("classes");
+    let classesSection = document.getElementById("classes");
     if(classesSection) {
         const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
         const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
@@ -131,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ BLOG ------------ */
-    const blogSection = document.getElementById("blog");
+    let blogSection = document.getElementById("blog");
     if(blogSection) {
         let blogLength = blogSection.querySelectorAll('.blog-item:not(.more-is-coming)').length;
         let blogSwiper;
@@ -176,19 +185,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ A37 MANIFESTO ------------ */
-    const a37ManifestoSection = document.getElementById("a37-manifesto");
+    let a37ManifestoSection = document.getElementById("a37-manifesto");
 
 
     /* ------------ WELCOME ------------ */
-    const welcomeSection = document.getElementById("welcome-and-join");
+    let welcomeSection = document.getElementById("welcome-and-join");
 
 
     /* ------------ PRICING ------------ */
-    const pricingImagesSection = document.getElementById("pricing-images");
+    let pricingImagesSection = document.getElementById("pricing-images");
 
 
     /* ------------ FAQ ------------ */
-    const faqItemsSection = document.getElementById("faq-items");
+    let faqItemsSection = document.getElementById("faq-items");
     if (faqItemsSection) {
         faqItemsSection.querySelectorAll('ul li').forEach(item => {
             item.addEventListener('click', () => {
@@ -207,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ TEAM ------------ */
-    const teamSection = document.getElementById("our-team");
+    let teamSection = document.getElementById("our-team");
     if(teamSection) {
         let teamSwiper = new Swiper('#our-team .swiper', {
             slidesPerView: "auto",
@@ -225,11 +234,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* ------------ WHO WE ARE  ------------ */
-    const wwaSection = document.getElementById("who-we-are-images");
+    let wwaSection = document.getElementById("who-we-are-images");
 
 
     /* ------------ A37 CLASSES ------------ */
-    const combineSection = document.getElementById("at-alchemy-37-we-combine");
+    let combineSection = document.getElementById("at-alchemy-37-we-combine");
 
 
 
