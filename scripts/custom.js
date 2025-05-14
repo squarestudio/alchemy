@@ -268,9 +268,11 @@ document.addEventListener("DOMContentLoaded", function () {
         const scrollPosition = window.scrollY || window.pageYOffset;
         if(benefitsSection) {
             const benefitsHeight = document.getElementById("benefits").offsetHeight;
+            let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
 
-            console.log(scrollPosition);
-            console.log(benefitsSection.offsetTop - window.innerHeight + benefitsHeight);
+            if(scrollPosition >= benefitsTriggerPoint) {
+                console.log('animate benefits');
+            }
         }
 
 
