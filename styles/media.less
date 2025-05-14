@@ -1308,27 +1308,11 @@
     margin-top: 0;
 
     #welcomeBlock {
-      & > .row > .col > .row > .col {
-        width: 100% !important;
+      & > .row > .col > .row > .col:first-child {
+        width: 100%;
       }
-      & > .row > .col > .row > .col:first-child h3 p br:first-child {
-        display: block;
-      }
-      & > .row > .col  >.row > .col:last-child ul {
-        margin-top: 0;
-      }
-      &>.row>.col>.row .col:last-child ul li.item .item-number+div h4 {
-        margin-top: -8px;
-      }
-      &>.row>.col>.row .col:last-child ul li.item .item-number {
-        padding-right: var(--gap-20);
-        margin-top: -4px;
-      }
-      &>.row>.col>.row .col:last-child ul li.item .item-number+div {
-        padding-left: var(--gap-16);
-      }
-      &>.row>.col>.row .col:last-child ul li.item .item-number+div .item-description {
-        margin-top: var(--gap-24);
+      & > .row > .col > .row > .col:last-child {
+        display: none;
       }
     }
 
