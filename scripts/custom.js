@@ -290,6 +290,13 @@ document.addEventListener("DOMContentLoaded", function () {
         pagination.classList.add('swiper-pagination');
         investSection.querySelector('.Index-page-content .sqs-col-12').appendChild(pagination);
 
+        let investSwiper = new Swiper('#nvest-in-your-movement .swiper', {
+            slidesPerView: "1",
+            spaceBetween: 24,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
     }
 
     window.onload = function() {
