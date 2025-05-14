@@ -1377,6 +1377,16 @@
           .sqs-col-12>.row>.col:nth-child(2) {
             width: ~"calc(50% - 12px)" !important;
           }
+          .sqs-col-12>.row>.col:nth-child(3) {
+            .form-block form {
+              flex-direction: column;
+
+              .field-list,
+              .field-list+.form-button-wrapper {
+                width: 100% !important;
+              }
+            }
+          }
         }
       }
     }
