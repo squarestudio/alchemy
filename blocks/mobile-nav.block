@@ -4,7 +4,7 @@
       {.folder?}
         {.index?}
           {.section collection}
-            <a href="{fullUrl}" class="Mobile-overlay-nav-item">
+            <a href="{fullUrl}" class="Mobile-overlay-nav-item{.if active} Mobile-overlay-nav-item--active{.end}">
               {navigationTitle}
             </a>
           {.end}
@@ -15,7 +15,7 @@
         {.end}
       {.or}
         {.section collection}
-          <a href="{fullUrl}" class="Mobile-overlay-nav-item">
+          <a href="{fullUrl}" class="Mobile-overlay-nav-item{.if active} Mobile-overlay-nav-item--active{.end}">
             {navigationTitle}
           </a>
         {.end}
