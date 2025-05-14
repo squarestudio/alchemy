@@ -64,6 +64,14 @@
   body {
     font-size: 20px;
   }
+  body.is-mobile-overlay-active {
+    .Mobile-bar .Mobile-bar-menu svg:first-child {
+      display: none;
+    }
+    .Mobile-bar .Mobile-bar-menu svg:last-child {
+      display: block !important;
+    }
+  }
   p, p.regular {
     font-size: 20px;
   }
