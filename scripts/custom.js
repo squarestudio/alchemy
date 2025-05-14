@@ -285,6 +285,11 @@ document.addEventListener("DOMContentLoaded", function () {
         investSection.querySelectorAll('.Index-page-content .sqs-col-12 > .row > .col').forEach(slide => {
             slide.classList.add('swiper-slide');
         });
+
+        const pagination = document.createElement('div');
+        pagination.classList.add('swiper-pagination');
+        investSection.querySelector('.Index-page-content .sqs-col-12').appendChild(pagination);
+
     }
 
     window.onload = function() {
