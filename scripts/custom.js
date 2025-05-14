@@ -109,9 +109,20 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-
     /* ------------ BENEFITS ------------ */
     let benefitsSection = document.getElementById("benefits");
+
+
+    /* ------------ MELT THE LIMITS ------------ */
+    let meltLimitsSection = document.getElementById("melt-the-limits");
+    if(meltLimitsSection) {
+        let meltTheLimitsSwiper = new Swiper('#melt-the-limits .swiper', {
+            slidesPerView: "2",
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        });
+    }
 
 
     /* ------------ SANCTUARY ------------ */
