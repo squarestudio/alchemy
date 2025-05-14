@@ -697,10 +697,15 @@
             align-items: flex-start;
 
             .newsletter-form-fields-wrapper {
-              flex-direction: column;
               width: 100%;
               align-items: flex-start;
               row-gap: var(--gap-60);
+              column-gap: var(--gap-24);
+
+              & > fieldset,
+              & > div {
+                width: 50%;
+              }
 
               *,  input {
                 width: 100%;
