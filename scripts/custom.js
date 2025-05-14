@@ -294,13 +294,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     benefitsSecondImage.style.opacity = `0`;
                 } else if (delta >= benefitsScrollRange) {
                     benefitsImageBlock.style.width = `${benefitsMaxWidth}%`;
-                    benefitsSecondImage.style.transform = `translateX(-50px)`;
+                    benefitsSecondImage.style.transform = `translateX(-20px)`;
                     benefitsSecondImage.style.opacity = `0.3`;
                 } else {
                     const progress = delta / benefitsScrollRange;
 
                     const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
-                    const currentTranslateX = -50 * progress;
+                    const currentTranslateX = -20 * progress;
 
                     benefitsImageBlock.style.width = `${currentWidth}%`;
                     benefitsSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
