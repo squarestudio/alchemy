@@ -847,6 +847,7 @@
       .sqs-col-12>.row {
         column-gap: 24px;
         padding-top: var(--gap-80);
+        padding-bottom: 50px;
 
         .col {
           box-sizing: border-box;
@@ -864,6 +865,31 @@
           & > .markdown-block:nth-child(1) .sqs-block-content h5:first-child {
             height: 57px;
           }
+        }
+      }
+      .swiper-pagination {
+        top: auto;
+        bottom: 0;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: var(--gap-16);
+
+        .swiper-pagination-bullet {
+          margin: 0;
+          width: 10px;
+          height: 10px;
+          border-radius: 10px;
+          opacity: 1;
+          background: var(--text-30) !important;
+
+          -webkit-transition: all .2s linear;
+          transition: all .2s linear;
+        }
+        .swiper-pagination-bullet-active {
+          width: 32px;
+          background: var(--text-bg) !important;
         }
       }
     }
