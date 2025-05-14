@@ -62,9 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
         const startColor = getInterpolatedColor(gradientStops, startPercent);
         const endColor = getInterpolatedColor(gradientStops, endPercent);
 
-        console.log(startColor);
-        console.log(endColor);
-
         element.style.background = `linear-gradient(180deg, ${startColor}, ${endColor})`;
     }
 
