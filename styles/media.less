@@ -1563,8 +1563,12 @@
       .sqs-col-12>.html-block h2 br {
         display: none !important;
       }
-      .sqs-col-12>.row .col {
-        max-width: 100%;
+      .sqs-col-12>.row {
+        column-gap: 0;
+
+        .col {
+          max-width: 100%;
+        }
       }
     }
   }
