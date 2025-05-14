@@ -269,9 +269,8 @@ document.addEventListener("DOMContentLoaded", function () {
         if(benefitsSection) {
             const benefitsHeight = document.getElementById("benefits").offsetHeight;
 
-            console.log(benefitsHeight);
             console.log(scrollPosition);
-            console.log(benefitsSection.offsetTop - window.innerHeight);
+            console.log(benefitsSection.offsetTop - window.innerHeight + benefitsHeight);
         }
 
 
