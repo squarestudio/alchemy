@@ -260,6 +260,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* ------------ BENEFITS ------------ */
     let benefitsSection = document.getElementById("benefits");
+    let benefitsHeight = document.getElementById("benefits").offsetHeight - 120;
     let benefitsImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
     const benefitsScrollRange = 100; // діапазон у якому змінюється ширина
     const benefitsMinWidth = 25; // в %
@@ -271,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
         if(benefitsSection) {
-            const benefitsHeight = document.getElementById("benefits").offsetHeight - 120;
+
             let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
 
             if(scrollPosition >= benefitsTriggerPoint) {
