@@ -344,6 +344,14 @@
     .sqs-layout > .row > .col > .row {
       flex-direction: column;
 
+      & > .col:first-child {
+        margin-bottom: var(--gap-80);
+
+        h3 p br {
+          display: none;
+        }
+      }
+
       & > .col {
         width: 100%;
       }
