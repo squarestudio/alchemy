@@ -344,6 +344,9 @@
     .sqs-layout > .row > .col > .row {
       flex-direction: column;
 
+      & > .col {
+        width: 100%;
+      }
       & > .col:first-child {
         margin-bottom: var(--gap-80);
 
@@ -351,9 +354,10 @@
           display: none;
         }
       }
-
-      & > .col {
-        width: 100%;
+      & > .col:last-child {
+        ul {
+          display: flex;
+        }
       }
     }
     .swiper-pagination {
