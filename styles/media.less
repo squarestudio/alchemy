@@ -860,6 +860,15 @@
         .sqs-col-1 {
           display: none;
         }
+
+        .sqs-col-6 {
+          display: flex;
+          flex-direction: column;
+
+          & > .row:last-child {
+            order: 0;
+          }
+        }
       }
     }
   }
