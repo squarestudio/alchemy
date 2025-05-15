@@ -235,6 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
     if(teamSection) {
         let teamSwiper = new Swiper('#our-team .swiper', {
             slidesPerView: '1',
+            pagination: {
+                el: '.swiper-pagination',
+            },
             breakpoints: {
                 768: {
                     slidesPerView: 2,
