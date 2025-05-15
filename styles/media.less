@@ -1873,18 +1873,25 @@
       .sqs-col-12>.row>.col:last-child {
         margin-top: 70px;
       }
-      .sqs-col-12 .row .col:last-child .markdown-block h4 {
-        padding-left: 55px;
+      .sqs-col-12 .row .col:last-child .markdown-block {
+        h4 {
+          padding-left: 55px;
 
-        font-size: 20px;
-        line-height: 110%;
+          font-size: 20px;
+          line-height: 110%;
 
-        &:before {
-          font-size: 12px;
-          line-height: 120%;
+          &:before {
+            font-size: 12px;
+            line-height: 120%;
+          }
+          &:after {
+            top: 6px;
+            left: 38px;
+            bottom: 32px;
+          }
         }
-        &:after {
-          left: 38px;
+        h4+h4:after {
+          top: 38px;
         }
       }
     }
