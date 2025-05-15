@@ -2073,11 +2073,18 @@
 
   body.collection-type-blog.view-item {
     .Main-content {
+      padding-left: 0;
+      padding-right: 0;
+
       article {
         .article-header {
           .article-image {
             max-width: none;
           }
+        }
+        .article-content {
+          padding-left: var(--gap-16);
+          padding-bottom: var(--gap-16);
         }
       }
     }
