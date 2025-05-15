@@ -1163,22 +1163,27 @@
   }
 
   /* MANIFESTO */
-  section#a37-manifesto .Index-page-content .manifesto-bg {
-    aspect-ratio: 1 / 1.3;
+  section#a37-manifesto  {
+    .Index-page-content {
+      .manifesto-bg {
+        aspect-ratio: 1 / 1.3;
+      }
+      .manifesto-bg+.sqs-layout {
+        .manifesto-header+.sqs-row {
+          height: 82vw;
+        }
+        .manifesto-header+.sqs-row .item-space {
+          width: 30%;
+        }
+        .manifesto-header+.sqs-row>.col:last-child {
+          width: 70%;
+        }
+        .manifesto-header+.sqs-row .manifesto-items .manifesto-item div.description {
+          margin-top: var(--gap-24);
+        }
+      }
+    }
   }
-  section#a37-manifesto .Index-page-content .manifesto-bg+.sqs-layout .manifesto-header+.sqs-row {
-    height: 82vw;
-  }
-  section#a37-manifesto .Index-page-content .manifesto-bg+.sqs-layout .manifesto-header+.sqs-row .item-space {
-    width: 30%;
-  }
-  section#a37-manifesto .Index-page-content .manifesto-bg+.sqs-layout .manifesto-header+.sqs-row>.col:last-child {
-    width: 70%;
-  }
-  section#a37-manifesto .Index-page-content .manifesto-bg+.sqs-layout .manifesto-header+.sqs-row .manifesto-items .manifesto-item div.description {
-    margin-top: var(--gap-24);
-  }
-
   section#transformation {
     .Index-page-content {
       .sqs-col-12 > .row {
