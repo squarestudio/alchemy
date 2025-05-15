@@ -1937,11 +1937,18 @@
           margin: 0 auto;
         }
       }
-      .sqs-col-12 .sqs-col-3 {
-        display: none;
-      }
-      .sqs-col-12 .sqs-col-2 {
-        width: ~"calc(50% - 12px)" !important;
+      .sqs-col-12 > .row {
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: var(--gap-24);
+        row-gap: var(--gap-32);
+
+        .sqs-col-3 {
+          display: none;
+        }
+        .sqs-col-2 {
+          width: ~"calc(50% - 12px)" !important;
+        }
       }
     }
   }
