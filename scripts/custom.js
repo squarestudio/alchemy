@@ -234,10 +234,18 @@ document.addEventListener("DOMContentLoaded", function () {
     let teamSection = document.getElementById("our-team");
     if(teamSection) {
         let teamSwiper = new Swiper('#our-team .swiper', {
-            slidesPerView: "auto",
-            centeredSlides: true,
-            spaceBetween: 24,
-            initialSlide: 1
+            slidesPerView: '1',
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 24,
+                },
+                1025: {
+                    slidesPerView: "auto",
+                    centeredSlides: true,
+                    initialSlide: 1,
+                }
+            },
         });
         teamSwiper.on('slideChange', () => {
             const realSlideCount = teamSwiper.slides.length;
