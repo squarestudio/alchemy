@@ -1292,15 +1292,19 @@
   }
 
   body.textpage {
-    .Main-content .sqs-col-12 > .row {
-      flex-direction: column;
-      row-gap: var(--gap-24);
+    .Main-content {
+      padding-bottom: 0;
 
-      & + .row {
-        margin-top: var(--gap-40);
-      }
-      & > .col {
-        width: 100%;
+      .sqs-col-12 > .row {
+        flex-direction: column;
+        row-gap: var(--gap-24);
+
+        & + .row {
+          margin-top: var(--gap-40);
+        }
+        & > .col {
+          width: 100%;
+        }
       }
     }
   }
