@@ -1285,8 +1285,18 @@
     }
   }
 
-  body.collection-type-blog.view-item .Main-content article .article-header .article-header-content h1.article-title {
-    font-size: 60px !important;
+  body.collection-type-blog.view-item {
+    .Main-content article .article-header .article-header-content h1.article-title {
+      font-size: 60px !important;
+    }
+  }
+
+  body.textpage {
+    .Main-content .sqs-col-12 > .row {
+      & + .row {
+        margin-top: var(--gap-40);
+      }
+    }
   }
 }
 
