@@ -247,12 +247,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             },
         });
-        teamSwiper.on('slideChange', () => {
-            const realSlideCount = teamSwiper.slides.length;
-            if (teamSwiper.activeIndex === 0 || teamSwiper.activeIndex === realSlideCount - 1) {
-                teamSwiper.slideTo(teamSwiper.previousIndex);
-            }
-        });
+        if(window.innerWidth > 1024) {
+            teamSwiper.on('slideChange', () => {
+                const realSlideCount = teamSwiper.slides.length;
+                if (teamSwiper.activeIndex === 0 || teamSwiper.activeIndex === realSlideCount - 1) {
+                    teamSwiper.slideTo(teamSwiper.previousIndex);
+                }
+            });
+        }
     }
 
 
