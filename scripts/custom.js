@@ -246,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 1025: {
                     slidesPerView: "auto",
                     centeredSlides: true,
+                    spaceBetween: 24,
                     initialSlide: 1,
                 }
             },
