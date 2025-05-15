@@ -1154,6 +1154,18 @@
   body.collection-type-blog.view-item .Main--blog-item {
     padding-left: 0;
   }
+  body.collection-type-blog.view-item .Main-content article .article-content .article-body .sqs-layout {
+    .sqs-col-12 {
+      .row {
+        flex-direction: column;
+
+        & > .col {
+          width: 100%;
+        }
+      }
+    }
+  }
+
 }
 
 @media only screen and (max-width:820px) {
