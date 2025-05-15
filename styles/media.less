@@ -1296,6 +1296,7 @@
       padding-bottom: 0;
 
       .sqs-col-12 > .row {
+        display: flex !important;
         flex-direction: column;
         row-gap: var(--gap-24);
 
@@ -1304,6 +1305,10 @@
         }
         & > .col {
           width: 100%;
+
+          p + p {
+            margin-top: 0;
+          }
         }
       }
       .sqs-col-12>.markdown-block+.html-block {
