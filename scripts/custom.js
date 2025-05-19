@@ -353,6 +353,11 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         }
+        if(sanctuarySection) {
+            let sanctuaryTriggerPoint = sanctuarySection.offsetTop - window.innerHeight + benefitsHeight;
+            console.log(sanctuaryTriggerPoint);
+        }
+
 
 
         // if(scrollPosition >= benefitsOffsetTop) {
