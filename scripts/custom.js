@@ -377,10 +377,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     sanctuarySmallImage.style.transform = `translateX(-20px)`;
                     sanctuarySmallImage.style.opacity = `0.3`;
                 } else {
-                    const progress = sanctuaryDelta / sanctuaryScrollOneRange;
-                    const currentTranslateX = -20 * progress;
+                    let sanctuaryProgress = sanctuaryDelta / sanctuaryScrollOneRange;
+                    let sanctuaryCurrentTranslateX = -20 * sanctuaryProgress;
 
-                    sanctuarySmallImage.style.transform = `translateX(${currentTranslateX}px)`;
+                    sanctuarySmallImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
                     sanctuarySmallImage.style.opacity = `0.3`;
                 }
             }
