@@ -283,7 +283,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let benefitsLayoutWidth;
 
     if(benefitsSection) {
-        benefitsHeight = benefitsSection.offsetHeight - 120;
+        benefitsHeight = benefitsSection.offsetHeight - 240;
         benefitsImageBlock = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
         benefitsSecondImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
         benefitsMinWidth = 25; // в %
@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
         if(benefitsSection) {
-            let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + 240;
+            let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
 
             if (scrollPosition >= benefitsTriggerPoint) {
                 const delta = scrollPosition - benefitsTriggerPoint;
