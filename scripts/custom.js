@@ -326,33 +326,33 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
-        // if(benefitsSection) {
-        //     let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
-        //
-        //     if (scrollPosition >= benefitsTriggerPoint) {
-        //         const delta = scrollPosition - benefitsTriggerPoint;
-        //
-        //         if (delta <= 0) {
-        //             benefitsImageBlock.style.width = `${benefitsMinWidth}%`;
-        //             benefitsSecondImage.style.transform = `translateX(0px)`;
-        //             benefitsSecondImage.style.opacity = `0`;
-        //         } else if (delta >= benefitsScrollRange) {
-        //             benefitsImageBlock.style.width = `${benefitsMaxWidth}%`;
-        //             benefitsSecondImage.style.transform = `translateX(-20px)`;
-        //             benefitsSecondImage.style.opacity = `0.3`;
-        //         } else {
-        //             const progress = delta / benefitsScrollRange;
-        //
-        //             const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
-        //             const currentTranslateX = -20 * progress;
-        //
-        //             benefitsImageBlock.style.width = `${currentWidth}%`;
-        //             benefitsSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
-        //             benefitsSecondImage.style.opacity = `0.3`;
-        //         }
-        //     }
-        //
-        // }
+        if(benefitsSection) {
+            let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
+
+            if (scrollPosition >= benefitsTriggerPoint) {
+                const delta = scrollPosition - benefitsTriggerPoint;
+
+                if (delta <= 0) {
+                    benefitsImageBlock.style.width = `${benefitsMinWidth}%`;
+                    benefitsSecondImage.style.transform = `translateX(0px)`;
+                    benefitsSecondImage.style.opacity = `0`;
+                } else if (delta >= benefitsScrollRange) {
+                    benefitsImageBlock.style.width = `${benefitsMaxWidth}%`;
+                    benefitsSecondImage.style.transform = `translateX(-20px)`;
+                    benefitsSecondImage.style.opacity = `0.3`;
+                } else {
+                    const progress = delta / benefitsScrollRange;
+
+                    const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
+                    const currentTranslateX = -20 * progress;
+
+                    benefitsImageBlock.style.width = `${currentWidth}%`;
+                    benefitsSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
+                    benefitsSecondImage.style.opacity = `0.3`;
+                }
+            }
+
+        }
         if(sanctuarySection) {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop - window.innerHeight + 287;
             console.log(sanctuaryTriggerPoint);
