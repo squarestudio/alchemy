@@ -367,16 +367,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (scrollPosition >= sanctuaryTriggerPoint) {
                 let sanctuaryDelta = scrollPosition - sanctuaryTriggerPoint;
+                console.log('sanctuaryDelta', sanctuaryDelta);
+                console.log('sanctuaryScrollOneRange', sanctuaryScrollOneRange);
 
                 if (sanctuaryDelta <= 0) {
                     sanctuarySmallImage.style.transform = `translateX(0px)`;
                     sanctuarySmallImage.style.opacity = `0`;
                 } else if (sanctuaryDelta >= sanctuaryScrollOneRange) {
-                    sanctuarySmallImage.style.transform = `translateX(-50px)`;
+                    sanctuarySmallImage.style.transform = `translateX(-20px)`;
                     sanctuarySmallImage.style.opacity = `0.3`;
                 } else {
                     const progress = sanctuaryDelta / sanctuaryScrollOneRange;
-                    const currentTranslateX = -50 * progress;
+                    const currentTranslateX = -20 * progress;
 
                     sanctuarySmallImage.style.transform = `translateX(${currentTranslateX}px)`;
                     sanctuarySmallImage.style.opacity = `0.3`;
