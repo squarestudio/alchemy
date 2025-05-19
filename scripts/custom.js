@@ -358,8 +358,8 @@ document.addEventListener("DOMContentLoaded", function () {
             let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 120;
             console.log(sanctuaryTriggerPoint);
             console.log(sanctuarySecondTriggerPoint);
+            console.log(scrollPosition);
         }
-        console.log(scrollPosition);
 
 
 
