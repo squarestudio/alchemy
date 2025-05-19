@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function () {
         //
         // }
         if(sanctuarySection) {
-            let sanctuaryTriggerPoint = sanctuarySection.offsetTop - window.innerHeight;
+            let sanctuaryTriggerPoint = sanctuarySection.offsetTop - window.innerHeight + 287;
             console.log(sanctuaryTriggerPoint);
         }
         console.log(scrollPosition);
