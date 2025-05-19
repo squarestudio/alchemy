@@ -126,10 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ------------ SANCTUARY ------------ */
-    let sanctuarySection = document.getElementById("your-sweat-sanctuary");
-
-
     /* ------------ A37 CLASSES ------------ */
     let a37ClassesSection = document.getElementById("a37-classes");
 
@@ -271,30 +267,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-
-    /* ------------ BENEFITS ------------ */
-    let benefitsSection = document.getElementById("benefits");
-    let benefitsHeight;
-    let benefitsImageBlock;
-    let benefitsSecondImage;
-    let benefitsScrollRange;
-    let benefitsMinWidth;
-    let benefitsMaxWidth;
-    let benefitsLayoutWidth;
-
-    if(benefitsSection) {
-        benefitsHeight = benefitsSection.offsetHeight - 240;
-        benefitsImageBlock = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
-        benefitsSecondImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
-        benefitsMinWidth = 25; // в %
-        benefitsMaxWidth = 58.333; // в %
-
-        benefitsLayoutWidth = benefitsSection.querySelector('.sqs-layout').offsetWidth - 24;
-        let initialWidth = (benefitsLayoutWidth/100)*25;
-        let finalWidth = (benefitsLayoutWidth/100)*58.333;
-        benefitsScrollRange = Math.ceil(finalWidth - initialWidth);
-    }
-
     /* INVEST IN YOUR MOVEMENT */
     let investSection = document.getElementById('invest-in-your-movement');
     if(investSection && window.innerWidth <= 1024) {
@@ -320,6 +292,41 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
     }
+
+
+    /* ------------ BENEFITS ------------ */
+    let benefitsSection = document.getElementById("benefits");
+    let benefitsHeight;
+    let benefitsImageBlock;
+    let benefitsSecondImage;
+    let benefitsScrollRange;
+    let benefitsMinWidth;
+    let benefitsMaxWidth;
+    let benefitsLayoutWidth;
+
+    if(benefitsSection) {
+        benefitsHeight = benefitsSection.offsetHeight - 240;
+        benefitsImageBlock = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
+        benefitsSecondImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
+        benefitsMinWidth = 25; // в %
+        benefitsMaxWidth = 58.333; // в %
+
+        benefitsLayoutWidth = benefitsSection.querySelector('.sqs-layout').offsetWidth - 24;
+        let initialWidth = (benefitsLayoutWidth/100)*25;
+        let finalWidth = (benefitsLayoutWidth/100)*58.333;
+        benefitsScrollRange = Math.ceil(finalWidth - initialWidth);
+    }
+
+
+    /* ------------ SANCTUARY ------------ */
+    let sanctuarySection = document.getElementById("your-sweat-sanctuary");
+    let sanctuarySmallImage;
+
+    if(sanctuarySection) {
+        sanctuarySmallImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:first-child .col:last-child");
+    }
+
+
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
@@ -356,9 +363,25 @@ document.addEventListener("DOMContentLoaded", function () {
         if(sanctuarySection) {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop - window.innerHeight + 287;
             let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 120;
-            console.log(sanctuaryTriggerPoint);
-            console.log(sanctuarySecondTriggerPoint);
-            console.log(scrollPosition);
+            let sanctuaryScrollOneRange = Math.ceil(sanctuarySecondTriggerPoint - sanctuaryTriggerPoint);
+
+            if (scrollPosition >= sanctuaryTriggerPoint) {
+                const delta = scrollPosition - sanctuaryTriggerPoint;
+
+                if (delta <= 0) {
+                    sanctuarySmallImage.style.transform = `translateX(0px)`;
+                    sanctuarySmallImage.style.opacity = `0`;
+                } else if (delta >= sanctuaryScrollOneRange) {
+                    sanctuarySmallImage.style.transform = `translateX(-50px)`;
+                    sanctuarySmallImage.style.opacity = `0.3`;
+                } else {
+                    const progress = delta / sanctuaryScrollOneRange;
+                    const currentTranslateX = -50 * progress;
+
+                    sanctuarySmallImage.style.transform = `translateX(${currentTranslateX}px)`;
+                    sanctuarySmallImage.style.opacity = `0.3`;
+                }
+            }
         }
 
 
