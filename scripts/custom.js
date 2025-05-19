@@ -378,8 +378,9 @@ document.addEventListener("DOMContentLoaded", function () {
                     sanctuarySmallImage.style.opacity = `0.3`;
                 } else {
                     let sanctuaryProgress = sanctuaryDelta / sanctuaryScrollOneRange;
-                    console.log('sanctuaryProgress',sanctuaryProgress);
                     let sanctuaryCurrentTranslateX = -20 * sanctuaryProgress;
+                    console.log('sanctuaryProgress',sanctuaryProgress);
+                    console.log('sanctuaryCurrentTranslateX',sanctuaryCurrentTranslateX);
 
                     sanctuarySmallImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
                     sanctuarySmallImage.style.opacity = `0.3`;
