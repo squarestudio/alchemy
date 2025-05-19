@@ -357,6 +357,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop - window.innerHeight + benefitsHeight;
             console.log(sanctuaryTriggerPoint);
         }
+        console.log(scrollPosition);
 
 
 
