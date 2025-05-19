@@ -280,6 +280,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let benefitsScrollRange;
     let benefitsMinWidth;
     let benefitsMaxWidth;
+    let benefitsLayoutWidth;
 
     if(benefitsSection) {
         benefitsHeight = benefitsSection.offsetHeight - 120;
@@ -289,6 +290,8 @@ document.addEventListener("DOMContentLoaded", function () {
         benefitsMinWidth = 25; // в %
         benefitsMaxWidth = 58.333; // в %
 
+        benefitsLayoutWidth = benefitsSection.querySelector('.sqs-layout').innerWidth;
+        console.log(benefitsLayoutWidth);
     }
 
     /* INVEST IN YOUR MOVEMENT */
