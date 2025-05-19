@@ -137,6 +137,7 @@
 
             </div>
             <div data-nc-container="bottom-right">
+              <squarespace:block-field id="book-your-class" columns="12" label="Book Your Class" />
 
               <nav class="Header-nav Header-nav--secondary" data-nc-element="secondary-nav" data-content-field="navigation">
                 <squarespace:navigation navigationId="secondaryNavigation" template="header-nav" />
