@@ -475,17 +475,17 @@ header.Header.Header--top {
 header.Header.Header--bottom {
   display: block !important;
 
-  position: fixed;
-  top: 50px;
-  right: 20px;
-  z-index: 10;
-
   .Header-inner {
     display: block;
     padding: 0;
 
     [data-nc-container="bottom-right"] {
       display: block;
+
+      position: fixed;
+      top: 50px;
+      right: 20px;
+      z-index: 10;
 
       .sqs-layout {
         max-width: none;
