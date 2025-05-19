@@ -290,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
         benefitsMinWidth = 25; // в %
         benefitsMaxWidth = 58.333; // в %
 
-        benefitsLayoutWidth = benefitsSection.querySelector('.sqs-layout').innerWidth;
+        benefitsLayoutWidth = benefitsSection.querySelector('.sqs-layout').offsetWidth;
         console.log(benefitsLayoutWidth);
     }
 
