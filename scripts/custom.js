@@ -327,7 +327,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
         if(benefitsSection) {
-            let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + 120;
+            let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + 240;
 
             if (scrollPosition >= benefitsTriggerPoint) {
                 const delta = scrollPosition - benefitsTriggerPoint;
