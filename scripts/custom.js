@@ -285,7 +285,7 @@ document.addEventListener("DOMContentLoaded", function () {
         benefitsHeight = benefitsSection.offsetHeight - 120;
         benefitsImageBlock = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
         benefitsSecondImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
-        benefitsScrollRange = 200; // діапазон у якому відбувається анімація
+        benefitsScrollRange = 232; // діапазон у якому відбувається анімація
         benefitsMinWidth = 25; // в %
         benefitsMaxWidth = 58.333; // в %
 
