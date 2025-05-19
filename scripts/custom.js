@@ -367,8 +367,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (scrollPosition >= sanctuaryTriggerPoint) {
                 let sanctuaryDelta = scrollPosition - sanctuaryTriggerPoint;
-                console.log('sanctuaryDelta', sanctuaryDelta);
-                console.log('sanctuaryScrollOneRange', sanctuaryScrollOneRange);
 
                 if (sanctuaryDelta <= 0) {
                     sanctuarySmallImage.style.transform = `translateX(0px)`;
@@ -379,7 +377,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 } else {
                     let sanctuaryProgress = sanctuaryDelta / sanctuaryScrollOneRange;
                     let sanctuaryCurrentTranslateX = Math.ceil(-20 * sanctuaryProgress);
-                    console.log(sanctuaryCurrentTranslateX);
 
                     sanctuarySmallImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
                     sanctuarySmallImage.style.opacity = `0.3`;
