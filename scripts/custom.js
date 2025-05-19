@@ -286,16 +286,13 @@ document.addEventListener("DOMContentLoaded", function () {
         benefitsHeight = benefitsSection.offsetHeight - 120;
         benefitsImageBlock = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
         benefitsSecondImage = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
-        benefitsScrollRange = 232; // діапазон у якому відбувається анімація
         benefitsMinWidth = 25; // в %
         benefitsMaxWidth = 58.333; // в %
 
         benefitsLayoutWidth = benefitsSection.querySelector('.sqs-layout').offsetWidth - 24;
         let initialWidth = (benefitsLayoutWidth/100)*25;
         let finalWidth = (benefitsLayoutWidth/100)*58.333;
-
-        console.log(initialWidth);
-        console.log(finalWidth);
+        benefitsScrollRange = Math.ceil(finalWidth - initialWidth);
     }
 
     /* INVEST IN YOUR MOVEMENT */
