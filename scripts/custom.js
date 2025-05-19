@@ -291,7 +291,11 @@ document.addEventListener("DOMContentLoaded", function () {
         benefitsMaxWidth = 58.333; // в %
 
         benefitsLayoutWidth = benefitsSection.querySelector('.sqs-layout').offsetWidth - 24;
-        console.log((benefitsLayoutWidth/100)*58.333);
+        let initialWidth = (benefitsLayoutWidth/100)*25;
+        let finalWidth = (benefitsLayoutWidth/100)*58.333;
+
+        console.log(initialWidth);
+        console.log(finalWidth);
     }
 
     /* INVEST IN YOUR MOVEMENT */
