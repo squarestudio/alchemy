@@ -524,8 +524,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if(piSection) {
-            let piTriggerPoint = piSection.offsetTop + 120;
-            let piSecondTriggerPoint = piSection.offsetTop + 320;
+            let piTriggerPoint = piSection.offsetTop;
+            let piSecondTriggerPoint = piSection.offsetTop + 200;
             let piScrollRange = Math.ceil(piSecondTriggerPoint - piTriggerPoint);
 
             if (scrollPosition >= piTriggerPoint) {
