@@ -498,12 +498,27 @@ header.Header.Header--bottom {
 /* ------------ HOMEPAGE ------------ */
 
 #alchemyEnroll {
-  display: none;
-}
-body.sqs-edit-mode #alchemyEnroll {
   display: block;
   margin-left: 96px;
 }
+body:not(.sqs-edit-mode) #alchemyEnroll {
+  .sqs-col-12 {
+    background: #ffffff;
+
+    & > .html-block {
+
+    }
+    & > .markdown-block {
+      h5 {
+        text-align: center;
+      }
+    }
+    & > .button-block {
+
+    }
+  }
+}
+
 
 /* HERO */
 
