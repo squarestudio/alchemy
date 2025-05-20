@@ -3115,6 +3115,29 @@ section#studio {
     .sqs-layout {
       max-width: unset;
       padding: 0;
+
+      .sqs-col-12 {
+        & > .row {
+          position: absolute;
+          top: 167px;
+          left: 0;
+          right: 0;
+          aspect-ratio: 1/.6168;
+          overflow: hidden;
+
+          .col {
+            width: 100%;
+
+            &:last-child {
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 2;
+              opacity: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
