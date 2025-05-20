@@ -530,17 +530,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 let piDelta = scrollPosition - piTriggerPoint;
 
                 if (piDelta <= 0) {
-                    a37ClassesFirstImage.style.transform = `translateX(0px)`;
-                    a37ClassesSecondImage.style.transform = `translateX(0px)`;
+                    piFirstImage.style.transform = `translateX(0px)`;
+                    piSecondImage.style.transform = `translateX(0px)`;
                 } else if (piDelta >= piScrollRange) {
-                    a37ClassesFirstImage.style.transform = `translateX(-20px)`;
-                    a37ClassesSecondImage.style.transform = `translateX(-20px)`;
+                    piFirstImage.style.transform = `translateX(-20px)`;
+                    piSecondImage.style.transform = `translateX(-20px)`;
                 } else {
                     let piProgress = piDelta / piScrollRange;
                     let piCurrentTranslateX = Math.ceil(-20 * piProgress);
 
-                    a37ClassesFirstImage.style.transform = `translateX(${piCurrentTranslateX}px)`;
-                    a37ClassesSecondImage.style.transform = `translateX(${piCurrentTranslateX}px)`;
+                    piFirstImage.style.transform = `translateX(${piCurrentTranslateX}px)`;
+                    piSecondImage.style.transform = `translateX(${piCurrentTranslateX}px)`;
                 }
             }
         }
