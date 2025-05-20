@@ -418,30 +418,27 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(benefitsSection) {
             let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight + 100;
-
             if (scrollPosition >= benefitsTriggerPoint) {
                 const delta = scrollPosition - benefitsTriggerPoint;
-
                 if (delta <= 0) {
                     benefitsImageBlock.style.width = `${benefitsMinWidth}%`;
                     benefitsSecondImage.style.transform = `translateX(0px)`;
                     benefitsSecondImage.style.opacity = `0`;
                 } else if (delta >= benefitsScrollRange) {
                     benefitsImageBlock.style.width = `${benefitsMaxWidth}%`;
-                    benefitsSecondImage.style.transform = `translateX(-20px)`;
+                    benefitsSecondImage.style.transform = `translateX(-40px)`;
                     benefitsSecondImage.style.opacity = `0.3`;
                 } else {
                     const progress = delta / benefitsScrollRange;
 
                     const currentWidth = benefitsMinWidth + (benefitsMaxWidth - benefitsMinWidth) * progress;
-                    const currentTranslateX = -20 * progress;
+                    const currentTranslateX = -40 * progress;
 
                     benefitsImageBlock.style.width = `${currentWidth}%`;
                     benefitsSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
                     benefitsSecondImage.style.opacity = `0.3`;
                 }
             }
-
         }
         if(sanctuarySection) {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop;
@@ -544,13 +541,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     welcomeSecondImage.style.opacity = `0`;
                 } else if (welcomeDelta >= welcomeScrollRange) {
                     welcomeImageBlock.style.width = `${welcomeMaxWidth}%`;
-                    welcomeSecondImage.style.transform = `translateX(-20px)`;
+                    welcomeSecondImage.style.transform = `translateX(-40px)`;
                     welcomeSecondImage.style.opacity = `0.3`;
                 } else {
                     let progress = welcomeDelta / welcomeScrollRange;
 
                     let currentWidth = welcomeMinWidth + (welcomeMaxWidth - welcomeMinWidth) * progress;
-                    let currentTranslateX = -20 * progress;
+                    let currentTranslateX = -40 * progress;
 
                     welcomeImageBlock.style.width = `${currentWidth}%`;
                     welcomeSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
