@@ -368,6 +368,8 @@ document.addEventListener("DOMContentLoaded", function () {
         piFirstImage = piSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:first-child .image-block + .image-block");
         piSecondImage = piSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:last-child .image-block + .image-block");
     }
+    console.log(piFirstImage);
+    console.log(piSecondImage);
 
 
 
