@@ -112,6 +112,8 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+
+
     /* ------------ MELT THE LIMITS ------------ */
     let meltLimitsSection = document.getElementById("melt-the-limits");
     if(meltLimitsSection && window.innerWidth <= 1024) {
@@ -124,9 +126,6 @@ document.addEventListener("DOMContentLoaded", function () {
             },
         });
     }
-
-
-
 
 
     /* ------------ BLOG ------------ */
@@ -177,9 +176,6 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ------------ A37 MANIFESTO ------------ */
     let a37ManifestoSection = document.getElementById("a37-manifesto");
 
-
-    /* ------------ WELCOME ------------ */
-    let welcomeSection = document.getElementById("welcome-and-join");
 
 
     /* ------------ PRICING ------------ */
@@ -282,7 +278,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let benefitsMinWidth;
     let benefitsMaxWidth;
     let benefitsLayoutWidth;
-
     if(benefitsSection) {
         benefitsHeight = benefitsSection.offsetHeight - 240;
         benefitsImageBlock = benefitsSection.querySelector(".Index-page-content .sqs-col-12>.row .col:first-child");
@@ -301,7 +296,6 @@ document.addEventListener("DOMContentLoaded", function () {
     let sanctuarySection = document.getElementById("your-sweat-sanctuary");
     let sanctuarySmallImage;
     let sanctuaryBigImage;
-
     if(sanctuarySection) {
         sanctuarySmallImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:first-child .col:last-child");
         sanctuaryBigImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) .col:last-child");
@@ -312,12 +306,10 @@ document.addEventListener("DOMContentLoaded", function () {
     let a37ClassesSection = document.getElementById("a37-classes");
     let a37ClassesFirstImage;
     let a37ClassesSecondImage;
-
     if(a37ClassesSection) {
         a37ClassesFirstImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:first-child .image-block + .image-block");
         a37ClassesSecondImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:last-child .image-block + .image-block");
     }
-
 
     let classesSection = document.getElementById("classes");
     if(classesSection) {
@@ -340,12 +332,36 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    /* ------------ WELCOME & JOIN ------------ */
+    let welcomeSection = document.getElementById("welcome-and-join");
+    let welcomeHeight;
+    let welcomeImageBlock;
+    let welcomeSecondImage;
+    let welcomeScrollRange;
+    let welcomeMinWidth;
+    let welcomeMaxWidth;
+    let welcomeLayoutWidth;
+    if(welcomeSection) {
+        welcomeHeight = welcomeSection.querySelector('#welcomeBlock').offsetHeight - 240;
+        welcomeImageBlock = welcomeSection.querySelector("#welcomeBlock .sqs-col-12>.row .col:first-child");
+        welcomeSecondImage = welcomeSection.querySelector("#welcomeBlock .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
+        welcomeMinWidth = 25; // в %
+        welcomeMaxWidth = 58.333; // в %
+
+        welcomeLayoutWidth = welcomeSection.querySelector('.sqs-layout').offsetWidth - 24;
+        let welcomeInitialWidth = (welcomeLayoutWidth/100)*25;
+        let welcomeFinalWidth = (welcomeLayoutWidth/100)*58.333;
+        welcomeScrollRange = Math.ceil(welcomeFinalWidth - welcomeInitialWidth);
+    }
+
+
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
+
         if(benefitsSection) {
             let benefitsTriggerPoint = benefitsSection.offsetTop - window.innerHeight + benefitsHeight;
 
@@ -438,38 +454,33 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }
+        if(welcomeSection) {
+            let welcomeTriggerPoint = welcomeSection.offsetTop - window.innerHeight + welcomeHeight;
 
+            if (scrollPosition >= welcomeTriggerPoint) {
+                const welcomeDelta = scrollPosition - welcomeTriggerPoint;
 
+                if (welcomeDelta <= 0) {
+                    welcomeImageBlock.style.width = `${welcomeMinWidth}%`;
+                    welcomeSecondImage.style.transform = `translateX(0px)`;
+                    welcomeSecondImage.style.opacity = `0`;
+                } else if (welcomeDelta >= welcomeScrollRange) {
+                    welcomeImageBlock.style.width = `${welcomeMaxWidth}%`;
+                    welcomeSecondImage.style.transform = `translateX(-20px)`;
+                    welcomeSecondImage.style.opacity = `0.3`;
+                } else {
+                    let progress = welcomeDelta / welcomeScrollRange;
 
-        // if(scrollPosition >= benefitsOffsetTop) {
-        //     document.body.classList.add('benefits-blur');
-        // }
-        // if(scrollPosition >= sanctuaryOffsetTop) {
-        //     document.body.classList.add('sanctuary-blur');
-        // }
-        // if(scrollPosition >= a37ClassesOffsetTop) {
-        //     document.body.classList.add('a37-blur');
-        // }
-        // if(scrollPosition >= classesOffsetTop) {
-        //     document.body.classList.add('classes-blur');
-        // }
-        // if(scrollPosition >= a37ManifestoOffsetTop) {
-        //     document.body.classList.add('manifesto-blur');
-        // }
-        // if(scrollPosition >= welcomeOffsetTop) {
-        //     document.body.classList.add('welcome-blur');
-        // }
-        //
-        // if(scrollPosition >= pricingImagesOffsetTop) {
-        //     document.body.classList.add('pricing-images-blur');
-        // }
-        //
-        // if(scrollPosition >= wwaOffsetTop) {
-        //     document.body.classList.add('wwa-blur');
-        // }
-        // if(scrollPosition >= combineOffsetTop) {
-        //     document.body.classList.add('combine-blur');
-        // }
+                    let currentWidth = welcomeMinWidth + (welcomeMaxWidth - welcomeMinWidth) * progress;
+                    let currentTranslateX = -20 * progress;
+
+                    welcomeImageBlock.style.width = `${currentWidth}%`;
+                    welcomeSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
+                    welcomeSecondImage.style.opacity = `0.3`;
+                }
+            }
+
+        }
 
     });
 

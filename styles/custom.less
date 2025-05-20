@@ -1732,8 +1732,6 @@ section#welcome-and-join {
 
       .col {
         float: none !important;
-
-        transition: width .5s linear;
       }
 
       .col:first-child {
@@ -1772,20 +1770,9 @@ section#welcome-and-join {
           }
         }
       }
-      .col.image-blur {
-        .image-block + .image-block {
-          .image-block-wrapper {
-            & > div {
-              img {
-                left: -20px;
-                opacity: .3;
-              }
-            }
-          }
-        }
-      }
       .col:last-child {
-        width: 75%;
+        max-width: 75%;
+        width: auto;
 
         h2 {
           position: relative;
@@ -1888,29 +1875,6 @@ section#welcome-and-join {
     }
   }
 }
-body.welcome-blur section#welcome-and-join {
-    #welcomeBlock {
-      .sqs-col-12 > .row {
-        .col:first-child {
-          width: 58.333%;
-
-          .image-block + .image-block {
-            .image-block-wrapper {
-              & > div {
-                img {
-                  left: -50px;
-                  opacity: .3;
-                }
-              }
-            }
-          }
-        }
-        .col:last-child {
-          width: 41.667%;
-        }
-      }
-    }
-  }
 body.textpage section#welcome-and-join {
   display: none;
 }
