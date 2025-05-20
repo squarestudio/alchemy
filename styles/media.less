@@ -2205,7 +2205,25 @@
 
     .sqs-col-12 {
       min-width: unset;
-      width: ~"calc(100% - 32px)";
+      width: ~"calc(100vw - 32px)" !important;
+
+      padding: 70px 20px 50px;
+
+      & > .code-block {
+        top: 14px;
+        right: 15px;
+      }
+      & > .markdown-block,
+      & > .button-block {
+        margin-top: 50px;
+      }
+      & > .button-block {
+        width: 100%;
+
+        & * {
+          width: 100%;
+        }
+      }
     }
   }
 
