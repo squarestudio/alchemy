@@ -422,6 +422,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             if (scrollPosition >= a37ClassesTriggerPoint) {
                 let a37ClassesDelta = scrollPosition - a37ClassesTriggerPoint;
+                console.log(a37ClassesDelta);
 
                 if (a37ClassesDelta <= 0) {
                     a37ClassesFirstImage.style.transform = `translateX(0px)`;
