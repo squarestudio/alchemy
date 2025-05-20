@@ -231,10 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    /* ------------ A37 CLASSES ------------ */
-    let combineSection = document.getElementById("at-alchemy-37-we-combine");
-
-
 
     /* INVEST IN YOUR MOVEMENT */
     let investSection = document.getElementById('invest-in-your-movement');
@@ -374,6 +370,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if(wwaSection) {
         wwaSmallImage = wwaSection.querySelector(".Index-page-content .sqs-col-12>.row:first-child .col:last-child");
         wwaBigImage = wwaSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) .col:last-child");
+    }
+
+
+    /* ------------ A37 CLASSES ------------ */
+    let combineSection = document.getElementById("at-alchemy-37-we-combine");
+    let combineFirstImage;
+    let combineSecondImage;
+    if(combineSection) {
+        combineFirstImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:first-child .image-block + .image-block");
+        combineSecondImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:last-child .image-block + .image-block");
     }
 
 
@@ -592,6 +598,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     wwaBigImage.style.transform = `translateX(${wwaCurrentTranslateX}px)`;
                     wwaBigImage.style.opacity = `0.3`;
+                }
+            }
+        }
+
+        if(combineSection) {
+            let combineTriggerPoint = combineSection.offsetTop;
+            let combineSecondTriggerPoint = combineSection.offsetTop + 200;
+            let combineScrollRange = Math.ceil(combineSecondTriggerPoint - combineTriggerPoint);
+
+            if (scrollPosition >= combineTriggerPoint) {
+                let combineDelta = scrollPosition - combineTriggerPoint;
+
+                if (combineDelta <= 0) {
+                    combineFirstImage.style.transform = `translateX(0px)`;
+                    combineSecondImage.style.transform = `translateX(0px)`;
+                } else if (combineDelta >= combineScrollRange) {
+                    combineFirstImage.style.transform = `translateX(-20px)`;
+                    combineSecondImage.style.transform = `translateX(-20px)`;
+                } else {
+                    let combineProgress = combineDelta / combineScrollRange;
+                    let combineCurrentTranslateX = Math.ceil(-20 * combineProgress);
+
+                    combineFirstImage.style.transform = `translateX(${combineCurrentTranslateX}px)`;
+                    combineSecondImage.style.transform = `translateX(${combineCurrentTranslateX}px)`;
                 }
             }
         }
