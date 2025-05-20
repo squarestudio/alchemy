@@ -393,11 +393,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     sanctuaryBigImage.style.transform = `translateX(0px)`;
                     sanctuaryBigImage.style.opacity = `0`;
                 } else if (sanctuarySDelta >= sanctuaryScrollTwoRange) {
-                    sanctuaryBigImage.style.transform = `translateX(-20px)`;
+                    sanctuaryBigImage.style.transform = `translateX(-50px)`;
                     sanctuaryBigImage.style.opacity = `0.3`;
                 } else {
                     let sanctuaryProgress = sanctuarySDelta / sanctuaryScrollTwoRange;
-                    let sanctuaryCurrentTranslateX = Math.ceil(-20 * sanctuaryProgress);
+                    let sanctuaryCurrentTranslateX = Math.ceil(-50 * sanctuaryProgress);
 
                     sanctuaryBigImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
                     sanctuaryBigImage.style.opacity = `0.3`;
