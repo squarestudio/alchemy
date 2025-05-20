@@ -315,7 +315,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if(a37ClassesSection) {
         a37ClassesFirstImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:first-child .image-block + .image-block");
-        a37ClassesSecondImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:last-child");
+        a37ClassesSecondImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:last-child .image-block + .image-block");
     }
 
 
