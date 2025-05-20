@@ -374,8 +374,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         }
         if(sanctuarySection) {
-            let sanctuaryTriggerPoint = sanctuarySection.offsetTop + 120;
-            let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 160;
+            let sanctuaryTriggerPoint = sanctuarySection.offsetTop;
+            let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 120;
             let sanctuaryThirdTriggerPoint = sanctuarySection.offsetTop + 260;
             let sanctuaryScrollOneRange = Math.ceil(sanctuarySecondTriggerPoint - sanctuaryTriggerPoint);
             let sanctuaryScrollTwoRange = Math.ceil(sanctuaryThirdTriggerPoint - sanctuarySecondTriggerPoint);
