@@ -420,8 +420,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(sanctuarySection) {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop;
-            let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 20;
-            let sanctuaryThirdTriggerPoint = sanctuarySection.offsetTop + 70;
+            let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 120;
+            let sanctuaryThirdTriggerPoint = sanctuarySection.offsetTop + 170;
             let sanctuaryScrollOneRange = Math.ceil(sanctuarySecondTriggerPoint - sanctuaryTriggerPoint);
             let sanctuaryScrollTwoRange = Math.ceil(sanctuaryThirdTriggerPoint - sanctuarySecondTriggerPoint);
 
@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(a37ClassesSection) {
             let a37ClassesTriggerPoint = a37ClassesSection.offsetTop + 120;
-            let a37ClassesSecondTriggerPoint = a37ClassesSection.offsetTop + 140;
+            let a37ClassesSecondTriggerPoint = a37ClassesSection.offsetTop + 320;
             let a37ClassesScrollRange = Math.ceil(a37ClassesSecondTriggerPoint - a37ClassesTriggerPoint);
 
             if (scrollPosition >= a37ClassesTriggerPoint) {
@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(piSection) {
             let piTriggerPoint = piSection.offsetTop - 100;
-            let piSecondTriggerPoint = piSection.offsetTop - 80;
+            let piSecondTriggerPoint = piSection.offsetTop;
             let piScrollRange = Math.ceil(piSecondTriggerPoint - piTriggerPoint);
 
             if (scrollPosition >= piTriggerPoint) {
@@ -561,8 +561,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(wwaSection) {
             let wwaTriggerPoint = wwaSection.offsetTop;
-            let wwaSecondTriggerPoint = wwaSection.offsetTop + 20;
-            let wwaThirdTriggerPoint = wwaSection.offsetTop + 70;
+            let wwaSecondTriggerPoint = wwaSection.offsetTop + 120;
+            let wwaThirdTriggerPoint = wwaSection.offsetTop + 170;
             let wwaScrollOneRange = Math.ceil(wwaSecondTriggerPoint - wwaTriggerPoint);
             let wwaScrollTwoRange = Math.ceil(wwaThirdTriggerPoint - wwaSecondTriggerPoint);
 
@@ -603,7 +603,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(combineSection) {
             let combineTriggerPoint = combineSection.offsetTop + 300;
-            let combineSecondTriggerPoint = combineSection.offsetTop + 320;
+            let combineSecondTriggerPoint = combineSection.offsetTop + 500;
             let combineScrollRange = Math.ceil(combineSecondTriggerPoint - combineTriggerPoint);
 
             if (scrollPosition >= combineTriggerPoint) {
