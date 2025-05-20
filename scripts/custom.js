@@ -625,8 +625,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         if(studioSection) {
-            let studioTriggerPoint = studioSection.offsetTop;
-            let studioSecondTriggerPoint = studioSection.offsetTop + 120;
+            let studioTriggerPoint = studioSection.offsetTop - 100;
+            let studioSecondTriggerPoint = studioSection.offsetTop;
             let studioScrollRange = Math.ceil(studioSecondTriggerPoint - studioTriggerPoint);
 
             if (scrollPosition >= studioTriggerPoint) {
