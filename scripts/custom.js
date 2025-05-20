@@ -321,9 +321,11 @@ document.addEventListener("DOMContentLoaded", function () {
     /* ------------ SANCTUARY ------------ */
     let sanctuarySection = document.getElementById("your-sweat-sanctuary");
     let sanctuarySmallImage;
+    let sanctuaryBigImage;
 
     if(sanctuarySection) {
         sanctuarySmallImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:first-child .col:last-child");
+        sanctuaryBigImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) .col:last-child");
     }
 
 
@@ -363,7 +365,9 @@ document.addEventListener("DOMContentLoaded", function () {
         if(sanctuarySection) {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop + 120;
             let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 160;
+            let sanctuaryThirdTriggerPoint = sanctuarySection.offsetTop + 260;
             let sanctuaryScrollOneRange = Math.ceil(sanctuarySecondTriggerPoint - sanctuaryTriggerPoint);
+            let sanctuaryScrollTwoRange = Math.ceil(sanctuaryThirdTriggerPoint - sanctuarySecondTriggerPoint);
 
             if (scrollPosition >= sanctuaryTriggerPoint) {
                 let sanctuaryDelta = scrollPosition - sanctuaryTriggerPoint;
@@ -380,6 +384,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     sanctuarySmallImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
                     sanctuarySmallImage.style.opacity = `0.3`;
+                }
+            }
+            if (scrollPosition > sanctuarySecondTriggerPoint) {
+                let sanctuarySDelta = scrollPosition - sanctuarySecondTriggerPoint;
+
+                if (sanctuarySDelta <= 0) {
+                    sanctuaryBigImage.style.transform = `translateX(0px)`;
+                    sanctuaryBigImage.style.opacity = `0`;
+                } else if (sanctuarySDelta >= sanctuaryScrollTwoRange) {
+                    sanctuaryBigImage.style.transform = `translateX(-20px)`;
+                    sanctuaryBigImage.style.opacity = `0.3`;
+                } else {
+                    let sanctuaryProgress = sanctuarySDelta / sanctuaryScrollTwoRange;
+                    let sanctuaryCurrentTranslateX = Math.ceil(-20 * sanctuaryProgress);
+
+                    sanctuaryBigImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
+                    sanctuaryBigImage.style.opacity = `0.3`;
                 }
             }
         }
