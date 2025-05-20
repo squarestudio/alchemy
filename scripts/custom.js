@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let a37ManifestoSection = document.getElementById("a37-manifesto");
     let a37ManifestoImage;
     if(a37ManifestoSection) {
-        a37ManifestoImage = a37ManifestoSection.querySelector(".manifesto-bg img:last-child");
+        a37ManifestoImage = a37ManifestoSection.querySelector(".manifesto-bg img+img");
     }
 
 
@@ -469,6 +469,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 let a37ManifestoDelta = scrollPosition - a37ManifestoTriggerPoint;
 
                 if (a37ManifestoDelta <= 0) {
+
                     a37ManifestoImage.style.transform = `translateX(0px)`;
                     a37ManifestoImage.style.opacity = `0`;
                 } else if (a37ManifestoDelta >= a37ManifestoScrollRange) {
