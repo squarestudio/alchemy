@@ -603,7 +603,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(combineSection) {
             let combineTriggerPoint = combineSection.offsetTop + 300;
-            let combineSecondTriggerPoint = combineSection.offsetTop + 500;
+            let combineSecondTriggerPoint = combineSection.offsetTop + 320;
             let combineScrollRange = Math.ceil(combineSecondTriggerPoint - combineTriggerPoint);
 
             if (scrollPosition >= combineTriggerPoint) {
