@@ -421,7 +421,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(sanctuarySection) {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop;
             let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 120;
-            let sanctuaryThirdTriggerPoint = sanctuarySection.offsetTop + 260;
+            let sanctuaryThirdTriggerPoint = sanctuarySection.offsetTop + 170;
             let sanctuaryScrollOneRange = Math.ceil(sanctuarySecondTriggerPoint - sanctuaryTriggerPoint);
             let sanctuaryScrollTwoRange = Math.ceil(sanctuaryThirdTriggerPoint - sanctuarySecondTriggerPoint);
 
@@ -562,7 +562,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if(wwaSection) {
             let wwaTriggerPoint = wwaSection.offsetTop;
             let wwaSecondTriggerPoint = wwaSection.offsetTop + 120;
-            let wwaThirdTriggerPoint = wwaSection.offsetTop + 260;
+            let wwaThirdTriggerPoint = wwaSection.offsetTop + 170;
             let wwaScrollOneRange = Math.ceil(wwaSecondTriggerPoint - wwaTriggerPoint);
             let wwaScrollTwoRange = Math.ceil(wwaThirdTriggerPoint - wwaSecondTriggerPoint);
 
@@ -625,8 +625,8 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         if(studioSection) {
-            let studioTriggerPoint = studioSection.offsetTop - 50;
-            let studioSecondTriggerPoint = studioSection.offsetTop;
+            let studioTriggerPoint = studioSection.offsetTop;
+            let studioSecondTriggerPoint = studioSection.offsetTop + 50;
             let studioScrollRange = Math.ceil(studioSecondTriggerPoint - studioTriggerPoint);
 
             if (scrollPosition >= studioTriggerPoint) {
