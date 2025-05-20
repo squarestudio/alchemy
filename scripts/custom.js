@@ -541,13 +541,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     welcomeSecondImage.style.opacity = `0`;
                 } else if (welcomeDelta >= welcomeScrollRange) {
                     welcomeImageBlock.style.width = `${welcomeMaxWidth}%`;
-                    welcomeSecondImage.style.transform = `translateX(-40px)`;
+                    welcomeSecondImage.style.transform = `translateX(-30px)`;
                     welcomeSecondImage.style.opacity = `0.3`;
                 } else {
                     let progress = welcomeDelta / welcomeScrollRange;
 
                     let currentWidth = welcomeMinWidth + (welcomeMaxWidth - welcomeMinWidth) * progress;
-                    let currentTranslateX = -40 * progress;
+                    let currentTranslateX = -30 * progress;
 
                     welcomeImageBlock.style.width = `${currentWidth}%`;
                     welcomeSecondImage.style.transform = `translateX(${currentTranslateX}px)`;
