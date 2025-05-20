@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(a37ManifestoSection) {
             let a37ManifestoTriggerPoint = a37ManifestoSection.offsetTop;
-            let a37ManifestoSecondTriggerPoint = a37ManifestoSection.offsetTop + 120;
+            let a37ManifestoSecondTriggerPoint = a37ManifestoSection.offsetTop + 200;
             let a37ManifestoScrollRange = Math.ceil(a37ManifestoSecondTriggerPoint - a37ManifestoTriggerPoint);
 
             if (scrollPosition >= a37ManifestoTriggerPoint) {
@@ -477,7 +477,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     a37ManifestoImage.style.opacity = `0.3`;
                 } else {
                     let a37ManifestoProgress = a37ManifestoDelta / a37ManifestoScrollRange;
-                    let a37ManifestoCurrentTranslateX = Math.ceil(-20 * a37ManifestoProgress);
+                    let a37ManifestoCurrentTranslateX = Math.ceil(-50 * a37ManifestoProgress);
 
                     a37ManifestoImage.style.transform = `translateX(${a37ManifestoCurrentTranslateX}px)`;
                     a37ManifestoImage.style.opacity = `0.3`;
