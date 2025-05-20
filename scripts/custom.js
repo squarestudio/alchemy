@@ -462,7 +462,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(a37ClassesSection) {
             let a37ClassesTriggerPoint = a37ClassesSection.offsetTop + 120;
-            let a37ClassesSecondTriggerPoint = a37ClassesSection.offsetTop + 320;
+            let a37ClassesSecondTriggerPoint = a37ClassesSection.offsetTop + 140;
             let a37ClassesScrollRange = Math.ceil(a37ClassesSecondTriggerPoint - a37ClassesTriggerPoint);
 
             if (scrollPosition >= a37ClassesTriggerPoint) {
@@ -537,7 +537,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         if(piSection) {
             let piTriggerPoint = piSection.offsetTop - 100;
-            let piSecondTriggerPoint = piSection.offsetTop;
+            let piSecondTriggerPoint = piSection.offsetTop - 80;
             let piScrollRange = Math.ceil(piSecondTriggerPoint - piTriggerPoint);
 
             if (scrollPosition >= piTriggerPoint) {
