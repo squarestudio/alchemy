@@ -505,6 +505,8 @@ header.Header.Header--bottom {
   max-width: none;
 }
 body:not(.sqs-edit-mode) #alchemyEnroll {
+  display: none;
+
   position: fixed;
   top: 0;
   bottom: 0;
@@ -561,6 +563,9 @@ body:not(.sqs-edit-mode) #alchemyEnroll {
       margin-top: 50px;
     }
   }
+}
+body:not(.sqs-edit-mode).show-enroll #alchemyEnroll {
+  display: block;
 }
 
 
