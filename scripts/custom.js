@@ -329,7 +329,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-
     /* ------------ A37 MANIFESTO ------------ */
     let a37ManifestoSection = document.getElementById("a37-manifesto");
     let a37ManifestoImage;
@@ -358,6 +357,16 @@ document.addEventListener("DOMContentLoaded", function () {
         let welcomeInitialWidth = (welcomeLayoutWidth/100)*25;
         let welcomeFinalWidth = (welcomeLayoutWidth/100)*58.333;
         welcomeScrollRange = Math.ceil(welcomeFinalWidth - welcomeInitialWidth);
+    }
+
+
+    /* ------------ PRICING IMAGES ------------ */
+    let piSection = document.getElementById("pricing-images");
+    let piFirstImage;
+    let piSecondImage;
+    if(piSection) {
+        piFirstImage = piSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:first-child .image-block + .image-block");
+        piSecondImage = piSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:last-child .image-block + .image-block");
     }
 
 
@@ -510,6 +519,30 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
 
+        }
+
+        if(piSection) {
+            let piTriggerPoint = piSection.offsetTop + 120;
+            let piSecondTriggerPoint = piSection.offsetTop + 320;
+            let piScrollRange = Math.ceil(piSecondTriggerPoint - piTriggerPoint);
+
+            if (scrollPosition >= piTriggerPoint) {
+                let piDelta = scrollPosition - piTriggerPoint;
+
+                if (piDelta <= 0) {
+                    a37ClassesFirstImage.style.transform = `translateX(0px)`;
+                    a37ClassesSecondImage.style.transform = `translateX(0px)`;
+                } else if (piDelta >= piScrollRange) {
+                    a37ClassesFirstImage.style.transform = `translateX(-20px)`;
+                    a37ClassesSecondImage.style.transform = `translateX(-20px)`;
+                } else {
+                    let piProgress = piDelta / piScrollRange;
+                    let piCurrentTranslateX = Math.ceil(-20 * piProgress);
+
+                    a37ClassesFirstImage.style.transform = `translateX(${piCurrentTranslateX}px)`;
+                    a37ClassesSecondImage.style.transform = `translateX(${piCurrentTranslateX}px)`;
+                }
+            }
         }
     });
 
