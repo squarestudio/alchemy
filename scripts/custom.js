@@ -334,7 +334,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let a37ManifestoSection = document.getElementById("a37-manifesto");
     let a37ManifestoImage;
     if(a37ManifestoSection) {
-        a37ManifestoImage = sanctuarySection.querySelector(".manifesto-bg img:last-child");
+        a37ManifestoImage = a37ManifestoSection.querySelector(".manifesto-bg img:last-child");
     }
 
 
