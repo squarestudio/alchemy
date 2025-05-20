@@ -3157,6 +3157,8 @@ body.collection-type-blog.view-item {
         margin-bottom: var(--gap-60);
 
         .article-image {
+          position: relative;
+          overflow: hidden;
           max-width: 66%;
           margin: 0 auto;
           height: 38.78vw;
@@ -3166,6 +3168,13 @@ body.collection-type-blog.view-item {
             width: 100%;
             height: 100%;
             object-fit: cover;
+          }
+          img + img {
+            position: absolute;
+            top: 0;
+            left: -20px;
+            width: 100%;
+            opacity: .3;
           }
         }
         .article-header-content {

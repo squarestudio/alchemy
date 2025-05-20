@@ -3,6 +3,7 @@
         <div class="article-header">
             <div class="article-image">
                 <img src="{assetUrl}" alt="{title}">
+                <img src="{assetUrl}" alt="{title}">
             </div>
             <div class="article-header-content">
                 <div class="article-date">{addedOn|date %A, %B %d}</div>
