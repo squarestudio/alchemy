@@ -473,7 +473,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     a37ManifestoImage.style.transform = `translateX(0px)`;
                     a37ManifestoImage.style.opacity = `0`;
                 } else if (a37ManifestoDelta >= a37ManifestoScrollRange) {
-                    a37ManifestoImage.style.transform = `translateX(-20px)`;
+                    a37ManifestoImage.style.transform = `translateX(-50px)`;
                     a37ManifestoImage.style.opacity = `0.3`;
                 } else {
                     let a37ManifestoProgress = a37ManifestoDelta / a37ManifestoScrollRange;
