@@ -230,9 +230,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ------------ WHO WE ARE  ------------ */
-    let wwaSection = document.getElementById("who-we-are-images");
-
 
     /* ------------ A37 CLASSES ------------ */
     let combineSection = document.getElementById("at-alchemy-37-we-combine");
@@ -368,6 +365,17 @@ document.addEventListener("DOMContentLoaded", function () {
         piFirstImage = piSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:first-child .image-block + .image-block");
         piSecondImage = piSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:last-child .image-block + .image-block");
     }
+
+
+    /* ------------ WHO WE ARE  ------------ */
+    let wwaSection = document.getElementById("who-we-are-images");
+    let wwaSmallImage;
+    let wwaBigImage;
+    if(wwaSection) {
+        wwaSmallImage = wwaSection.querySelector(".Index-page-content .sqs-col-12>.row:first-child .col:last-child");
+        wwaBigImage = wwaSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) .col:last-child");
+    }
+
 
 
 
