@@ -362,7 +362,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(sanctuarySection) {
             let sanctuaryTriggerPoint = sanctuarySection.offsetTop + 120;
-            let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 140;
+            let sanctuarySecondTriggerPoint = sanctuarySection.offsetTop + 160;
             let sanctuaryScrollOneRange = Math.ceil(sanctuarySecondTriggerPoint - sanctuaryTriggerPoint);
 
             if (scrollPosition >= sanctuaryTriggerPoint) {
