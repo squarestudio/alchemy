@@ -342,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let welcomeMaxWidth;
     let welcomeLayoutWidth;
     if(welcomeSection) {
-        welcomeHeight = welcomeSection.querySelector('#welcomeBlock').offsetHeight - 240;
+        welcomeHeight = welcomeSection.querySelector('#welcomeBlock').offsetHeight - 120;
         welcomeImageBlock = welcomeSection.querySelector("#welcomeBlock .sqs-col-12>.row .col:first-child");
         welcomeSecondImage = welcomeSection.querySelector("#welcomeBlock .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
         welcomeMinWidth = 25; // в %
