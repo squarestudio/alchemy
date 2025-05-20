@@ -1,5 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    if(!sessionStorage.getItem("enroll")) {
+        console.log('show enroll');
+    }
+
     /* ------------ HEADER GRADIENT ------------ */
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
     const mobileOverlay = document.querySelector(".Mobile-overlay-menu");
@@ -84,7 +88,6 @@ document.addEventListener("DOMContentLoaded", function () {
             updateGradients(); // після закриття меню відновлюємо
         }
     });
-
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
 
@@ -388,7 +391,6 @@ document.addEventListener("DOMContentLoaded", function () {
     if(blogItem) {
         blogImage = blogItem.querySelector(".article-header .article-image img:last-child");
     }
-
 
 
 
