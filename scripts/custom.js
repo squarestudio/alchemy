@@ -314,8 +314,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let a37ClassesSecondImage;
 
     if(a37ClassesSection) {
-        a37ClassesFirstImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:first-child .image-block + .image-block img");
-        a37ClassesSecondImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:last-child .image-block + .image-block img");
+        a37ClassesFirstImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:first-child .image-block + .image-block");
+        a37ClassesSecondImage = a37ClassesSection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:last-child .image-block + .image-block");
     }
 
 
@@ -426,22 +426,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
                 if (a37ClassesDelta <= 0) {
                     a37ClassesFirstImage.style.transform = `translateX(0px)`;
-                    a37ClassesFirstImage.style.opacity = `0`;
+                    // a37ClassesFirstImage.style.opacity = `0`;
                     a37ClassesSecondImage.style.transform = `translateX(0px)`;
-                    a37ClassesSecondImage.style.opacity = `0`;
+                    // a37ClassesSecondImage.style.opacity = `0`;
                 } else if (a37ClassesDelta >= a37ClassesScrollRange) {
                     a37ClassesFirstImage.style.transform = `translateX(-20px)`;
-                    a37ClassesFirstImage.style.opacity = `0.3`;
+                    // a37ClassesFirstImage.style.opacity = `0.3`;
                     a37ClassesSecondImage.style.transform = `translateX(-20px)`;
-                    a37ClassesSecondImage.style.opacity = `0.3`;
+                    // a37ClassesSecondImage.style.opacity = `0.3`;
                 } else {
                     let a37ClassesProgress = a37ClassesDelta / a37ClassesScrollRange;
                     let a37ClassesCurrentTranslateX = Math.ceil(-20 * a37ClassesProgress);
 
                     a37ClassesFirstImage.style.transform = `translateX(${a37ClassesCurrentTranslateX}px)`;
-                    a37ClassesFirstImage.style.opacity = `0.3`;
+                    // a37ClassesFirstImage.style.opacity = `0.3`;
                     a37ClassesSecondImage.style.transform = `translateX(${a37ClassesCurrentTranslateX}px)`;
-                    a37ClassesSecondImage.style.opacity = `0.3`;
+                    // a37ClassesSecondImage.style.opacity = `0.3`;
                 }
             }
         }
