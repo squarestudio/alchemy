@@ -494,7 +494,7 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
         if(welcomeSection) {
-            let welcomeTriggerPoint = welcomeSection.offsetTop - window.innerHeight + welcomeHeight + 100;
+            let welcomeTriggerPoint = welcomeSection.offsetTop - window.innerHeight + welcomeHeight + 150;
 
             if (scrollPosition >= welcomeTriggerPoint) {
                 const welcomeDelta = scrollPosition - welcomeTriggerPoint;
