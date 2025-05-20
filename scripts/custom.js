@@ -417,31 +417,24 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if(a37ClassesSection) {
             let a37ClassesTriggerPoint = a37ClassesSection.offsetTop;
-            let a37ClassesSecondTriggerPoint = a37ClassesSection.offsetTop + 100;
+            let a37ClassesSecondTriggerPoint = a37ClassesSection.offsetTop + 200;
             let a37ClassesScrollRange = Math.ceil(a37ClassesSecondTriggerPoint - a37ClassesTriggerPoint);
 
             if (scrollPosition >= a37ClassesTriggerPoint) {
                 let a37ClassesDelta = scrollPosition - a37ClassesTriggerPoint;
-                console.log(a37ClassesDelta);
 
                 if (a37ClassesDelta <= 0) {
                     a37ClassesFirstImage.style.transform = `translateX(0px)`;
-                    // a37ClassesFirstImage.style.opacity = `0`;
                     a37ClassesSecondImage.style.transform = `translateX(0px)`;
-                    // a37ClassesSecondImage.style.opacity = `0`;
                 } else if (a37ClassesDelta >= a37ClassesScrollRange) {
                     a37ClassesFirstImage.style.transform = `translateX(-20px)`;
-                    // a37ClassesFirstImage.style.opacity = `0.3`;
                     a37ClassesSecondImage.style.transform = `translateX(-20px)`;
-                    // a37ClassesSecondImage.style.opacity = `0.3`;
                 } else {
                     let a37ClassesProgress = a37ClassesDelta / a37ClassesScrollRange;
                     let a37ClassesCurrentTranslateX = Math.ceil(-20 * a37ClassesProgress);
 
                     a37ClassesFirstImage.style.transform = `translateX(${a37ClassesCurrentTranslateX}px)`;
-                    // a37ClassesFirstImage.style.opacity = `0.3`;
                     a37ClassesSecondImage.style.transform = `translateX(${a37ClassesCurrentTranslateX}px)`;
-                    // a37ClassesSecondImage.style.opacity = `0.3`;
                 }
             }
         }
