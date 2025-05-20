@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     if(!sessionStorage.getItem("enroll")) {
-        console.log('show enroll');
+        setTimeout(function(){
+            document.body.classList.add('enroll');
+        },5000)
     }
 
     /* ------------ HEADER GRADIENT ------------ */
