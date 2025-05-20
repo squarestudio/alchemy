@@ -2516,6 +2516,7 @@ section#who-we-are {
     }
   }
 }
+
 section#who-we-are-images {
   overflow: visible;
 
@@ -2734,18 +2735,7 @@ section#at-alchemy-37-we-combine {
               top: 0;
               left: 0;
               width: 100%;
-
-              .image-block-wrapper {
-                & > div {
-                  img {
-                    left: 0;
-                    opacity: 0;
-
-                    -webkit-transition: all 1s ease-in-out .1s;
-                    transition: all 1s ease-in-out .1s;
-                  }
-                }
-              }
+              opacity: .3;
             }
           }
           .col:nth-child(2) {
@@ -2772,17 +2762,24 @@ section#at-alchemy-37-we-combine {
               top: 0;
               left: 0;
               width: 100%;
-
-              .image-block-wrapper {
-                & > div {
-                  img {
-                    left: 0;
-                    opacity: 0;
-
-                    -webkit-transition: all 1s ease-in-out .1s;
-                    transition: all 1s ease-in-out .1s;
-                  }
-                }
+              opacity: .3;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+body.combine-blur section#at-alchemy-37-we-combine{
+  .Index-page-content {
+    .sqs-col-12 > .row:last-child {
+      .col {
+        .image-block + .image-block {
+          .image-block-wrapper {
+            & > div {
+              img {
+                left: -20px;
+                opacity: .3;
               }
             }
           }
@@ -2901,24 +2898,6 @@ section#transformation {
             h4:nth-child(10) {
               &:before {
                 content: '[10]';
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-body.combine-blur section#at-alchemy-37-we-combine{
-  .Index-page-content {
-    .sqs-col-12 > .row:last-child {
-      .col {
-        .image-block + .image-block {
-          .image-block-wrapper {
-            & > div {
-              img {
-                left: -20px;
-                opacity: .3;
               }
             }
           }

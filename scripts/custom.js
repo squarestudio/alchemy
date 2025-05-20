@@ -378,8 +378,8 @@ document.addEventListener("DOMContentLoaded", function () {
     let combineFirstImage;
     let combineSecondImage;
     if(combineSection) {
-        combineFirstImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:first-child .image-block + .image-block");
-        combineSecondImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row > .col:last-child .image-block + .image-block");
+        combineFirstImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row:last-child > .col:first-child .image-block + .image-block");
+        combineSecondImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row:last-child > .col:last-child .image-block + .image-block");
     }
 
 
