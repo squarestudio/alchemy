@@ -112,8 +112,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-
-
     /* ------------ MELT THE LIMITS ------------ */
     let meltLimitsSection = document.getElementById("melt-the-limits");
     if(meltLimitsSection && window.innerWidth <= 1024) {
@@ -171,12 +169,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
-
-
-
-
-    /* ------------ PRICING ------------ */
-    let pricingImagesSection = document.getElementById("pricing-images");
 
 
     /* ------------ FAQ ------------ */
@@ -380,6 +372,14 @@ document.addEventListener("DOMContentLoaded", function () {
     if(combineSection) {
         combineFirstImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row:last-child > .col:first-child .image-block + .image-block");
         combineSecondImage = combineSection.querySelector(".Index-page-content .sqs-col-12 > .row:last-child > .col:last-child .image-block + .image-block");
+    }
+
+
+    /* ------------ STUDIO ------------ */
+    let studioSection = document.getElementById("studio");
+    let studioImage;
+    if(studioSection) {
+        studioImage = studioSection.querySelector(".Index-page-content .sqs-col-12>.row .col:last-child");
     }
 
 
@@ -601,7 +601,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }
-
         if(combineSection) {
             let combineTriggerPoint = combineSection.offsetTop + 300;
             let combineSecondTriggerPoint = combineSection.offsetTop + 500;
@@ -622,6 +621,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     combineFirstImage.style.transform = `translateX(${combineCurrentTranslateX}px)`;
                     combineSecondImage.style.transform = `translateX(${combineCurrentTranslateX}px)`;
+                }
+            }
+        }
+        if(studioSection) {
+            let studioTriggerPoint = studioSection.offsetTop;
+            let studioSecondTriggerPoint = studioSection.offsetTop + 120;
+            let studioScrollRange = Math.ceil(studioSecondTriggerPoint - studioTriggerPoint);
+
+            if (scrollPosition >= studioTriggerPoint) {
+                let studioDelta = scrollPosition - studioTriggerPoint;
+
+                if (studioDelta <= 0) {
+                    studioImage.style.transform = `translateX(0px)`;
+                    studioImage.style.opacity = `0`;
+                } else if (studioDelta >= studioScrollRange) {
+                    studioImage.style.transform = `translateX(-50px)`;
+                    studioImage.style.opacity = `0.3`;
+                } else {
+                    let studioProgress = studioDelta / studioScrollRange;
+                    let studioCurrentTranslateX = Math.ceil(-50 * studioProgress);
+
+                    studioImage.style.transform = `translateX(${studioCurrentTranslateX}px)`;
+                    studioImage.style.opacity = `0.3`;
                 }
             }
         }
