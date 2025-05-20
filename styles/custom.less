@@ -533,7 +533,17 @@ body:not(.sqs-edit-mode) #alchemyEnroll {
     align-items: center;
 
     & > .html-block {
+      position: absolute;
+      top: var(--gap-20);
+      right: var(--gap-20);
+      padding: 9px;
 
+      cursor: pointer;
+
+      .sqs-block-content {
+        height: 16px;
+        line-height: 100%;
+      }
     }
     & > .markdown-block {
       margin-top: 50px;
