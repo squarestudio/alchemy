@@ -126,28 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ------------ A37 CLASSES ------------ */
-    let a37ClassesSection = document.getElementById("a37-classes");
 
-    let classesSection = document.getElementById("classes");
-    if(classesSection) {
-        const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
-        const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
-
-        cols.forEach((col, index) => {
-            col.addEventListener('click', () => {
-                cols.forEach(c => c.classList.remove('active'));
-                items.forEach(item => item.classList.remove('active'));
-
-                // Add 'active' class to the clicked col and the corresponding item
-                col.classList.add('active');
-                if (items[index]) {
-                    items[index].classList.add('active');
-                }
-            });
-        });
-        cols[0].click();
-    }
 
 
     /* ------------ BLOG ------------ */
@@ -329,6 +308,38 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+    /* ------------ A37 CLASSES ------------ */
+    let a37ClassesSection = document.getElementById("a37-classes");
+    let a37ClassesFirstImage;
+    let a37ClassesSecondImage;
+
+    if(a37ClassesSection) {
+        a37ClassesFirstImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:first-child");
+        a37ClassesSecondImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) > .col:last-child");
+    }
+
+
+    let classesSection = document.getElementById("classes");
+    if(classesSection) {
+        const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
+        const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
+
+        cols.forEach((col, index) => {
+            col.addEventListener('click', () => {
+                cols.forEach(c => c.classList.remove('active'));
+                items.forEach(item => item.classList.remove('active'));
+
+                // Add 'active' class to the clicked col and the corresponding item
+                col.classList.add('active');
+                if (items[index]) {
+                    items[index].classList.add('active');
+                }
+            });
+        });
+        cols[0].click();
+    }
+
+
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
@@ -401,6 +412,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
                     sanctuaryBigImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
                     sanctuaryBigImage.style.opacity = `0.3`;
+                }
+            }
+        }
+        if(a37ClassesSection) {
+            let a37ClassesTriggerPoint = a37ClassesSection.offsetTop;
+            let a37ClassesSecondTriggerPoint = a37ClassesSection.offsetTop + 100;
+            let a37ClassesScrollRange = Math.ceil(a37ClassesSecondTriggerPoint - a37ClassesTriggerPoint);
+
+            if (scrollPosition >= a37ClassesTriggerPoint) {
+                let a37ClassesDelta = scrollPosition - a37ClassesTriggerPoint;
+
+                if (a37ClassesDelta <= 0) {
+                    a37ClassesFirstImage.style.transform = `translateX(0px)`;
+                    a37ClassesFirstImage.style.opacity = `0`;
+                    a37ClassesSecondImage.style.transform = `translateX(0px)`;
+                    a37ClassesSecondImage.style.opacity = `0`;
+                } else if (a37ClassesDelta >= a37ClassesScrollRange) {
+                    a37ClassesFirstImage.style.transform = `translateX(-20px)`;
+                    a37ClassesFirstImage.style.opacity = `0.3`;
+                    a37ClassesSecondImage.style.transform = `translateX(-20px)`;
+                    a37ClassesSecondImage.style.opacity = `0.3`;
+                } else {
+                    let a37ClassesProgress = a37ClassesDelta / a37ClassesScrollRange;
+                    let a37ClassesCurrentTranslateX = Math.ceil(-20 * a37ClassesProgress);
+
+                    a37ClassesFirstImage.style.transform = `translateX(${a37ClassesCurrentTranslateX}px)`;
+                    a37ClassesFirstImage.style.opacity = `0.3`;
+                    a37ClassesSecondImage.style.transform = `translateX(${a37ClassesCurrentTranslateX}px)`;
+                    a37ClassesSecondImage.style.opacity = `0.3`;
                 }
             }
         }
