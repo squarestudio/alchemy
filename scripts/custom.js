@@ -552,6 +552,49 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }
+
+        if(wwaSection) {
+            let wwaTriggerPoint = wwaSection.offsetTop;
+            let wwaSecondTriggerPoint = wwaSection.offsetTop + 120;
+            let wwaThirdTriggerPoint = wwaSection.offsetTop + 260;
+            let wwaScrollOneRange = Math.ceil(wwaSecondTriggerPoint - wwaTriggerPoint);
+            let wwaScrollTwoRange = Math.ceil(wwaThirdTriggerPoint - wwaSecondTriggerPoint);
+
+            if (scrollPosition >= wwaTriggerPoint) {
+                let wwaDelta = scrollPosition - wwaTriggerPoint;
+
+                if (wwaDelta <= 0) {
+                    wwaSmallImage.style.transform = `translateX(0px)`;
+                    wwaSmallImage.style.opacity = `0`;
+                } else if (wwaDelta >= wwaScrollOneRange) {
+                    wwaSmallImage.style.transform = `translateX(-20px)`;
+                    wwaSmallImage.style.opacity = `0.3`;
+                } else {
+                    let wwaProgress = wwaDelta / wwaScrollOneRange;
+                    let wwaCurrentTranslateX = Math.ceil(-20 * wwaProgress);
+
+                    wwaSmallImage.style.transform = `translateX(${wwaCurrentTranslateX}px)`;
+                    wwaSmallImage.style.opacity = `0.3`;
+                }
+            }
+            if (scrollPosition > wwaSecondTriggerPoint) {
+                let wwaSDelta = scrollPosition - wwaSecondTriggerPoint;
+
+                if (wwaSDelta <= 0) {
+                    wwaBigImage.style.transform = `translateX(0px)`;
+                    wwaBigImage.style.opacity = `0`;
+                } else if (wwaSDelta >= wwaScrollTwoRange) {
+                    wwaBigImage.style.transform = `translateX(-50px)`;
+                    wwaBigImage.style.opacity = `0.3`;
+                } else {
+                    let wwaProgress = wwaSDelta / wwaScrollTwoRange;
+                    let wwaCurrentTranslateX = Math.ceil(-50 * wwaProgress);
+
+                    wwaBigImage.style.transform = `translateX(${wwaCurrentTranslateX}px)`;
+                    wwaBigImage.style.opacity = `0.3`;
+                }
+            }
+        }
     });
 
 });
