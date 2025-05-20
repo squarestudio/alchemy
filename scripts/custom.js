@@ -173,9 +173,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
-    /* ------------ A37 MANIFESTO ------------ */
-    let a37ManifestoSection = document.getElementById("a37-manifesto");
-
 
 
     /* ------------ PRICING ------------ */
@@ -332,6 +329,15 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
 
+
+    /* ------------ A37 MANIFESTO ------------ */
+    let a37ManifestoSection = document.getElementById("a37-manifesto");
+    let a37ManifestoImage;
+    if(a37ManifestoSection) {
+        a37ManifestoImage = sanctuarySection.querySelector(".manifesto-bg img:last-child");
+    }
+
+
     /* ------------ WELCOME & JOIN ------------ */
     let welcomeSection = document.getElementById("welcome-and-join");
     let welcomeHeight;
@@ -454,6 +460,29 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
             }
         }
+        if(a37ManifestoSection) {
+            let a37ManifestoTriggerPoint = a37ManifestoSection.offsetTop;
+            let a37ManifestoSecondTriggerPoint = a37ManifestoSection.offsetTop + 120;
+            let a37ManifestoScrollRange = Math.ceil(a37ManifestoSecondTriggerPoint - a37ManifestoTriggerPoint);
+
+            if (scrollPosition >= a37ManifestoTriggerPoint) {
+                let a37ManifestoDelta = scrollPosition - a37ManifestoTriggerPoint;
+
+                if (a37ManifestoDelta <= 0) {
+                    a37ManifestoImage.style.transform = `translateX(0px)`;
+                    a37ManifestoImage.style.opacity = `0`;
+                } else if (a37ManifestoDelta >= a37ManifestoScrollRange) {
+                    a37ManifestoImage.style.transform = `translateX(-20px)`;
+                    a37ManifestoImage.style.opacity = `0.3`;
+                } else {
+                    let a37ManifestoProgress = a37ManifestoDelta / a37ManifestoScrollRange;
+                    let a37ManifestoCurrentTranslateX = Math.ceil(-20 * a37ManifestoProgress);
+
+                    a37ManifestoImage.style.transform = `translateX(${a37ManifestoCurrentTranslateX}px)`;
+                    a37ManifestoImage.style.opacity = `0.3`;
+                }
+            }
+        }
         if(welcomeSection) {
             let welcomeTriggerPoint = welcomeSection.offsetTop - window.innerHeight + welcomeHeight;
 
@@ -481,7 +510,6 @@ document.addEventListener("DOMContentLoaded", function () {
             }
 
         }
-
     });
 
 });
