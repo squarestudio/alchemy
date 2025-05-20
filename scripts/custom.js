@@ -6,6 +6,20 @@ document.addEventListener("DOMContentLoaded", function () {
         },5000)
     }
 
+    document.addEventListener('click', function (e) {
+        const enrollEl = document.getElementById('alchemyEnroll');
+        const codeBlock = enrollEl.querySelector('.code-block');
+
+        if (enrollEl.contains(e.target)) {
+            // Case 1: click directly on #alchemyEnroll, but NOT its children
+            if (e.target === enrollEl || codeBlock.contains(e.target)) {
+                document.body.classList.remove('enroll');
+                sessionStorage.setItem("enroll", "enroll");
+            }
+        }
+    });
+
+
     /* ------------ HEADER GRADIENT ------------ */
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
     const mobileOverlay = document.querySelector(".Mobile-overlay-menu");
