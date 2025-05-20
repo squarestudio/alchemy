@@ -536,12 +536,17 @@ body:not(.sqs-edit-mode) #alchemyEnroll {
 
     }
     & > .markdown-block {
+      margin-top: var(--gap-60);
+
       h5 {
         text-align: center;
       }
     }
+    & > .markdown-block + .html-block {
+      margin-top: var(--gap-32);
+    }
     & > .button-block {
-
+      margin-top: var(--gap-60);
     }
   }
 }
