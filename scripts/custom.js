@@ -694,10 +694,14 @@ document.addEventListener("DOMContentLoaded", function () {
         const svg = document.getElementById("book-button");
         console.log(svg);
         svg.addEventListener("mouseenter", () => {
-            gsap.to(".morph", { duration: 1, morphSVG:".morph-hover", yoyo:false});
+            TweenMax.to(".morph", 1, {
+                ease:Power2.easeInOut, morphSVG:".morph-hover", yoyo: false
+            });
         });
         svg.addEventListener("mouseleave", () => {
-            gsap.to(".morph", { duration: 1, morphSVG:".morph", yoyo:false});
+            TweenMax.to(".morph", 1, {
+                ease:Power2.easeInOut, morphSVG:".morph", yoyo: false
+            });
         });
     });
 
