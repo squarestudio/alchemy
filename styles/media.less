@@ -2237,10 +2237,13 @@
       .embed-block {
         margin-top: var(--gap-40);
 
-        .embed-block-wrapper > iframe {
-          height: auto;
-          max-height: unset;
-          position: static;
+        .embed-block-wrapper {
+          padding-bottom: 0;
+          & > iframe {
+            height: auto;
+            max-height: unset;
+            position: static;
+          }
         }
       }
     }
