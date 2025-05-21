@@ -410,6 +410,15 @@ window.Squarespace.onInitialize(Y, function() {
 
 
 
+    const svg = document.getElementById("book-button");
+    TweenMax.to("#morph", 1, {
+        morphSVG:"#morph-hover", delay: .5, repeat: -1, repeatDelay: .5, yoyo: true
+    });
+
+    console.log(typeof MorphSVGPlugin);
+
+
+
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
     }
@@ -690,13 +699,6 @@ window.Squarespace.onInitialize(Y, function() {
                 }
             }
         }
-
-        const svg = document.getElementById("book-button");
-        TweenMax.to("#morph", 1, {
-            morphSVG:"#morph-hover", delay: .5, repeat: -1, repeatDelay: .5, yoyo: true
-        });
-
-        console.log(typeof MorphSVGPlugin);
 
     });
 
