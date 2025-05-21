@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function () {
+window.Squarespace.onInitialize(Y, function() {
 
     if(!sessionStorage.getItem("enroll")) {
         setTimeout(function(){
