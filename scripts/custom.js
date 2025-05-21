@@ -692,6 +692,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const svg = document.getElementById("book-button");
+        console.log(svg);
         svg.addEventListener("mouseenter", () => {
             gsap.to(".morph", { duration: 1, morphSVG:".morph-hover", yoyo:false});
         });
