@@ -199,8 +199,24 @@ a.sqs-block-button-element,
   -webkit-font-smoothing: antialiased !important;
 }
 
-svg .morph-hover {
-  visibility: hidden;
+a.alchemy-button {
+  display: block;
+  width: 203px;
+  height: 69px;
+
+  position: relative;
+
+  svg .morph-hover {
+    visibility: hidden;
+  }
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
 }
 
 a.sqs-block-button-element:hover,
