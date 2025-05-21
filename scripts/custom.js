@@ -423,6 +423,19 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+    const heroButton = document.getElementById("hero-button");
+    if(heroButton) {
+        heroButton.addEventListener("mouseenter", () => {
+            TweenMax.to("#hero-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#hero-button .morph-hover", yoyo: false
+            });
+        });
+        heroButton.addEventListener("mouseleave", () => {
+            TweenMax.to("#hero-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#hero-button .morph", yoyo: false
+            });
+        });
+    }
 
 
 
