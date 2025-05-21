@@ -692,8 +692,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const svg = document.getElementById("book-button");
-        TweenMax.to(".morph", 1, {
-            ease:Power2.easeInOut, morphSVG:".morph-hover", delay: .5, repeat: -1, repeatDelay: .5, yoyo: true
+        TweenMax.to("#morph", 1, {
+            morphSVG:"#morph-hover", delay: .5, repeat: -1, repeatDelay: .5, yoyo: true
         });
 
     });
