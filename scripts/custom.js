@@ -1,4 +1,4 @@
-window.Squarespace.onInitialize(Y, function() {
+document.addEventListener("DOMContentLoaded", function () {
 
     if(!sessionStorage.getItem("enroll")) {
         setTimeout(function(){
@@ -410,12 +410,19 @@ window.Squarespace.onInitialize(Y, function() {
 
 
 
-    const svg = document.getElementById("book-button");
-    TweenMax.to("#morph", 1, {
-        morphSVG:"#morph-hover", delay: .5, repeat: -1, repeatDelay: .5, yoyo: true
-    });
-
-    console.log(typeof MorphSVGPlugin);
+    const bookButton = document.getElementById("book-button");
+    if(bookButton) {
+        bookButton.addEventListener("mouseenter", () => {
+            TweenMax.to(".morph", 1, {
+                ease:Power2.easeInOut, morphSVG:".morph-hover", yoyo: false
+            });
+        });
+        bookButton.addEventListener("mouseleave", () => {
+            TweenMax.to(".morph", 1, {
+                ease:Power2.easeInOut, morphSVG:".morph", yoyo: false
+            });
+        });
+    }
 
 
 
@@ -699,7 +706,6 @@ window.Squarespace.onInitialize(Y, function() {
                 }
             }
         }
-
     });
 
 });
