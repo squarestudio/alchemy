@@ -199,6 +199,14 @@ a.sqs-block-button-element,
   -webkit-font-smoothing: antialiased !important;
 }
 
+a.sqs-block-button-element:hover,
+.sqs-block-button .sqs-block-button-element--small:hover,
+.sqs-block-button .sqs-block-button-element--medium:hover,
+.sqs-block-button .sqs-block-button-element--large:hover,
+.button:hover, button:hover{
+  background: var(--gradient-button) !important;
+}
+
 a.alchemy-button {
   display: block;
   width: 203px;
@@ -238,13 +246,8 @@ a.alchemy-button {
     pointer-events: none;
   }
 }
-
-a.sqs-block-button-element:hover,
-.sqs-block-button .sqs-block-button-element--small:hover,
-.sqs-block-button .sqs-block-button-element--medium:hover,
-.sqs-block-button .sqs-block-button-element--large:hover,
-.button:hover, button:hover{
-  background: var(--gradient-button) !important;
+#timetable-button {
+  margin-top: 5px;
 }
 
 .text-bg {
