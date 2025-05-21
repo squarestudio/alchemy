@@ -3211,8 +3211,12 @@ section#our-classes-sound-like {
     .embed-block {
       margin-top: 50px;
 
-      .embed-block-wrapper > iframe {
-        max-height: 590px;
+      .embed-block-wrapper {
+        padding-bottom: 590px;
+
+        & > iframe {
+          max-height: 590px;
+        }
       }
     }
   }
