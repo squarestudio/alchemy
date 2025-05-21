@@ -436,6 +436,19 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+    const timetableButton = document.getElementById("timetable-button");
+    if(timetableButton) {
+        timetableButton.addEventListener("mouseenter", () => {
+            TweenMax.to("#timetable-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#timetable-button .morph-hover", yoyo: false
+            });
+        });
+        timetableButton.addEventListener("mouseleave", () => {
+            TweenMax.to("#timetable-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#timetable-button .morph", yoyo: false
+            });
+        });
+    }
 
 
 
