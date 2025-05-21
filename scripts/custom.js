@@ -401,7 +401,7 @@ document.addEventListener("DOMContentLoaded", function () {
         studioImage = studioSection.querySelector(".Index-page-content .sqs-col-12>.row .col:last-child");
     }
 
-    /* ------------ STUDIO ------------ */
+    /* ------------ BLOG ITEM ------------ */
     let blogItem = document.querySelector(".BlogItem");
     let blogImage;
     if(blogItem) {
@@ -411,6 +411,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     const bookButton = document.getElementById("book-button");
+    const heroButton = document.getElementById("hero-button");
+    const timetableButton = document.getElementById("timetable-button");
+    const potentialButton = document.getElementById("potential-button");
+
     if(bookButton) {
         bookButton.addEventListener("mouseenter", () => {
             TweenMax.to("#book-button .morph", 1, {
@@ -423,7 +427,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-    const heroButton = document.getElementById("hero-button");
     if(heroButton) {
         heroButton.addEventListener("mouseenter", () => {
             TweenMax.to("#hero-button .morph", 1, {
@@ -436,7 +439,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-    const timetableButton = document.getElementById("timetable-button");
     if(timetableButton) {
         timetableButton.addEventListener("mouseenter", () => {
             TweenMax.to("#timetable-button .morph", 1, {
@@ -449,7 +451,6 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
-    const potentialButton = document.getElementById("potential-button");
     if(potentialButton) {
         potentialButton.addEventListener("mouseenter", () => {
             TweenMax.to("#potential-button .morph", 1, {
@@ -461,6 +462,14 @@ document.addEventListener("DOMContentLoaded", function () {
                 ease:Power2.easeInOut, morphSVG:"#potential-button .morph", yoyo: false
             });
         });
+    }
+
+    if(document.getElementById("faq-items")) {
+        let faqButtonHref = document.querySelector("#faq-items .faq-columns > .col:first-child p:last-child a").getAttribute('href');
+        let faqButtonText = document.querySelector("#faq-items .faq-columns > .col:first-child p:last-child a").innerText;
+
+        console.log(faqButtonHref);
+        console.log(faqButtonText);
     }
 
 
