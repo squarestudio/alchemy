@@ -2515,7 +2515,10 @@ section#faq-items {
       p:last-child {
         margin-top: 0;
       }
-      p a {
+      p a:not(#faq-button) {
+        display: none;
+      }
+      p a#faq-button {
         margin-top: var(--gap-60);
       }
     }
