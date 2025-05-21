@@ -449,6 +449,19 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
     }
+    const potentialButton = document.getElementById("potential-button");
+    if(potentialButton) {
+        potentialButton.addEventListener("mouseenter", () => {
+            TweenMax.to("#potential-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#potential-button .morph-hover", yoyo: false
+            });
+        });
+        potentialButton.addEventListener("mouseleave", () => {
+            TweenMax.to("#potential-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#potential-button .morph", yoyo: false
+            });
+        });
+    }
 
 
 
