@@ -692,17 +692,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         const svg = document.getElementById("book-button");
-        console.log(svg);
-        svg.addEventListener("mouseenter", () => {
-            TweenMax.to(".morph", 1, {
-                ease:Power2.easeInOut, morphSVG:".morph-hover", yoyo: false
-            });
+        TweenMax.to(".morph", 1, {
+            ease:Power2.easeInOut, morphSVG:".morph-hover", delay: .5, repeat: -1, repeatDelay: .5, yoyo: true
         });
-        svg.addEventListener("mouseleave", () => {
-            TweenMax.to(".morph", 1, {
-                ease:Power2.easeInOut, morphSVG:".morph", yoyo: false
-            });
-        });
+
     });
 
 });
