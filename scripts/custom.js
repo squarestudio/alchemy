@@ -696,6 +696,8 @@ window.Squarespace.onInitialize(Y, function() {
             morphSVG:"#morph-hover", delay: .5, repeat: -1, repeatDelay: .5, yoyo: true
         });
 
+        console.log(typeof MorphSVGPlugin);
+
     });
 
 });
