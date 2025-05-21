@@ -413,12 +413,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const bookButton = document.getElementById("book-button");
     if(bookButton) {
         bookButton.addEventListener("mouseenter", () => {
-            TweenMax.to(".morph", 1, {
+            TweenMax.to(".morph", .7, {
                 ease:Power2.easeInOut, morphSVG:".morph-hover", yoyo: false
             });
         });
         bookButton.addEventListener("mouseleave", () => {
-            TweenMax.to(".morph", 1, {
+            TweenMax.to(".morph", .7, {
                 ease:Power2.easeInOut, morphSVG:".morph", yoyo: false
             });
         });
