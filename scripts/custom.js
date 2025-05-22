@@ -1,5 +1,15 @@
 window.Squarespace.onInitialize(Y, function() {
 
+    const path = window.location.pathname;
+
+    document.querySelectorAll('[data-navigation-link]').forEach(link => {
+        if (link.getAttribute('href') === path) {
+            link.classList.add('Mobile-overlay-nav-item--active');
+        } else {
+            link.classList.remove('Mobile-overlay-nav-item--active');
+        }
+    });
+
     if(!sessionStorage.getItem("enroll")) {
         setTimeout(function(){
             document.body.classList.add('enroll');
