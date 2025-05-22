@@ -805,7 +805,9 @@ window.Squarespace.onInitialize(Y, function() {
             }
         }
     }
-    window.removeEventListener('scroll', handleScroll);
     window.addEventListener('scroll', handleScroll);
-
 });
+
+window.Squarespace.onDestroy(Y, function() {
+    window.removeEventListener('scroll', handleScroll);
+})
