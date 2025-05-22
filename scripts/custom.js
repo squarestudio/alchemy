@@ -526,7 +526,7 @@ window.Squarespace.onInitialize(Y, function() {
         }
     }
 
-    window.addEventListener('scroll', () => {
+    function handleScroll() {
         const scrollPosition = window.scrollY || window.pageYOffset;
 
         if(benefitsSection) {
@@ -804,6 +804,8 @@ window.Squarespace.onInitialize(Y, function() {
                 }
             }
         }
-    });
+    }
+    window.removeEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
 });
