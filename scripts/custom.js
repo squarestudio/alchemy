@@ -526,9 +526,6 @@ window.Squarespace.onInitialize(Y, function() {
         }
     }
 
-    window.onload = function() {
-        document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
-    }
     window.addEventListener('scroll', () => {
         const scrollPosition = window.scrollY || window.pageYOffset;
 
