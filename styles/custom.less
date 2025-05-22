@@ -2148,7 +2148,17 @@ body.textpage section#welcome-and-join {
                           line-height: 150%;
                           letter-spacing: 0;
 
-                          color: var(--text-30);
+                          color: var(--text-30) !important;
+
+                          &::placeholder {
+                            font-family: var(--font-regular);
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 150%;
+                            letter-spacing: 0;
+
+                            color: var(--text-30) !important;
+                          }
                         }
                       }
                     }
