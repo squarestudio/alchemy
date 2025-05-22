@@ -357,6 +357,10 @@ window.Squarespace.onInitialize(Y, function() {
         welcomeMinWidth = 25; // в %
         welcomeMaxWidth = 58.333; // в %
 
+        welcomeImageBlock.style.width = `${welcomeMinWidth}%`;
+        welcomeSecondImage.style.transform = `translateX(0px)`;
+        welcomeSecondImage.style.opacity = `0`;
+
         welcomeLayoutWidth = welcomeJoinSection.querySelector('.sqs-layout').offsetWidth - 24;
         let welcomeInitialWidth = (welcomeLayoutWidth/100)*25;
         let welcomeFinalWidth = (welcomeLayoutWidth/100)*58.333;
@@ -644,11 +648,6 @@ window.Squarespace.onInitialize(Y, function() {
         }
         if(welcomeJoinSection) {
             let welcomeTriggerPoint = welcomeJoinSection.offsetTop - window.innerHeight + welcomeHeight + 150;
-            console.log('welcomeJoinSection.offsetTop', welcomeJoinSection.offsetTop);
-            console.log('window.innerHeight', window.innerHeight);
-            console.log('welcomeHeight', welcomeHeight);
-            console.log('scrollPosition', scrollPosition);
-            console.log('welcomeTriggerPoint', welcomeTriggerPoint);
 
             if (scrollPosition >= welcomeTriggerPoint) {
                 const welcomeDelta = scrollPosition - welcomeTriggerPoint;
