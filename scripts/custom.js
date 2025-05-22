@@ -421,6 +421,7 @@ window.Squarespace.onInitialize(Y, function() {
         studioImage = studioSection.querySelector(".Index-page-content .sqs-col-12>.row .col:last-child");
     }
 
+
     /* ------------ BLOG ITEM ------------ */
     let blogItem = document.querySelector(".BlogItem");
     let blogImage;
@@ -428,6 +429,22 @@ window.Squarespace.onInitialize(Y, function() {
         blogImage = blogItem.querySelector(".article-header .article-image img:last-child");
     }
 
+    let footerButton = document.querySelector('footer button.form-button-wrapper');
+    if (!footerButton.querySelector('svg')) {
+        let footerSVG = `<svg width="203" height="69" viewBox="0 0 203 69" fill="none" xmlns="http://www.w3.org/2000/svg"><path class="morph" d="M 27 0.5 H 176 C 190.636 0.5 202.5 12.3645 202.5 27 V 28.625 C 202.5 42.3631 191.363 53.5 177.625 53.5 H 131.684 C 128.453 53.5 125 53.5 120 53.5 C 113 53.5 113 53.5 107 53.5 L 107 53.5 C 103 53.5 99.9155 53.5 96.667 53.5 H 83.3975 C 78.7805 53.5002 77 53.5 75 53.5 L 72 53.5 C 64 53.5 64 53.5 56 53.5 C 57 53.5 47.8295 53.5 43.0273 53.5 H 25.375 C 11.6369 53.5 0.5 42.3631 0.5 28.625 V 27 C 0.5 12.3645 12.3645 0.5 27 0.5 Z" stroke="#303030"/><path class="morph-hover" d="M27 0.5H176C190.636 0.500001 202.5 12.3645 202.5 27V28.625C202.5 42.3631 191.363 53.5 177.625 53.5H131.684C128.453 53.5 125.305 54.5237 122.692 56.4238C117.782 59.9953 111.15 60.0724 106.157 56.6162L105.758 56.3398C103.087 54.4908 99.9155 53.5 96.667 53.5H83.3975C78.7805 53.5002 74.6009 56.2315 72.7471 60.46L71.8926 62.4102C68.2076 70.8152 56.0424 70.0571 53.4287 61.2598C52.061 56.6566 47.8295 53.5 43.0273 53.5H25.375C11.6369 53.5 0.5 42.3631 0.5 28.625V27C0.5 12.3645 12.3645 0.5 27 0.5Z" stroke="#303030"/></svg>`;
+        footerButton.insertAdjacentHTML('afterbegin', footerSVG);
+    }
+
+    footerButton.addEventListener("mouseenter", () => {
+        TweenMax.to("footer button.form-button-wrapper .morph", 1, {
+            ease:Power2.easeInOut, morphSVG:"footer button.form-button-wrapper .morph-hover", yoyo: false
+        });
+    });
+    footerButton.addEventListener("mouseleave", () => {
+        TweenMax.to("footer button.form-button-wrapper .morph", 1, {
+            ease:Power2.easeInOut, morphSVG:"footer button.form-button-wrapper .morph", yoyo: false
+        });
+    });
 
 
     const bookButton = document.getElementById("book-button");
@@ -503,8 +520,6 @@ window.Squarespace.onInitialize(Y, function() {
             });
         }
     }
-
-
 
     window.onload = function() {
         document.querySelector('footer.Footer input[type="checkbox"]').checked = true;
