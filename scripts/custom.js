@@ -647,6 +647,7 @@ window.Squarespace.onInitialize(Y, function() {
         }
         if(welcomeJoinSection) {
             let welcomeTriggerPoint = welcomeJoinSection.offsetTop - window.innerHeight + welcomeHeight + 150;
+            console.log('scrollPosition', scrollPosition);
             console.log('welcomeTriggerPoint', welcomeTriggerPoint);
 
             if (scrollPosition >= welcomeTriggerPoint) {
