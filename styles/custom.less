@@ -2164,68 +2164,37 @@ body.textpage section#welcome-and-join {
                     }
                     .newsletter-form-button-wrapper button {
                       padding: 0;
-                      box-shadow: none;
+                      border-radius: 0 !important;
                       border: none !important;
+                      box-shadow: none !important;
+
+                      position: relative;
+                      top: 22px;
+
                       background: none !important;
+
+                      svg {
+                        path {
+                          fill: #ffffff;
+                        }
+                        .morph-hover {
+                          display: none;
+                        }
+                      }
+
+                      .newsletter-form-spinner,
+                      .newsletter-form-button-icon {
+                        display: none !important;
+                      }
+                      .newsletter-form-button-label {
+                        position: absolute;
+                        top: 17px;
+                        left: 50%;
+
+                        -webkit-transform: translateX(-50%);
+                        transform: translateX(-50%);
+                      }
                     }
-                  }
-                }
-              }
-            }
-            .form-block {
-              form {
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-
-                div[tabindex="-1"] {
-                  display: none;
-                }
-                .form-item {
-                  margin-bottom: 0;
-
-                  & > label {
-                    display: none;
-                  }
-                  .option {
-                    display: none;
-                  }
-                }
-
-                .field-list {
-                  width: ~"calc(60% - 12px)";
-
-                  input[type="email"] {
-                    padding: 0 0 5px;
-                    background: none;
-                    outline: none;
-                    border: none;
-                    border-bottom: 1px solid var(--text-30);
-
-                    display: block;
-                    height: 25px;
-
-                    font-family: var(--font-regular);
-                    font-weight: 400;
-                    font-size: 18px;
-                    line-height: 150%;
-                    letter-spacing: 0;
-
-                    color: var(--text-30);
-                  }
-                }
-                button[type="submit"] {
-                  padding: 17px 32px;
-                  border-radius: 30px;
-
-                  span {
-                    font-family: var(--font-medium);
-                    font-weight: 500;
-                    font-style: normal;
-                    font-size: 16px;
-                    line-height: 100%;
-
-                    letter-spacing: 0;
                   }
                 }
               }
