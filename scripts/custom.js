@@ -435,6 +435,8 @@ window.Squarespace.onInitialize(Y, function() {
         footerButton.insertAdjacentHTML('afterbegin', footerSVG);
     }
 
+    console.log(footerButton);
+
     footerButton.addEventListener("mouseenter", () => {
         TweenMax.to("footer button.form-submit-button .morph", 1, {
             ease:Power2.easeInOut, morphSVG:"footer button.form-submit-button .morph-hover", yoyo: false
