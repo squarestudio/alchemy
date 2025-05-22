@@ -429,7 +429,7 @@ window.Squarespace.onInitialize(Y, function() {
         blogImage = blogItem.querySelector(".article-header .article-image img:last-child");
     }
 
-    let footerButton = document.querySelector('.Footer .Footer-middle');
+    let footerButton = document.querySelector('.Footer .Footer-middle form');
     console.log(footerButton);
 
     if (!footerButton.querySelector('svg')) {
