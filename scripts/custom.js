@@ -644,6 +644,9 @@ window.Squarespace.onInitialize(Y, function() {
         }
         if(welcomeJoinSection) {
             let welcomeTriggerPoint = welcomeJoinSection.offsetTop - window.innerHeight + welcomeHeight + 150;
+            console.log('welcomeJoinSection.offsetTop', welcomeJoinSection.offsetTop);
+            console.log('window.innerHeight', window.innerHeight);
+            console.log('welcomeHeight', welcomeHeight);
             console.log('scrollPosition', scrollPosition);
             console.log('welcomeTriggerPoint', welcomeTriggerPoint);
 
@@ -807,7 +810,3 @@ window.Squarespace.onInitialize(Y, function() {
     }
     window.addEventListener('scroll', handleScroll);
 });
-
-window.Squarespace.onDestroy(Y, function() {
-    window.removeEventListener('scroll', handleScroll);
-})
