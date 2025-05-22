@@ -351,7 +351,6 @@ window.Squarespace.onInitialize(Y, function() {
     let welcomeMaxWidth;
     let welcomeLayoutWidth;
     if(welcomeJoinSection) {
-        welcomeHeight = welcomeJoinSection.querySelector('#welcomeBlock').offsetHeight - 120;
         welcomeImageBlock = welcomeJoinSection.querySelector("#welcomeBlock .sqs-col-12>.row .col:first-child");
         welcomeSecondImage = welcomeJoinSection.querySelector("#welcomeBlock .sqs-col-12>.row .col:first-child .image-block+.image-block .image-block-wrapper>div img");
         welcomeMinWidth = 25; // в %
@@ -360,6 +359,8 @@ window.Squarespace.onInitialize(Y, function() {
         welcomeImageBlock.style.width = `${welcomeMinWidth}%`;
         welcomeSecondImage.style.transform = `translateX(0px)`;
         welcomeSecondImage.style.opacity = `0`;
+
+        welcomeHeight = welcomeJoinSection.querySelector('#welcomeBlock').offsetHeight - 120;
 
         welcomeLayoutWidth = welcomeJoinSection.querySelector('.sqs-layout').offsetWidth - 24;
         let welcomeInitialWidth = (welcomeLayoutWidth/100)*25;
