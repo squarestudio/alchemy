@@ -1459,7 +1459,11 @@ section#classes {
                   }
                   & > .html-block {
                     p {
+                      margin: 0;
                       color: var(--text-30);
+                    }
+                    p + p {
+                      margin-top: var(--gap-16);
                     }
                     ul {
                       margin-top: var(--gap-24);
@@ -1477,12 +1481,6 @@ section#classes {
                     }
                     ul + p {
                       margin-top: var(--gap-48);
-                    }
-                    p {
-                      margin: 0;
-                    }
-                    p + p {
-                      margin-top: var(--gap-16);
                     }
                   }
                   & > .html-block + .code-block {
