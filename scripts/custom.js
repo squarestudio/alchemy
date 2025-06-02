@@ -15,7 +15,6 @@ window.Squarespace.onInitialize(Y, function() {
             document.body.classList.add('enroll');
         },5000)
     }
-
     document.addEventListener('click', function (e) {
         const enrollEl = document.getElementById('alchemyEnroll');
         const codeBlock = enrollEl.querySelector('.code-block');
@@ -28,7 +27,6 @@ window.Squarespace.onInitialize(Y, function() {
             }
         }
     });
-
 
     /* ------------ HEADER GRADIENT ------------ */
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");

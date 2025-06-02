@@ -80,7 +80,7 @@
                 <section id="{urlId}" class="Index-list" data-collection-id="{id}" data-parallax-id="{id}">
                     <div class="Index-page-content">
                         <div class="sqs-layout">
-                            <div class="row sqs-row">
+                            <div class="row sqs-row" style="display:none;">
                                 {.repeated section items}
                                     <div class="col sqs-col-4">
                                         <h3 class="tab-title">{title}</h3>
