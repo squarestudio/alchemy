@@ -1438,7 +1438,7 @@ section#classes {
               }
             }
             .item-description {
-              background: #303030;
+              background: var(--text-100);
               padding: 40px 20px 30px;
 
               overflow: hidden;
@@ -1448,6 +1448,11 @@ section#classes {
                 max-width: unset;
 
                 .sqs-col-12 {
+                  & > .markdown-block {
+                    h4 {
+                      color: var(--text-30);
+                    }
+                  }
                   & > .html-block {
                     ul {
                       margin-top: var(--gap-24);
