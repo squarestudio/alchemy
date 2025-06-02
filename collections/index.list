@@ -92,13 +92,13 @@
                                     <div class="row">
                                         {.repeated section items}
                                             <div class="col sqs-col-4 item">
-                                                <div class="col sqs-col-12 item-image">
+                                                <div class="item-image">
                                                     <div class="image">
                                                         <img src="{assetUrl}" alt="{title}">
                                                         <img src="{assetUrl}" alt="{title}">
                                                     </div>
                                                 </div>
-                                                <div class="col sqs-col-12 item-description">
+                                                <div class="item-description">
                                                     {body}
                                                 </div>
                                             </div>
