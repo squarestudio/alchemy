@@ -1499,17 +1499,9 @@ section#classes {
                   & > .html-block + .code-block {
                     margin-top: var(--gap-48);
                   }
-                  & > .code-block + .row {
-                    margin-top: var(--gap-32);
-                  }
                   & > .row {
                     & > .col {
-                      display: flex;
-                      align-items: center;
-                      justify-content: flex-start;
-                      column-gap: var(--gap-8);
-
-                      width: 192px;
+                      width: auto;
 
                       .code-block {
                         width: 44px;
@@ -1530,9 +1522,6 @@ section#classes {
                         }
                       }
                     }
-                  }
-                  & > .row + .row {
-                    margin-top: var(--gap-16);
                   }
                 }
               }
