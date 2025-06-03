@@ -597,9 +597,20 @@
 
         & > .col > .row {
           display: block;
+          position: relative;
 
           & > .col {
             width: 100%;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            &.active {
+              position: relative;
+              z-index: 1;
+            }
           }
         }
       }
