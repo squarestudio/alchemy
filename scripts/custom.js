@@ -323,7 +323,7 @@ window.Squarespace.onInitialize(Y, function() {
     let classesSection = document.getElementById("classes");
     if(classesSection) {
         const cols = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(1) .col');
-        const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row.item');
+        const items = classesSection.querySelectorAll('.Index-page-content > .sqs-layout > .row:nth-child(2) > .sqs-col-12 > .row > .col.item');
 
         cols.forEach((col, index) => {
             col.addEventListener('click', () => {
