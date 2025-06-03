@@ -1820,38 +1820,31 @@
     #joinBlock {
       background: #ffffff;
 
-      .sqs-col-12>.sqs-block .newsletter-form-body {
-        .newsletter-form-fields-wrapper {
-          flex-direction: column;
-
-          & > fieldset input,
-          & > div input {
-            font-size: 12px;
-            background: #ffffff !important;
-          }
-
-          & > * {
-            width: 100% !important;
-          }
-        }
-        .newsletter-form-button-wrapper button {
-          font-size: 14px;
-          max-width: unset;
-        }
-      }
       .newsletter-block {
         margin-top: var(--gap-60) !important;
 
         .newsletter-form-body {
           .newsletter-form-fields-wrapper {
             row-gap: var(--gap-24) !important;
+            flex-direction: column;
+
+            & > fieldset input,
+            & > div input {
+              font-size: 14px !important;
+              background: #ffffff !important;
+            }
+
+            & > * {
+              width: 100% !important;
+            }
           }
           .newsletter-form-button-wrapper {
             margin-top: var(--gap-24) !important;
-          }
-          .newsletter-form-fields-wrapper>fieldset input,
-          .newsletter-form-fields-wrapper>div input {
-            font-size: 14px !important;
+
+            button {
+              font-size: 14px;
+              max-width: unset;
+            }
           }
         }
       }
