@@ -25,6 +25,7 @@
                               <div class="item-date">{addedOn|date %A, %B %d}</div>
                               <h5 class="item-title"><a href="/blog/{urlId}">{title}</a></h5>
                               <div class="item-excerpt">{excerpt}</div>
+                              <div class="item-link"><a href="/blog/{urlId}">Full article</a></div>
                           </div>
                       </div>
                   {.end}
