@@ -1721,7 +1721,10 @@
 
       &>.sqs-col-12>.row>.col .item-description .sqs-layout .sqs-col-12>.row {
         display: flex !important;
-        column-gap: 20px;
+
+        & > .col {
+          width: 50% !important;
+        }
       }
     }
   }
