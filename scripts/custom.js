@@ -279,7 +279,7 @@ window.Squarespace.onInitialize(Y, function() {
 
 
     /* ------------ BENEFITS ------------ */
-    let benefitsSection = document.getElementById("benefits");
+    let benefitsSection = document.getElementById("benefitsofheat");
     let benefitsHeight;
     let benefitsImageBlock;
     let benefitsSecondImage;
