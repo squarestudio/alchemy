@@ -140,9 +140,9 @@ window.Squarespace.onInitialize(Y, function() {
 
 
     /* ------------ MELT THE LIMITS ------------ */
-    let meltLimitsSection = document.getElementById("melt-the-limits");
+    let meltLimitsSection = document.getElementById("benefitsofheat");
     if(meltLimitsSection && window.innerWidth <= 1024) {
-        let meltTheLimitsSwiper = new Swiper('#melt-the-limits .swiper', {
+        let meltTheLimitsSwiper = new Swiper('#benefitsofheat .swiper', {
             slidesPerView: "1",
             spaceBetween: 24,
             autoHeight: true,
@@ -279,7 +279,7 @@ window.Squarespace.onInitialize(Y, function() {
 
 
     /* ------------ BENEFITS ------------ */
-    let benefitsSection = document.getElementById("benefitsofheat");
+    let benefitsSection = document.getElementById("benefits");
     let benefitsHeight;
     let benefitsImageBlock;
     let benefitsSecondImage;
