@@ -470,6 +470,7 @@ window.Squarespace.onInitialize(Y, function() {
 
     const bookButton = document.getElementById("book-button");
     const heroButton = document.getElementById("hero-button");
+    const sweatyButton = document.getElementById("sweaty-button");
     const timetableButton = document.getElementById("timetable-button");
     const potentialButton = document.getElementById("potential-button");
 
@@ -494,6 +495,18 @@ window.Squarespace.onInitialize(Y, function() {
         heroButton.addEventListener("mouseleave", () => {
             TweenMax.to("#hero-button .morph", 1, {
                 ease:Power2.easeInOut, morphSVG:"#hero-button .morph", yoyo: false
+            });
+        });
+    }
+    if(sweatyButton && window.innerWidth > 1024) {
+        sweatyButton.addEventListener("mouseenter", () => {
+            TweenMax.to("#sweaty-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#sweaty-button .morph-hover", yoyo: false
+            });
+        });
+        sweatyButton.addEventListener("mouseleave", () => {
+            TweenMax.to("#sweaty-button .morph", 1, {
+                ease:Power2.easeInOut, morphSVG:"#sweaty-button .morph", yoyo: false
             });
         });
     }
