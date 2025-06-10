@@ -121,8 +121,7 @@ window.Squarespace.onInitialize(Y, function() {
         heroSection.querySelector(".col:nth-child(2)").classList.add("image-blur");
     }
     if(heroSection && window.innerWidth < 768) {
-        // This will log the width of the viewport
-        console.log(window.innerHeight - 72);
+        document.querySelector("section#hero .sqs-layout > .row:nth-child(1)").style.height = (window.innerHeight - 72) + "px";
     }
 
 
