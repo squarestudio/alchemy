@@ -647,7 +647,7 @@ window.Squarespace.onInitialize(Y, function() {
                     neueSeiteImage.style.opacity = `0.3`;
                 } else {
                     let neueProgress = neueDelta / neueScrollRange;
-                    let neueCurrentTranslateX = Math.ceil(-20 * neueProgress);
+                    let neueCurrentTranslateX = Math.ceil(-50 * neueProgress);
 
                     neueSeiteImage.style.transform = `translate(${neueCurrentTranslateX}px, -50%)`;
                     neueSeiteImage.style.opacity = `0.3`;
