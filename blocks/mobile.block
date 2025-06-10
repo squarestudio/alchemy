@@ -3,7 +3,7 @@
 
     <div data-nc-container="top-left">
       <a href="/" class="Mobile-bar-branding" data-nc-element="branding" data-content-field="site-title">
-        <img src="../assets/logo.png">
+        <img src="../assets/mobile-logo.png">
       </a>
     </div>
     <div data-nc-container="top-center"></div>
