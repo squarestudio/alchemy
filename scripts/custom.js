@@ -122,7 +122,7 @@ window.Squarespace.onInitialize(Y, function() {
     }
     if(heroSection && window.innerWidth < 768) {
         // This will log the width of the viewport
-        console.log(window.innerWidth);
+        console.log(window.innerHeight);
     }
 
 
