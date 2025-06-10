@@ -121,7 +121,7 @@ window.Squarespace.onInitialize(Y, function() {
         heroSection.querySelector(".col:nth-child(2)").classList.add("image-blur");
     }
     if(heroSection && window.innerWidth < 768) {
-        document.querySelector("section#hero .sqs-layout > .row:nth-child(1)").style.height = (window.innerHeight - 72) + "px";
+        heroSection.querySelector(".sqs-layout > .row:nth-child(1)").style.height = (window.innerHeight - 72) + "px";
     }
 
 
@@ -160,7 +160,12 @@ window.Squarespace.onInitialize(Y, function() {
     let neueSeiteImage;
     if(neueSeiteSection) {
         neueSeiteImage = neueSeiteSection.querySelector(".Index-page-content .sqs-col-12>.image-block:nth-child(2)");
+
+        if(window.innerWidth < 768) {
+            neueSeiteSection.querySelector(".sqs-layout .sqs-col-12").style.height = (window.innerHeight - 72) + "px";
+        }
     }
+
 
     /* ------------ BLOG ------------ */
     let blogSection = document.getElementById("blog");
