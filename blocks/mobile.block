@@ -30,7 +30,7 @@
         aria-label="{localizedStrings.openNavigation}"
       >
         <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
-          <path d="M34 25H21M34 15H13M34 34H13" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M35 21H14M35 28H14" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
         <svg style="display:none" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" fill="none">
           <path d="M34.5 34.5L13.5 13.5M34.5 13.5L13.5 34.5" stroke="#303030" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
