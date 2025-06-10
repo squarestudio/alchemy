@@ -159,7 +159,7 @@ window.Squarespace.onInitialize(Y, function() {
     let neueSeiteSection = document.getElementById("neue-seite");
     let neueSeiteImage;
     if(neueSeiteSection) {
-        neueSeiteImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.image-block:nth-child(2)");
+        neueSeiteImage = neueSeiteSection.querySelector(".Index-page-content .sqs-col-12>.image-block:nth-child(2)");
     }
 
     /* ------------ BLOG ------------ */
