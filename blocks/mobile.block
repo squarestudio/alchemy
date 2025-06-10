@@ -3,18 +3,7 @@
 
     <div data-nc-container="top-left">
       <a href="/" class="Mobile-bar-branding" data-nc-element="branding" data-content-field="site-title">
-        {.section website}
-          {.section logoImageUrl}
-            {.ctx @image src=logoImageUrl alt=siteTitle}
-            {@image|apply/apply-image-component.block/
-              /class=Mobile-bar-branding-logo/
-              /sizes=240px/
-              /elementTiming=wf-mobile-bar-branding-logo/
-            }
-          {.or}
-            {.section siteTitle}{@}{.end}
-          {.end}
-        {.end}
+        <img src="../assets/logo.png">
       </a>
     </div>
     <div data-nc-container="top-center"></div>
