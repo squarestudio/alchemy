@@ -363,6 +363,10 @@ window.Squarespace.onInitialize(Y, function() {
     let a37ManifestoImage;
     if(a37ManifestoSection) {
         a37ManifestoImage = a37ManifestoSection.querySelector(".manifesto-bg img+img");
+        if(window.innerWidth < 1025) {
+            a37ManifestoSection.querySelector(".Index-page-content").style.height = (window.innerHeight - 72) + "px";
+        }
+
     }
 
 
