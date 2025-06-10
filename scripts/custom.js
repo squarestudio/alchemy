@@ -616,13 +616,13 @@ window.Squarespace.onInitialize(Y, function() {
                     sanctuaryBigImage.style.transform = `translateX(0px)`;
                     sanctuaryBigImage.style.opacity = `0`;
                 } else if (sanctuarySDelta >= sanctuaryScrollTwoRange) {
-                    sanctuaryBigImage.style.transform = `translateX(-50px)`;
+                    sanctuaryBigImage.style.transform = `translate(-50px, -50%)`;
                     sanctuaryBigImage.style.opacity = `0.3`;
                 } else {
                     let sanctuaryProgress = sanctuarySDelta / sanctuaryScrollTwoRange;
                     let sanctuaryCurrentTranslateX = Math.ceil(-50 * sanctuaryProgress);
 
-                    sanctuaryBigImage.style.transform = `translateX(${sanctuaryCurrentTranslateX}px)`;
+                    sanctuaryBigImage.style.transform = `translate(${sanctuaryCurrentTranslateX}px, -50%)`;
                     sanctuaryBigImage.style.opacity = `0.3`;
                 }
             }
