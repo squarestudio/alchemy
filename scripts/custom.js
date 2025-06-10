@@ -640,16 +640,16 @@ window.Squarespace.onInitialize(Y, function() {
                 let neueDelta = scrollPosition - neueTriggerPoint;
 
                 if (neueDelta <= 0) {
-                    neueSeiteImage.style.transform = `translateX(0px)`;
+                    neueSeiteImage.style.transform = `translate(0px, -50%)`;
                     neueSeiteImage.style.opacity = `0`;
                 } else if (neueDelta >= neueScrollRange) {
-                    neueSeiteImage.style.transform = `translateX(-20px)`;
+                    neueSeiteImage.style.transform = `translate(-50px, -50%)`;
                     neueSeiteImage.style.opacity = `0.3`;
                 } else {
                     let neueProgress = neueDelta / neueScrollRange;
                     let neueCurrentTranslateX = Math.ceil(-20 * neueProgress);
 
-                    neueSeiteImage.style.transform = `translateX(${neueCurrentTranslateX}px)`;
+                    neueSeiteImage.style.transform = `translate(${neueCurrentTranslateX}px, -50%)`;
                     neueSeiteImage.style.opacity = `0.3`;
                 }
             }
