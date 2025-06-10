@@ -320,6 +320,10 @@ window.Squarespace.onInitialize(Y, function() {
     if(sanctuarySection) {
         sanctuarySmallImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:first-child .col:last-child");
         sanctuaryBigImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) .col:last-child");
+
+        if(window.innerWidth < 1025) {
+            sanctuarySection.querySelector(".Index-page-content .sqs-layout .sqs-col-12").style.height = (window.innerHeight + 53) + "px";
+        }
     }
 
 
