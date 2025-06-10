@@ -632,8 +632,8 @@ window.Squarespace.onInitialize(Y, function() {
             }
         }
         if(neueSeiteSection) {
-            let neueTriggerPoint = neueSeiteSection.offsetTop - 200;
-            let neueSecondTriggerPoint = neueSeiteSection.offsetTop - 80;
+            let neueTriggerPoint = neueSeiteSection.offsetTop - 120;
+            let neueSecondTriggerPoint = neueSeiteSection.offsetTop;
             let neueScrollRange = Math.ceil(neueSecondTriggerPoint - neueTriggerPoint);
 
             if (scrollPosition >= neueTriggerPoint) {
