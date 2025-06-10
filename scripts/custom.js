@@ -627,16 +627,28 @@ window.Squarespace.onInitialize(Y, function() {
                 let sanctuarySDelta = scrollPosition - sanctuarySecondTriggerPoint;
 
                 if (sanctuarySDelta <= 0) {
-                    sanctuaryBigImage.style.transform = `translateX(0px)`;
+                    if(window.innerWidth < 1025) {
+                        sanctuaryBigImage.style.transform = `translate(0px, -20%)`;
+                    }else{
+                        sanctuaryBigImage.style.transform = `translate(0px, -50%)`;
+                    }
                     sanctuaryBigImage.style.opacity = `0`;
                 } else if (sanctuarySDelta >= sanctuaryScrollTwoRange) {
-                    sanctuaryBigImage.style.transform = `translate(-50px, -50%)`;
+                    if(window.innerWidth < 1025) {
+                        sanctuaryBigImage.style.transform = `translate(-50px, -20%)`;
+                    }else{
+                        sanctuaryBigImage.style.transform = `translate(-50px, -50%)`;
+                    }
                     sanctuaryBigImage.style.opacity = `0.3`;
                 } else {
                     let sanctuaryProgress = sanctuarySDelta / sanctuaryScrollTwoRange;
                     let sanctuaryCurrentTranslateX = Math.ceil(-50 * sanctuaryProgress);
 
-                    sanctuaryBigImage.style.transform = `translate(${sanctuaryCurrentTranslateX}px, -50%)`;
+                    if(window.innerWidth < 1025) {
+                        sanctuaryBigImage.style.transform = `translate(${sanctuaryCurrentTranslateX}px, -20%)`;
+                    }else{
+                        sanctuaryBigImage.style.transform = `translate(${sanctuaryCurrentTranslateX}px, -50%)`;
+                    }
                     sanctuaryBigImage.style.opacity = `0.3`;
                 }
             }
