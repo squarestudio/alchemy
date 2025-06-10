@@ -155,6 +155,12 @@ window.Squarespace.onInitialize(Y, function() {
         });
     }
 
+    /* ------------ NEUE SEITE ------------ */
+    let neueSeiteSection = document.getElementById("neue-seite");
+    let neueSeiteImage;
+    if(neueSeiteSection) {
+        neueSeiteImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.image-block:nth-child(2)");
+    }
 
     /* ------------ BLOG ------------ */
     let blogSection = document.getElementById("blog");
@@ -250,8 +256,6 @@ window.Squarespace.onInitialize(Y, function() {
             });
         }
     }
-
-
 
 
     /* INVEST IN YOUR MOVEMENT */
@@ -624,6 +628,29 @@ window.Squarespace.onInitialize(Y, function() {
 
                     sanctuaryBigImage.style.transform = `translate(${sanctuaryCurrentTranslateX}px, -50%)`;
                     sanctuaryBigImage.style.opacity = `0.3`;
+                }
+            }
+        }
+        if(neueSeiteSection) {
+            let neueTriggerPoint = neueSeiteSection.offsetTop;
+            let neueSecondTriggerPoint = neueSeiteSection.offsetTop + 120;
+            let neueScrollRange = Math.ceil(neueSecondTriggerPoint - neueTriggerPoint);
+
+            if (scrollPosition >= neueTriggerPoint) {
+                let neueDelta = scrollPosition - neueTriggerPoint;
+
+                if (neueDelta <= 0) {
+                    neueSeiteImage.style.transform = `translateX(0px)`;
+                    neueSeiteImage.style.opacity = `0`;
+                } else if (neueDelta >= neueScrollRange) {
+                    neueSeiteImage.style.transform = `translateX(-20px)`;
+                    neueSeiteImage.style.opacity = `0.3`;
+                } else {
+                    let neueProgress = neueDelta / neueScrollRange;
+                    let neueCurrentTranslateX = Math.ceil(-20 * neueProgress);
+
+                    neueSeiteImage.style.transform = `translateX(${neueCurrentTranslateX}px)`;
+                    neueSeiteImage.style.opacity = `0.3`;
                 }
             }
         }
