@@ -88,9 +88,9 @@ window.Squarespace.onInitialize(Y, function() {
         const endColor = getInterpolatedColor(gradientStops, endPercent);
 
         element.style.background = `linear-gradient(180deg, ${startColor}, ${endColor})`;
+        console.log(element.style.background);
     }
     function updateGradients() {
-        console.log('updateGradients');
         const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (isMenuOpen) return;
 
