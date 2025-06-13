@@ -43,6 +43,7 @@ window.Squarespace.onInitialize(Y, function() {
         "#FF9700"
     ];
 
+    // --- Color math ---
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
         const c2 = parseInt(color2.slice(1), 16);
@@ -69,10 +70,9 @@ window.Squarespace.onInitialize(Y, function() {
         return interpolateColor(startColor, endColor, factor);
     }
 
+    // --- Scroll % ---
     function getElementScrollPercent(element) {
         const rect = element.getBoundingClientRect();
-        // const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
         const start = rect.top + window.scrollY;
         const end = rect.bottom + window.scrollY;
         const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -83,9 +83,9 @@ window.Squarespace.onInitialize(Y, function() {
         return [startPercent, endPercent];
     }
 
+    // --- Apply gradient ---
     function applyGradientToElement(element) {
         const [startPercent, endPercent] = getElementScrollPercent(element);
-
         const startColor = getInterpolatedColor(gradientStops, startPercent);
         const endColor = getInterpolatedColor(gradientStops, endPercent);
 
@@ -96,19 +96,22 @@ window.Squarespace.onInitialize(Y, function() {
         const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (isMenuOpen) return;
 
-        applyGradientToElement(header);
-        applyGradientToElement(mobileOverlay);
+        const header = document.querySelector("header");
+        const mobileOverlay = document.querySelector(".Mobile-overlay");
+
+        if (header) applyGradientToElement(header);
+        if (mobileOverlay) applyGradientToElement(mobileOverlay);
     }
 
-    // Оновлення при скролі
+    // --- Listen to scroll ---
     window.addEventListener("scroll", updateGradients);
     updateGradients();
 
-    // Спостереження за відкриттям меню
+    // --- MutationObserver for Squarespace mobile menu ---
     const observer = new MutationObserver(() => {
         const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (!isMenuOpen) {
-            updateGradients(); // після закриття меню відновлюємо
+            updateGradients(); // restore gradient after menu closes
         }
     });
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
