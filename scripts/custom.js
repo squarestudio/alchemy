@@ -35,9 +35,7 @@ window.Squarespace.onInitialize(Y, function() {
     const gradientStops = [
         "#00C3B2",
         "#06E181",
-        "#99ED61",
-        "#FFDC00",
-        "#FF8B92"
+        "#99ED61"
     ];
 
     function interpolateColor(color1, color2, factor) {
