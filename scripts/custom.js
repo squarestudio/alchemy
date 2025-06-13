@@ -67,9 +67,6 @@ window.Squarespace.onInitialize(Y, function() {
     const pageHeight = document.body.scrollHeight;
     const gradientStops = getGradientColorsByHeight(allGradientStops, pageHeight);
 
-    console.log(gradientStops);
-
-
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
         const c2 = parseInt(color2.slice(1), 16);
