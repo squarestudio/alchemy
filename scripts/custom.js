@@ -47,9 +47,12 @@ window.Squarespace.onInitialize(Y, function() {
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
         const c2 = parseInt(color2.slice(1), 16);
-
-        const r1 = (c1 >> 16) & 0xff, g1 = (c1 >> 8) & 0xff, b1 = c1 & 0xff;
-        const r2 = (c2 >> 16) & 0xff, g2 = (c2 >> 8) & 0xff, b2 = c2 & 0xff;
+        const r1 = (c1 >> 16) & 0xff,
+            g1 = (c1 >> 8) & 0xff,
+            b1 = c1 & 0xff;
+        const r2 = (c2 >> 16) & 0xff,
+            g2 = (c2 >> 8) & 0xff,
+            b2 = c2 & 0xff;
 
         const r = Math.round(r1 + (r2 - r1) * factor);
         const g = Math.round(g1 + (g2 - g1) * factor);
@@ -57,6 +60,7 @@ window.Squarespace.onInitialize(Y, function() {
 
         return `rgb(${r}, ${g}, ${b})`;
     }
+
     function getInterpolatedColor(stops, percent) {
         const rangeCount = stops.length - 1;
         const exactIndex = percent * rangeCount;
@@ -68,10 +72,9 @@ window.Squarespace.onInitialize(Y, function() {
         const endColor = stops[upperIndex];
         return interpolateColor(startColor, endColor, factor);
     }
+
     function getElementScrollPercent(element) {
         const rect = element.getBoundingClientRect();
-        // const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-
         const start = rect.top + window.scrollY;
         const end = rect.bottom + window.scrollY;
         const docHeight = document.body.scrollHeight - window.innerHeight;
@@ -81,15 +84,16 @@ window.Squarespace.onInitialize(Y, function() {
 
         return [startPercent, endPercent];
     }
-    function applyGradientToElement(element) {
-        const [startPercent, endPercent] = getElementScrollPercent(element);
 
+    function applyGradientToElement(element) {
+        if (!element) return;
+        const [startPercent, endPercent] = getElementScrollPercent(element);
         const startColor = getInterpolatedColor(gradientStops, startPercent);
         const endColor = getInterpolatedColor(gradientStops, endPercent);
-
         element.style.background = `linear-gradient(180deg, ${startColor}, ${endColor})`;
         console.log(element.style.background);
     }
+
     function updateGradients() {
         const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (isMenuOpen) return;
@@ -98,15 +102,36 @@ window.Squarespace.onInitialize(Y, function() {
         applyGradientToElement(mobileOverlay);
     }
 
-    // Оновлення при скролі
-    window.addEventListener("scroll", updateGradients);
-    updateGradients();
+    // Delay gradient update until DOM is really ready
+    function waitForRender(callback) {
+        let lastHeight = 0;
+        let tries = 0;
+        const maxTries = 10;
 
-    // Спостереження за відкриттям меню
+        const check = () => {
+            const currentHeight = document.body.scrollHeight;
+            if (currentHeight !== lastHeight || tries < 2) {
+                lastHeight = currentHeight;
+                tries++;
+                requestAnimationFrame(check);
+            } else {
+                callback();
+            }
+        };
+        check();
+    }
+
+    // Initial run
+    waitForRender(updateGradients);
+
+    // Update on scroll
+    window.addEventListener("scroll", updateGradients);
+
+    // Observe menu toggle
     const observer = new MutationObserver(() => {
         const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (!isMenuOpen) {
-            updateGradients(); // після закриття меню відновлюємо
+            updateGradients();
         }
     });
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
