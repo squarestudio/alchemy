@@ -40,8 +40,7 @@ window.Squarespace.onInitialize(Y, function() {
         "#FF8B92",
         "#BD00C6",
         "#F25E8F",
-        "#FF9700",
-        "#F8EC1B"
+        "#FF9700"
     ];
 
     function interpolateColor(color1, color2, factor) {
