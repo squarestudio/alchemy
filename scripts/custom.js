@@ -57,7 +57,6 @@ window.Squarespace.onInitialize(Y, function() {
 
         return `rgb(${r}, ${g}, ${b})`;
     }
-
     function getInterpolatedColor(stops, percent) {
         const rangeCount = stops.length - 1;
         const exactIndex = percent * rangeCount;
@@ -69,7 +68,6 @@ window.Squarespace.onInitialize(Y, function() {
         const endColor = stops[upperIndex];
         return interpolateColor(startColor, endColor, factor);
     }
-
     function getElementScrollPercent(element) {
         const rect = element.getBoundingClientRect();
         // const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -83,7 +81,6 @@ window.Squarespace.onInitialize(Y, function() {
 
         return [startPercent, endPercent];
     }
-
     function applyGradientToElement(element) {
         const [startPercent, endPercent] = getElementScrollPercent(element);
 
@@ -92,8 +89,8 @@ window.Squarespace.onInitialize(Y, function() {
 
         element.style.background = `linear-gradient(180deg, ${startColor}, ${endColor})`;
     }
-
     function updateGradients() {
+        console.log('updateGradients');
         const isMenuOpen = document.body.classList.contains("is-mobile-overlay-active");
         if (isMenuOpen) return;
 
