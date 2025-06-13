@@ -32,11 +32,43 @@ window.Squarespace.onInitialize(Y, function() {
     const header = document.querySelector(".Mobile-bar.Mobile-bar--top");
     const mobileOverlay = document.querySelector(".Mobile-overlay-menu");
 
-    const gradientStops = [
+    const allGradientStops = [
         "#00C3B2",
         "#06E181",
-        "#99ED61"
+        "#99ED61",
+        "#FFDC00",
+        "#FF8B92",
+        "#BD00C6",
+        "#F25E8F",
+        "#FF9700",
+        "#F8EC1B"
     ];
+
+    function getGradientColorsByHeight(allStops, pageHeight) {
+        const minHeight = 1000;
+        const maxHeight = 9000;
+        const totalStops = allStops.length;
+
+        let count;
+
+        if (pageHeight <= minHeight) {
+            count = 1;
+        } else if (pageHeight >= maxHeight) {
+            count = totalStops;
+        } else {
+            const percent = (pageHeight - minHeight) / (maxHeight - minHeight);
+            count = Math.round(1 + percent * (totalStops - 1));
+        }
+
+        return allStops.slice(0, count);
+    }
+
+    // Replace gradientStops with result
+    const pageHeight = document.body.scrollHeight;
+    const gradientStops = getGradientColorsByHeight(allGradientStops, pageHeight);
+
+    console.log(gradientStops);
+
 
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
