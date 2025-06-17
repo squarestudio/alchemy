@@ -1,8 +1,10 @@
 window.Squarespace.onInitialize(Y, function() {
 
-    if (window.Squarespace && Squarespace.MapLoader && typeof Squarespace.MapLoader.load === "function") {
-        Squarespace.MapLoader.load();
-    }
+    setTimeout(() => {
+        if (window.Squarespace && Squarespace.MapLoader?.load) {
+            Squarespace.MapLoader.load();
+        }
+    }, 100);
 
     const path = window.location.pathname;
 
