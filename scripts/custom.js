@@ -1,20 +1,15 @@
-function reloadSquarespaceMaps() {
-    if (window.require) {
-        try {
-            window.require(['website.components.map.visitor'], function() {
-                if (window.Squarespace?.MapLoader?.load) {
-                    Squarespace.MapLoader.load();
-                }
-            });
-        } catch (e) {
-            console.error("Map reload failed:", e);
-        }
-    }
-}
-
 window.Squarespace.onInitialize(Y, function() {
 
-    setTimeout(reloadSquarespaceMaps, 100);
+    const lazyLoadMaps = () => {
+        const lazyComponents = window.Squarespace?.require?.("squarespace-lazyload")?.LazyLoader;
+
+        if (lazyComponents && typeof lazyComponents.loadComponents === "function") {
+            lazyComponents.loadComponents(document.body);
+        }
+    };
+
+    // Delay is crucial so their AMD + DOM can settle
+    setTimeout(lazyLoadMaps, 200);
 
     const path = window.location.pathname;
 
