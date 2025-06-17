@@ -1,11 +1,20 @@
+function reloadSquarespaceMaps() {
+    if (window.require) {
+        try {
+            window.require(['website.components.map.visitor'], function() {
+                if (window.Squarespace?.MapLoader?.load) {
+                    Squarespace.MapLoader.load();
+                }
+            });
+        } catch (e) {
+            console.error("Map reload failed:", e);
+        }
+    }
+}
+
 window.Squarespace.onInitialize(Y, function() {
 
-    setTimeout(() => {
-        console.log(Squarespace.MapLoader);
-        if (window.Squarespace && Squarespace.MapLoader?.load) {
-            Squarespace.MapLoader.load();
-        }
-    }, 100);
+    setTimeout(reloadSquarespaceMaps, 100);
 
     const path = window.location.pathname;
 
