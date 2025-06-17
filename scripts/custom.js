@@ -1,6 +1,7 @@
 window.Squarespace.onInitialize(Y, function() {
 
     setTimeout(() => {
+        console.log(Squarespace.MapLoader);
         if (window.Squarespace && Squarespace.MapLoader?.load) {
             Squarespace.MapLoader.load();
         }
