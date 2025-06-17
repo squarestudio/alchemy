@@ -1,12 +1,17 @@
+function reinitSquarespaceMaps() {
+    const lazy = window.Squarespace?.require?.('squarespace-lazyload')?.LazyLoader;
+    if (lazy && typeof lazy.loadComponents === 'function') {
+        lazy.loadComponents(document.body);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(reinitSquarespaceMaps, 100);
+});
+
 window.Squarespace.onInitialize(Y, function() {
 
-    const lazyLoadMaps = () => {
-        const lazyComponents = window.Squarespace?.require?.("squarespace-lazyload")?.LazyLoader;
-
-        if (lazyComponents && typeof lazyComponents.loadComponents === "function") {
-            lazyComponents.loadComponents(document.body);
-        }
-    };
+    setTimeout(reinitSquarespaceMaps, 200);
 
     // Delay is crucial so their AMD + DOM can settle
     setTimeout(lazyLoadMaps, 200);
