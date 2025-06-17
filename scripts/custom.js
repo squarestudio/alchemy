@@ -1,5 +1,9 @@
 window.Squarespace.onInitialize(Y, function() {
 
+    if (window.Squarespace && Squarespace.MapLoader && typeof Squarespace.MapLoader.load === "function") {
+        Squarespace.MapLoader.load();
+    }
+
     const path = window.location.pathname;
 
     document.querySelectorAll('[data-navigation-link]').forEach(link => {
