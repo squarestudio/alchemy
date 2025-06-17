@@ -1,8 +1,5 @@
 window.Squarespace.onInitialize(Y, function() {
 
-    // Delay is crucial so their AMD + DOM can settle
-    setTimeout(lazyLoadMaps, 200);
-
     const path = window.location.pathname;
 
     document.querySelectorAll('[data-navigation-link]').forEach(link => {
