@@ -3259,8 +3259,6 @@ section#our-team {
       margin-top: var(--gap-120);
       padding: var(--gap-32) 0;
 
-      cursor: grab;
-
       * {
         cursor: grab;
       }
@@ -3269,6 +3267,7 @@ section#our-team {
         width: 29%;
         height: auto;
         box-sizing: border-box;
+        cursor: grab;
 
         user-select: none;
         -moz-user-select: none;
@@ -3361,6 +3360,14 @@ section#our-team {
           }
         }
 
+        &:first-child {
+          cursor: default;
+
+          user-select: unset;
+          -moz-user-select: unset;
+          -ms-user-select: unset;
+          -webkit-user-select: unset;
+        }
         &:first-child,
         &:hover {
           .item-image {
