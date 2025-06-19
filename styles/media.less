@@ -699,10 +699,15 @@
             //margin-top: 20%;
             height: 80%;
             overflow: hidden;
+
+            .col:last-child {
+              height: 100% !important;
+            }
           }
         }
         .manifesto-header+.sqs-row .manifesto-items .manifesto-item {
-          height: 33% !important;
+          height: auto !important;
+          min-height: 300px;
 
           div.description {
             margin-top: var(--gap-20) !important;
