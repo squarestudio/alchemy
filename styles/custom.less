@@ -622,9 +622,7 @@ body:not(.sqs-edit-mode).enroll #alchemyEnroll {
   display: block;
 }
 .yui3-widget.sqs-widget.sqs-popup-overlay {
-  .sqs-slide-container[data-slide-type="popup-overlay"].button-layout-style-inline-auto [data-slice-type="buttons"] ul li a:hover {
-    background: var(--gradient-button) !important;
-
+  .sqs-slide-container[data-slide-type="popup-overlay"].button-layout-style-inline-auto [data-slice-type="buttons"] ul li a {
     font-family: var(--font-medium);
     font-weight: 500;
     font-style: normal;
@@ -633,6 +631,10 @@ body:not(.sqs-edit-mode).enroll #alchemyEnroll {
     letter-spacing: 0;
     text-transform: uppercase;
     color: var(--text-100) !important;
+
+    &:hover {
+      background: var(--gradient-button) !important;
+    }
   }
 }
 
