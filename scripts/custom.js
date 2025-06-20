@@ -65,41 +65,7 @@ window.Squarespace.onInitialize(Y, function() {
 
     // Replace gradientStops with result
     const pageHeight = document.body.scrollHeight;
-    let gradientStops;
-    if(window.innerWidth < 768) {
-        gradientStops = [
-            "#00C3B2",
-            "#06E181",
-            "#99ED61",
-            "#FFDC00",
-            "#FF8B92",
-            "#BD00C6",
-            "#F25E8F",
-            "#FF9700",
-            "#F8EC1B",
-            "#00C3B2",
-            "#06E181",
-            "#99ED61",
-            "#FFDC00",
-            "#FF8B92",
-            "#BD00C6",
-            "#F25E8F",
-            "#FF9700",
-            "#F8EC1B",
-            "#F8EC1B",
-            "#00C3B2",
-            "#06E181",
-            "#99ED61",
-            "#FFDC00",
-            "#FF8B92",
-            "#BD00C6",
-            "#F25E8F",
-            "#FF9700",
-            "#F8EC1B"
-        ];
-    }else{
-        gradientStops = getGradientColorsByHeight(allGradientStops, pageHeight);
-    }
+    const gradientStops = getGradientColorsByHeight(allGradientStops, pageHeight);
 
     function interpolateColor(color1, color2, factor) {
         const c1 = parseInt(color1.slice(1), 16);
