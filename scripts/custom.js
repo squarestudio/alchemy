@@ -12,7 +12,7 @@ window.Squarespace.onInitialize(Y, function() {
 
     if(!sessionStorage.getItem("enroll")) {
         setTimeout(function(){
-            document.body.classList.add('enroll');
+            // document.body.classList.add('enroll');
         },5000)
     }
     document.addEventListener('click', function (e) {
