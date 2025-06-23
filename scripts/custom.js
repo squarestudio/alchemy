@@ -443,7 +443,8 @@ window.Squarespace.onInitialize(Y, function() {
         }
 
         let joinSection = welcomeJoinSection.querySelector('#joinBlock');
-        joinSection.querySelector('button.newsletter-form-button')
+        let nameInput = joinSection.querySelector('input[name="fname"]');
+        if (nameInput) nameInput.placeholder = 'Full Name';
 
         let joinButton = joinSection.querySelector('button.newsletter-form-button');
 
