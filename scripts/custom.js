@@ -219,10 +219,22 @@ window.Squarespace.onInitialize(Y, function() {
         let blogHeight;
         if(blogLength > 2) {
             blogSwiper = new Swiper('#blog .swiper', {
-                slidesPerView: "auto",
-                centeredSlides: true,
-                spaceBetween: 24,
-                initialSlide: 1
+                slidesPerView: 1,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                breakpoints: {
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 24,
+                    },
+                    1025: {
+                        slidesPerView: "auto",
+                        centeredSlides: true,
+                        spaceBetween: 24,
+                        initialSlide: 1,
+                    }
+                },
             });
 
             blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
