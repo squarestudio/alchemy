@@ -239,12 +239,14 @@ window.Squarespace.onInitialize(Y, function() {
 
             blogHeight = blogSection.querySelector('.swiper-wrapper').offsetHeight;
 
-            blogSwiper.on('slideChange', () => {
-                const realSlideCount = blogSwiper.slides.length;
-                if (blogSwiper.activeIndex === 0 || blogSwiper.activeIndex === realSlideCount - 1) {
-                    blogSwiper.slideTo(blogSwiper.previousIndex);
-                }
-            });
+            if(window.innerWidth >= 1025) {
+                blogSwiper.on('slideChange', () => {
+                    const realSlideCount = blogSwiper.slides.length;
+                    if (blogSwiper.activeIndex === 0 || blogSwiper.activeIndex === realSlideCount - 1) {
+                        blogSwiper.slideTo(blogSwiper.previousIndex);
+                    }
+                });
+            }
         }else{
             blogSection.classList.add('blogItems'+blogLength);
 
