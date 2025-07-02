@@ -41,11 +41,6 @@
           </div>
         </div>
       {.end}
-      <a href="/search" class="Mobile-bar-search" data-nc-element="search-icon" aria-label="{localizedStrings.search}">
-        <svg class="Icon Icon--search" viewBox="0 0 20 20">
-          <use xlink:href="/assets/ui-icons.svg#search-icon"></use>
-        </svg>
-      </a>
     </div>
   </div>
 
