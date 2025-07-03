@@ -33,15 +33,15 @@ window.Squarespace.onInitialize(Y, function() {
     const mobileOverlay = document.querySelector(".Mobile-overlay-menu");
 
     const allGradientStops = [
-        "#00C3B2",
-        "#06E181",
-        "#99ED61",
         "#FFDC00",
         "#FF8B92",
         "#BD00C6",
         "#F25E8F",
         "#FF9700",
-        "#F8EC1B"
+        "#F8EC1B",
+        "#99ED61",
+        "#06E181",
+        "#00C3B2"
     ];
 
     function getGradientColorsByHeight(allStops, pageHeight) {
