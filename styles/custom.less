@@ -831,7 +831,7 @@ section#hero {
             transform: translateX(0);
           }
           to {
-            transform: translateX(-100%);
+            transform: translateX(-100% - 1rem);
           }
         }
       }
@@ -851,7 +851,7 @@ section#hero {
 .marquee {
   display: flex;
   overflow: hidden;
-  gap: 1rem;
+  gap: 4rem;
 
   position: relative;
   user-select: none;
@@ -868,7 +868,7 @@ section#hero {
     justify-content: space-around;
     align-items: center;
     min-width: 100%;
-    gap: 1rem;
+    gap: 4rem;
 
     h5 {
       color: var(--text-0);
@@ -883,7 +883,7 @@ section#hero {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100% - 1rem);
+    transform: translateX(-100% - 4rem);
   }
 }
 
