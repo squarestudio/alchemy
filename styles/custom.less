@@ -851,7 +851,6 @@ section#hero {
 .marquee {
   display: flex;
   overflow: hidden;
-  gap: 40px;
 
   position: relative;
   user-select: none;
@@ -868,10 +867,11 @@ section#hero {
     justify-content: space-around;
     align-items: center;
     min-width: 100%;
-    gap: 40px;
 
     h5 {
       color: var(--text-0);
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
   .scroll {
@@ -883,7 +883,7 @@ section#hero {
     transform: translateX(0);
   }
   to {
-    transform: translateX(-100% - 40px);
+    transform: translateX(-100%);
   }
 }
 
