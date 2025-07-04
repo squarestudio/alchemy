@@ -851,39 +851,33 @@ section#hero {
 .marquee {
   display: flex;
   overflow: hidden;
-  gap: 4rem;
-
   position: relative;
-  user-select: none;
-
   height: 98px;
   width: 100vw;
-  margin-left: ~"calc(600px - 50vw)";
-
   background: var(--text-100);
 
   .marquee-content {
     flex-shrink: 0;
     display: flex;
-    justify-content: space-around;
     align-items: center;
-    min-width: 100%;
     gap: 4rem;
+    min-width: 100%;
 
     h5 {
       color: var(--text-0);
     }
   }
   .scroll {
+    display: flex;
     animation: scroll 30s linear infinite;
   }
 }
 @keyframes scroll {
-  from {
+  0% {
     transform: translateX(0);
   }
-  to {
-    transform: translateX(calc(-100% - 4rem));
+  100% {
+    transform: translateX(-100%);
   }
 }
 
