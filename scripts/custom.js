@@ -380,8 +380,8 @@ window.Squarespace.onInitialize(Y, function() {
         sanctuaryBigImage = sanctuarySection.querySelector(".Index-page-content .sqs-col-12>.row:nth-child(2) .col:last-child");
 
         if(window.innerWidth < 1025) {
-            sanctuarySection.querySelector(".Index-page-content .sqs-layout .sqs-col-12").style.height = (window.innerHeight + 53) + "px";
-            sanctuarySection.querySelector(".Index-page-content .sqs-layout .sqs-col-12 > .row:nth-child(2)").style.height = (window.innerHeight - 72) + "px";
+            sanctuarySection.querySelector(".Index-page-content .sqs-layout .sqs-col-12").style.height = window.innerHeight + 53 + "px";
+            sanctuarySection.querySelector(".Index-page-content .sqs-layout .sqs-col-12 > .row:nth-child(2)").style.height = window.innerHeight + "px";
         }
     }
 
