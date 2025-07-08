@@ -1028,38 +1028,40 @@ section#lets-get-sweaty #sweaty-button {
 }
 
 /* NEUE SEITE */
-section#neue-seite {
-  .sqs-layout {
-    max-width: none !important;
-    padding: 0;
+body:not(.sqs-edit-mode) {
+  section#neue-seite {
+    .sqs-layout {
+      max-width: none !important;
+      padding: 0;
 
-    .sqs-col-12 {
-      position: relative;
+      .sqs-col-12 {
+        position: relative;
 
-      height: 100vh;
-      overflow: hidden;
+        height: 100vh;
+        overflow: hidden;
 
-      .image-block {
-        top: 50%;
-        left: 0;
+        .image-block {
+          top: 50%;
+          left: 0;
 
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
+          -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 
-        width: ~"calc(100% + 50px)";
-        height: 100%;
-
-        & * {
+          width: ~"calc(100% + 50px)";
           height: 100%;
-        }
-        .sqs-image-shape-container-element {
-          padding-bottom: 0 !important;
-        }
 
-        &:nth-child(2) {
-          position: absolute;
+          & * {
+            height: 100%;
+          }
+          .sqs-image-shape-container-element {
+            padding-bottom: 0 !important;
+          }
 
-          opacity: .3;
+          &:nth-child(2) {
+            position: absolute;
+
+            opacity: .3;
+          }
         }
       }
     }
