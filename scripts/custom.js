@@ -184,6 +184,20 @@ window.Squarespace.onInitialize(Y, function() {
             },
         });
     }
+    let formulaLanding = document.getElementById("formula-landing");
+    if(formulaLanding && window.innerWidth <= 1024) {
+        let formulaSwiper = new Swiper('#formula-landing .swiper', {
+            slidesPerView: '1',
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2
+                }
+            },
+        });
+    }
 
 
     /* ------------ MELT THE LIMITS ------------ */
