@@ -169,6 +169,11 @@ window.Squarespace.onInitialize(Y, function() {
     }
 
 
+    let heroLanding = document.getElementById("hero-landing");
+    if(heroLanding && window.innerWidth < 768) {
+        heroLanding.style.height = (window.innerHeight - 114) + "px";
+    }
+
     /* ------------ FORMULA ------------ */
     let formulaSection = document.getElementById("formula-items");
     if(formulaSection && window.innerWidth <= 1024) {
