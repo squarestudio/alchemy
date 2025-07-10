@@ -165,7 +165,7 @@ window.Squarespace.onInitialize(Y, function() {
         heroSection.querySelector(".col:nth-child(2)").classList.add("image-blur");
     }
     if(heroSection && window.innerWidth < 768) {
-        heroSection.querySelector(".sqs-layout > .row:nth-child(1)").style.height = (window.innerHeight - 126) + "px";
+        heroSection.querySelector(".sqs-layout > .row:nth-child(1)").style.height = (window.innerHeight - 114) + "px";
     }
 
 
