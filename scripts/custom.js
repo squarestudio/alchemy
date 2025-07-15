@@ -638,6 +638,7 @@ window.Squarespace.onInitialize(Y, function() {
 
     bookButton.addEventListener('click', function (e) {
         e.preventDefault();
+        e.stopPropagation();
         document.body.classList.add('waitlist');
     });
 
