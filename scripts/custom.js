@@ -636,6 +636,11 @@ window.Squarespace.onInitialize(Y, function() {
         });
     }
 
+    bookButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        document.body.classList.add('waitlist');
+    });
+
     if(document.getElementById("faq-items")) {
         let faqButtonHref = document.querySelector("#faq-items .faq-columns > .col:first-child p:last-child a").getAttribute('href');
         let faqButtonText = document.querySelector("#faq-items .faq-columns > .col:first-child p:last-child a").innerText;
@@ -956,5 +961,5 @@ window.Squarespace.onInitialize(Y, function() {
             }
         }
     }
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll);;
 });

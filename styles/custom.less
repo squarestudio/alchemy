@@ -3834,4 +3834,11 @@ section#marquee {
 body ._form-wrapper {
   opacity: 0 !important;
   visibility: hidden;
+
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+body.waitlist ._form-wrapper {
+  visibility: visible;
+  opacity: 1 !important;
 }
