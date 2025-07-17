@@ -636,22 +636,22 @@ window.Squarespace.onInitialize(Y, function() {
         });
     }
 
-    const waitlistTriggers = [
-        '#book-button',
-        '#hero-button',
-        '.Mobile-overlay-book a'
-    ];
-
-    waitlistTriggers.forEach(selector => {
-        const el = document.querySelector(selector);
-        if (el) {
-            el.addEventListener('click', e => {
-                e.preventDefault();
-                e.stopPropagation();
-                document.body.classList.add('waitlist');
-            });
-        }
-    });
+    // const waitlistTriggers = [
+    //     '#book-button',
+    //     '#hero-button',
+    //     '.Mobile-overlay-book a'
+    // ];
+    //
+    // waitlistTriggers.forEach(selector => {
+    //     const el = document.querySelector(selector);
+    //     if (el) {
+    //         el.addEventListener('click', e => {
+    //             e.preventDefault();
+    //             e.stopPropagation();
+    //             document.body.classList.add('waitlist');
+    //         });
+    //     }
+    // });
 
 
     if(document.getElementById("faq-items")) {
