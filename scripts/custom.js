@@ -479,6 +479,7 @@ window.Squarespace.onInitialize(Y, function() {
         let nameInput = joinSection.querySelector('input[name="fname"]');
         let lastInput = joinSection.querySelector('input[name="lname"]');
         if (nameInput) nameInput.placeholder = 'Full Name';
+        if (nameInput) nameInput.required = true;
         if (lastInput) lastInput.value = '-';
 
         let joinButton = joinSection.querySelector('button.newsletter-form-button');
@@ -975,4 +976,4 @@ window.Squarespace.onInitialize(Y, function() {
         }
     }
     window.addEventListener('scroll', handleScroll);;
-});
+});P
