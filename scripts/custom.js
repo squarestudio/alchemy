@@ -479,7 +479,6 @@ window.Squarespace.onInitialize(Y, function() {
         let nameInput = joinSection.querySelector('input[name="fname"]');
         let lastInput = joinSection.querySelector('input[name="lname"]');
         if (nameInput) nameInput.placeholder = 'Full Name';
-        if (lastInput) lastInput.value = '-';
 
         let joinButton = joinSection.querySelector('button.newsletter-form-button');
 
