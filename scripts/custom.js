@@ -487,7 +487,9 @@ window.Squarespace.onInitialize(Y, function() {
             newsletterFirstNameInput.setAttribute('placeholder', 'Full Name');
 
             let newsletterLastNameInput = newForm.querySelector('fieldset div.last-name input');
+            console.log(newsletterLastNameInput.value);
             newsletterLastNameInput.value = '-';
+            console.log(newsletterLastNameInput.value);
 
             let newsletterButton = newForm.querySelector('button[type="submit"]');
             if (!newsletterButton.querySelector('svg')) {
