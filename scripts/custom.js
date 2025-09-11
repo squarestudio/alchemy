@@ -496,7 +496,7 @@ window.Squarespace.onInitialize(Y, function() {
             }
             newsletterFirstNameInput.addEventListener('input', function(event) {
                 setTimeout(function(){
-                    newsletterLastNameInput.value = '-';
+                    newsletterLastNameInput.value = 'Smith';
                 },1000)
             });
             if(window.innerWidth > 1024) {
