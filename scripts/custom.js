@@ -480,6 +480,7 @@ window.Squarespace.onInitialize(Y, function() {
         fNameInputs.forEach(input => {
             input.setAttribute('placeholder', 'Full Name');
         });
+        console.log(fNameInputs[1]);
         let lNameInputs = joinSection.querySelectorAll('input[name="lname"]');
 
         let joinButton = joinSection.querySelector('button.newsletter-form-button');
