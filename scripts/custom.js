@@ -477,7 +477,6 @@ window.Squarespace.onInitialize(Y, function() {
 
         let joinSection = welcomeJoinSection.querySelector('#joinBlock');
         let fNameInputs = joinSection.querySelectorAll('input[name="fname"]');
-        console.log(fNameInputs);
         fNameInputs.forEach(input => {
             input.placeholder = 'Full Name';
         });
