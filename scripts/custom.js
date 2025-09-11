@@ -482,7 +482,7 @@ window.Squarespace.onInitialize(Y, function() {
         });
         setTimeout(function(){
             let newsletterNameInput = joinSection.querySelector('.form-block fieldset div.first-name input');
-            console.log(newsletterNameInput);
+            newsletterNameInput.setAttribute('placeholder', 'Full Name');
         }, 1000)
         let lNameInputs = joinSection.querySelectorAll('input[name="lname"]');
 
