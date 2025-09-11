@@ -482,11 +482,12 @@ window.Squarespace.onInitialize(Y, function() {
         });
         setTimeout(function(){
             let newForm = joinSection.querySelector('.form-block');
-            let newsletterNameInput = newForm.querySelector('fieldset div.first-name input');
-            newsletterNameInput.setAttribute('placeholder', 'Full Name');
+            let newsletterFirstNameInput = newForm.querySelector('fieldset div.first-name input');
+            let newsletterLastNameInput = joinSection.querySelectorAll('fieldset div.last-name input');
+            newsletterFirstNameInput.setAttribute('placeholder', 'Full Name');
+            newsletterLastNameInput.value = '-';
             newForm.querySelector('div.option input[type="checkbox"]').checked = true;
         }, 1000)
-        let lNameInputs = joinSection.querySelectorAll('input[name="lname"]');
 
         let joinButton = joinSection.querySelector('button.newsletter-form-button');
         if (!joinButton.querySelector('svg')) {
