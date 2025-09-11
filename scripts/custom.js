@@ -498,7 +498,7 @@ window.Squarespace.onInitialize(Y, function() {
                 setTimeout(function(){
                     console.log('yes');
                     newsletterLastNameInput.value = '-';
-                },1000)
+                },500)
             });
             if(window.innerWidth > 1024) {
                 newsletterButton.addEventListener("mouseenter", () => {
