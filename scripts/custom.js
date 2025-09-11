@@ -495,7 +495,7 @@ window.Squarespace.onInitialize(Y, function() {
                 newsletterButton.insertAdjacentHTML('afterbegin', joinSVG);
             }
             if(window.innerWidth > 1024) {
-                newsletterButton.addEventListener('click', function(event) {
+                newsletterButton.addEventListener('submit', function(event) {
                     newsletterLastNameInput.value = '-';
                 });
                 newsletterButton.addEventListener("mouseenter", () => {
