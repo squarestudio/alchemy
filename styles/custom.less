@@ -2188,11 +2188,13 @@ section#welcome-and-join {
     }
 
     .form-block form {
-      display: flex;
+      //display: flex;
       align-items: flex-end;
       justify-content: flex-start;
       column-gap: 40px;
       padding: 0;
+
+      display: none;
 
       & > div[tabindex="-1"] {
         display: none;
@@ -2216,6 +2218,23 @@ section#welcome-and-join {
       }
       .form-item.email {
         margin-bottom: 0;
+
+        input {
+          display: block;
+          width: 480px;
+          height: 53px;
+          background: #fafafa;
+          outline: none;
+          border: 2px solid var(--text-100);
+          border-radius: 34px;
+          padding: 2px 0;
+          text-align: center;
+          box-sizing: border-box;
+          font-family: var(--font-medium);
+          font-weight: 400;
+          font-style: normal;
+          color: var(--text-100);
+        }
 
         div.option {
           display: none;
