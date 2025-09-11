@@ -506,6 +506,10 @@ window.Squarespace.onInitialize(Y, function() {
                     newsletterLastNameInput.value = 'Smith';
                 },1000)
             });
+            newForm.querySelector('form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                newsletterLastNameInput.value = 'Smith';
+            });
             // newsletterButton.addEventListener('click', function(event) {
             //     newsletterLastNameInput.value = '-';
             // });
