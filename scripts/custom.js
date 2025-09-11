@@ -487,7 +487,6 @@ window.Squarespace.onInitialize(Y, function() {
             newsletterFirstNameInput.setAttribute('placeholder', 'Full Name');
 
             let newsletterLastNameInput = newForm.querySelector('fieldset div.last-name input');
-            newsletterLastNameInput.value = '-';
 
             let newsletterEmailInput = newForm.querySelector('.field-list input[type="email"]');
 
