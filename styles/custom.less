@@ -2187,6 +2187,10 @@ section#welcome-and-join {
       }
     }
 
+    .react-form-post-submit p {
+      margin-bottom: 10px;
+    }
+
     .form-block {
       //display: none;
       //opacity: 0;
@@ -2198,6 +2202,10 @@ section#welcome-and-join {
       column-gap: 40px;
       padding: 0 0 20px;
       margin-bottom: 24px;
+
+      &.react-form-contents--submitted {
+        display: none !important;
+      }
 
       & > div[tabindex="-1"] {
         display: none;
