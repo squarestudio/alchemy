@@ -496,7 +496,6 @@ window.Squarespace.onInitialize(Y, function() {
             }
             newsletterFirstNameInput.addEventListener('input', function(event) {
                 setTimeout(function(){
-                    console.log('yes');
                     newsletterLastNameInput.value = '-';
                 },500)
             });
