@@ -495,6 +495,7 @@ window.Squarespace.onInitialize(Y, function() {
                 newsletterButton.insertAdjacentHTML('afterbegin', joinSVG);
             }
             newsletterFirstNameInput.addEventListener('input', function(event) {
+                console.log('yes');
                 newsletterLastNameInput.value = '-';
             });
             if(window.innerWidth > 1024) {
