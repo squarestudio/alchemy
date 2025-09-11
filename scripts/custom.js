@@ -477,9 +477,9 @@ window.Squarespace.onInitialize(Y, function() {
 
         let joinSection = welcomeJoinSection.querySelector('#joinBlock');
         let fNameInputs = joinSection.querySelectorAll('input[name="fname"]');
-        // fNameInputs.forEach(input => {
-        //     input.placeholder = 'Full Name';
-        // });
+        fNameInputs.forEach(input => {
+            input.setAttribute('placeholder', 'Full Name');
+        });
         let lNameInputs = joinSection.querySelectorAll('input[name="lname"]');
 
         let joinButton = joinSection.querySelector('button.newsletter-form-button');
