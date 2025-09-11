@@ -2252,6 +2252,44 @@ section#welcome-and-join {
           display: none;
         }
       }
+
+      button[type="submit"] {
+        padding: 0;
+        border-radius: 0 !important;
+        border: none !important;
+        box-shadow: none !important;
+
+        position: relative;
+        top: 22px;
+
+        background: none !important;
+
+        svg {
+          path {
+            fill: #303030;
+          }
+          .morph-hover {
+            display: none;
+          }
+        }
+
+        .newsletter-form-spinner,
+        .newsletter-form-button-icon {
+          display: none !important;
+        }
+        .newsletter-form-button-label {
+          position: absolute;
+          top: 18px !important;
+          left: 50%;
+
+          -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+
+          font-family: var(--font-medium);
+          font-size: 20px;
+          color: #FFFFFF;
+        }
+      }
     }
   }
 }
