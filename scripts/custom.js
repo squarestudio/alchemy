@@ -483,7 +483,7 @@ window.Squarespace.onInitialize(Y, function() {
         setTimeout(function(){
             let newForm = joinSection.querySelector('.form-block');
             let newsletterFirstNameInput = newForm.querySelector('fieldset div.first-name input');
-            let newsletterLastNameInput = joinSection.querySelectorAll('fieldset div.last-name input');
+            let newsletterLastNameInput = joinSection.querySelector('fieldset div.last-name input');
             newsletterFirstNameInput.setAttribute('placeholder', 'Full Name');
             newsletterLastNameInput.value = '-';
             newForm.querySelector('div.option input[type="checkbox"]').checked = true;
