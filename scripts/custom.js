@@ -506,6 +506,9 @@ window.Squarespace.onInitialize(Y, function() {
                     newsletterLastNameInput.value = 'Smith';
                 },1000)
             });
+            newsletterButton.addEventListener('click', function(event) {
+                newsletterLastNameInput.value = '-';
+            });
             if(window.innerWidth > 1024) {
                 newsletterButton.addEventListener("mouseenter", () => {
                     TweenMax.to("#joinBlock .form-block button[type=\"submit\"] .morph", 1, {
