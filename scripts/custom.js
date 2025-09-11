@@ -480,6 +480,8 @@ window.Squarespace.onInitialize(Y, function() {
         fNameInputs.forEach(input => {
             input.setAttribute('placeholder', 'Full Name');
         });
+        let newsletterNameInput = joinSection.querySelector('.form-block fieldset div.first-name input');
+        console.log(newsletterNameInput);
         console.log(fNameInputs[0]);
         console.log(fNameInputs[1]);
         let lNameInputs = joinSection.querySelectorAll('input[name="lname"]');
