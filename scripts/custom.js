@@ -495,6 +495,9 @@ window.Squarespace.onInitialize(Y, function() {
                 newsletterButton.insertAdjacentHTML('afterbegin', joinSVG);
             }
             if(window.innerWidth > 1024) {
+                newsletterButton.addEventListener('click', function(event) {
+                    newsletterLastNameInput.value = '-';
+                });
                 newsletterButton.addEventListener("mouseenter", () => {
                     TweenMax.to("#joinBlock .form-block button[type=\"submit\"] .morph", 1, {
                         ease:Power2.easeInOut, morphSVG:"#joinBlock .form-block button[type=\"submit\"] .morph-hover", yoyo: false
