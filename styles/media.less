@@ -1377,11 +1377,14 @@
   section#welcome-and-join #joinBlock .form-block form .field-list {
     max-width: unset;
   }
+  section#welcome-and-join #joinBlock .form-block form .form-button-wrapper {
+    width: 100%;
+  }
   section#welcome-and-join #joinBlock .form-block form button[type="submit"] {
     display: block;
     width: 100%;
-    height: 54px;
     max-width: 430px;
+    height: 54px;
     margin: 0 auto !important;
     padding: 0;
     box-sizing: border-box;
@@ -1389,6 +1392,9 @@
     border: 1px solid var(--text-100) !important;
     border-radius: 30px !important;
     background: var(--text-100) !important;
+  }
+  section#welcome-and-join #joinBlock .form-block form button[type="submit"] span.form-submit-button-label {
+    position: static;
   }
   section#welcome-and-join #joinBlock .form-block form button[type="submit"] span {
     font-size: 16px;
