@@ -484,6 +484,12 @@ window.Squarespace.onInitialize(Y, function() {
                 newsletterButton.insertAdjacentHTML('afterbegin', joinSVG);
             }
 
+            newForm.querySelectorAll('.field-list .form-item input').forEach(function(input) {
+                input.addEventListener('blur', function(event) {
+                    newForm.querySelector('div.option input[type="checkbox"]').setAttribute('checked', 'checked');
+                });
+            });
+
             if(window.innerWidth > 1024) {
                 newsletterButton.addEventListener("mouseenter", () => {
                     TweenMax.to("#joinBlock .form-block button[type=\"submit\"] .morph", 1, {
@@ -497,8 +503,7 @@ window.Squarespace.onInitialize(Y, function() {
                 });
             }
 
-
-            newForm.querySelector('div.option input[type="checkbox"]').checked = true;
+            newForm.querySelector('div.option input[type="checkbox"]').setAttribute('checked', 'checked');
         }, 1000)
 
         // let joinButton = joinSection.querySelector('button.newsletter-form-button');
