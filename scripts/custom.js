@@ -486,7 +486,7 @@ window.Squarespace.onInitialize(Y, function() {
 
             newForm.querySelectorAll('.field-list .form-item input').forEach(function(input) {
                 input.addEventListener('blur', function(event) {
-                    newForm.querySelector('div.option input[type="checkbox"]').setAttribute('checked', 'checked');
+                    newForm.querySelector('div.option input[type="checkbox"]').checked = true;
                 });
             });
 
@@ -503,7 +503,7 @@ window.Squarespace.onInitialize(Y, function() {
                 });
             }
 
-            newForm.querySelector('div.option input[type="checkbox"]').setAttribute('checked', 'checked');
+            newForm.querySelector('div.option input[type="checkbox"]').checked = true;
         }, 1000)
 
         // let joinButton = joinSection.querySelector('button.newsletter-form-button');
