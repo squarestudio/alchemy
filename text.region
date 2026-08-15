@@ -13,7 +13,6 @@
     <div class="Loader"></div>
 
     {@|apply mobile.block}
-    {@|apply grid.block}
     {@|apply grid-layout.block}
 
     <div class="Parallax-host-outer">
